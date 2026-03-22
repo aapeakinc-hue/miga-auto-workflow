@@ -19,7 +19,7 @@ def email_send_node(state: EmailSendInput, config: RunnableConfig, runtime: Runt
     
     # resend API 配置
     resend_api_key = "re_cB3gsHB9_2rJhdZsAoFdCA6i12zynFm6F"
-    from_email = "aapeakinc@gmail.com"
+    from_email = "info@miga.cc"
     
     # 统计结果
     send_results = {
@@ -64,12 +64,13 @@ def email_send_node(state: EmailSendInput, config: RunnableConfig, runtime: Runt
 <p>{body.replace('\n', '<br>')}</p>
 <br>
 <p>Best regards,</p>
-<p>aapeakinc Team</p>
+<p>MIGA Team</p>
 <p>Email: {from_email}</p>
+<p>Website: https://miga.cc</p>
 </body>
 </html>
                 """,
-                "text": f"Dear {to_name},\n\n{body}\n\nBest regards,\naapeakinc Team\nEmail: {from_email}"
+                "text": f"Dear {to_name},\n\n{body}\n\nBest regards,\nMIGA Team\nEmail: {from_email}\nWebsite: https://miga.cc"
             }
             
             response = requests.post(url, headers=headers, json=data, timeout=30)

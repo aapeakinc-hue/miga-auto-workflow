@@ -111,7 +111,7 @@ def email_generate_node(state: EmailGenerateInput, config: RunnableConfig, runti
                 else:
                     # 如果没有找到JSON，使用备用格式
                     email_data = {
-                        "subject": f"Partnership Opportunity with aapeakinc",
+                        "subject": f"Partnership Opportunity with MIGA",
                         "body": content
                     }
             except:
@@ -136,10 +136,10 @@ def email_generate_node(state: EmailGenerateInput, config: RunnableConfig, runti
                 "to_email": email,
                 "to_name": recipient_name,
                 "to_company": company_name,
-                "subject": f"Partnership Opportunity with aapeakinc - {company_name}",
+                "subject": f"Partnership Opportunity with MIGA - {company_name}",
                 "body": f"""Dear {recipient_name},
 
-I hope this email finds you well. I am reaching out from aapeakinc to explore potential partnership opportunities with {company_name}.
+I hope this email finds you well. I am reaching out from MIGA to explore potential partnership opportunities with {company_name}.
 
 Based on my research, I believe our products could be a great fit for your business needs. We specialize in providing high-quality products with competitive pricing and excellent service.
 
@@ -147,8 +147,9 @@ I would appreciate the opportunity to discuss how we can support your business g
 
 Best regards,
 Your Name
-aapeakinc
-Email: aapeakinc@gmail.com"""
+MIGA
+Email: info@miga.cc
+Website: https://miga.cc"""
             }
             email_templates.append(email_template)
     
