@@ -26,13 +26,58 @@ def email_fetch_node(state: EmailFetchInput, config: RunnableConfig, runtime: Ru
     for customer in state.customer_list:
         website = customer.get("website", "")
         company_name = customer.get("company_name", "")
+        domain = customer.get("domain", "")
         
         if not website:
-            # 如果没有网站，尝试从公司名称推导域名（简单示例）
-            domain = company_name.lower().replace(" ", "").replace(".", "") + ".com"
-        else:
-            # 从网站URL提取域名
+            continue
+        
+        # 如果没有域名，从网站URL提取
+        if not domain:
             domain = website.replace("https://", "").replace("http://", "").split("/")[0]
+        
+        # 进一步验证是否为企业网站（排除常见的非商业域名和电商平台/B2B平台）
+        excluded_domains = [
+            'news', 'blog', 'wiki', 'youtube', 'facebook', 'linkedin',
+            'xueqiu', 'csdn', 'sohu', 'taobao', 'tmall', 'jd.com', 'amazon', 'ebay',
+            'alibaba', '1688', 'aliexpress', 'etsy', 'walmart', 'dhgate',
+            'made-in-china', 'globalsources', 'ec21', 'tradekey'
+        ]
+        
+        # 优先选择欧美地区的企业
+        preferred_tlds = ['.com', '.net', '.org', '.us', '.uk', '.eu', '.ca', '.au']
+        
+        # 检查是否在排除列表中
+        if any(excluded in domain.lower() for excluded in excluded_domains):
+            customer_with_email = {
+                "company_name": company_name,
+                "website": website,
+                "domain": domain,
+                "email": "",
+                "first_name": "",
+                "last_name": "",
+                "position": "",
+                "status": "skipped",
+                "reason": "E-commerce or B2B platform"
+            }
+            customers_with_email.append(customer_with_email)
+            continue
+        
+        # 检查是否是中文网站（排除）
+        chinese_domains = ['.cn', '.com.cn', '.net.cn', '.cn.com', 'shangye', 'xinzhi', 'pinkoi', 'toutiao', '163', 'sina', 'sohu', 'qq.com']
+        if any(chinese in domain.lower() for chinese in chinese_domains):
+            customer_with_email = {
+                "company_name": company_name,
+                "website": website,
+                "domain": domain,
+                "email": "",
+                "first_name": "",
+                "last_name": "",
+                "position": "",
+                "status": "skipped",
+                "reason": "Chinese website"
+            }
+            customers_with_email.append(customer_with_email)
+            continue
         
         # 调用 snov.io API 获取邮箱
         try:

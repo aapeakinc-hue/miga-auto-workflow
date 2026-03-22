@@ -19,39 +19,55 @@ def customer_search_node(state: CustomerSearchInput, config: RunnableConfig, run
     # 初始化 SearchClient
     client = SearchClient(ctx=ctx)
     
-    # 构建搜索查询
-    search_query = f"{state.target_keywords} suppliers manufacturers distributors importers"
+    # 针对水晶产品的精准搜索关键词组合
+    search_queries = [
+        f"{state.target_keywords} crystal candelabra wholesale",
+        f"{state.target_keywords} crystal decor importer",
+        f"{state.target_keywords} wedding supplies distributor",
+        f"{state.target_keywords} luxury home decor buyer"
+    ]
     
-    # 执行搜索
-    response = client.web_search(
-        query=search_query,
-        count=10  # 搜索前10个结果
-    )
+    # 收集所有搜索结果
+    all_customers = []
+    seen_domains = set()
     
-    # 提取搜索结果
-    customer_list = []
-    if response.web_items:
-        for result in response.web_items[:5]:  # 限制前5个
-            customer = {
-                "company_name": result.title if result.title else "未知公司",
-                "website": result.url if result.url else "",
-                "description": result.snippet if result.snippet else ""
-            }
-            customer_list.append(customer)
+    # 执行多个搜索
+    for search_query in search_queries[:2]:  # 限制搜索2个查询
+        response = client.web_search(
+            query=search_query,
+            count=10
+        )
+        
+        if response.web_items:
+            for result in response.web_items:
+                # 过滤掉非商业网站和B2B平台
+                domain = result.url.split('/')[2] if len(result.url.split('/')) > 2 else ""
+                
+                # 排除新闻网站、博客、B2B平台等
+                excluded_domains = [
+                    'news', 'blog', 'wiki', 'youtube', 'facebook', 'linkedin',
+                    'alibaba', '1688', 'taobao', 'tmall', 'jd.com', 'amazon', 'ebay',
+                    'etsy', 'walmart', 'aliexpress', 'dhgate', 'made-in-china',
+                    'global sources', 'ec21', 'tradekey'
+                ]
+                if any(excluded in domain.lower() for excluded in excluded_domains):
+                    continue
+                
+                # 去重
+                if domain and domain in seen_domains:
+                    continue
+                if domain:
+                    seen_domains.add(domain)
+                
+                customer = {
+                    "company_name": result.title if result.title else "未知公司",
+                    "website": result.url if result.url else "",
+                    "description": result.snippet if result.snippet else "",
+                    "domain": domain
+                }
+                all_customers.append(customer)
     
-    # 如果搜索结果为空，返回示例数据
-    if not customer_list:
-        customer_list = [
-            {
-                "company_name": "示例客户1",
-                "website": "https://example1.com",
-                "description": "可能感兴趣的客户"
-            },
-            {
-                "company_name": "示例客户2",
-                "website": "https://example2.com",
-                "description": "可能感兴趣的客户"
-            }
-        ]
+    # 限制返回5个最相关的客户
+    customer_list = all_customers[:5] if all_customers else []
     
     return CustomerSearchOutput(customer_list=customer_list)
