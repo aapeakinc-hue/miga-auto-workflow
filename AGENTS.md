@@ -31,6 +31,14 @@
 5. **邮件发送** (`email_send`): 使用 resend API 批量发送邮件
 
 ## 配置说明
+### 自定义域名配置
+- **产品网站**: https://products.miga.cc
+- **配置方式**:
+  - 在阿里云DNS中添加CNAME记录：`products → migac-website.pages.dev`
+  - 在Cloudflare Pages中激活自定义域名：`products.miga.cc`
+  - Cloudflare自动提供SSL证书
+- **旧域名**: https://migac-website.pages.dev/products (仍然可用)
+
 ### API 配置
 - **snov.io**:
   - API Token: `fbf98546081c2793e21d6de6540ce2ca`
@@ -38,18 +46,34 @@
   
 - **resend**:
   - API Key: `re_cB3gsHB9_2rJhdZsAoFdCA6i12zynFm6F`
-  - 发件邮箱: `aapeakinc@gmail.com`
-  
-### 注意事项
-⚠️ **resend 域名验证**: 
-- 使用 gmail.com 作为发件域名需要在 resend.com 上验证域名
-- 如果未验证，邮件发送会失败（返回 403 错误）
-- 解决方案：在 https://resend.com/domains 上添加并验证你的域名
+  - 发件邮箱: `info@miga.cc` (已验证域名)
+  - 域名状态: ✅ 已验证
+
+### 邮件署名信息
+- 发件人: MIGA Team
+- 邮箱: info@miga.cc
+- 网站: https://miga.cc
 
 ## 测试结果
 工作流已成功测试，各节点运行正常：
-- ✅ 产品信息抓取成功
-- ✅ 客户搜索成功（测试搜索到5个相关网站）
-- ✅ 邮箱获取成功（部分邮箱为估计值）
-- ✅ 邮件生成成功
-- ⚠️ 邮件发送失败（因域名未验证，需要配置 resend 域名）
+- ✅ 产品信息抓取成功（从 products.miga.cc）
+- ✅ 客户搜索成功（智能过滤B2B平台和非商业网站）
+- ✅ 邮箱获取成功（使用snov.io API）
+- ✅ 邮件生成成功（大模型生成个性化邮件）
+- ✅ 邮件发送成功（成功率80%+）
+
+### 最新测试结果（2026-03-22）
+- **关键词**: 美国水晶装饰品批发商
+- **搜索到的客户**: 5家
+- **邮件发送**: 4/5 成功
+- **成功发送到**:
+  - Crystals Wholesale USA
+  - Best crystals Deals Online in the US
+  - Tocrystal (Bulk Crystals)
+  - ACCIO (trending crystal products)
+
+### 产品信息
+根据 https://products.miga.cc 抓取的产品：
+- **水晶烛台系列**: 10款（五臂/九臂烛台、烛台套装等）
+- **水晶工艺品系列**: 6款（花艺摆件、雕塑、花瓶、装饰桌等）
+- **目标客户**: 婚礼策划公司、活动策划公司、高端酒店、奢华家居装饰批发商

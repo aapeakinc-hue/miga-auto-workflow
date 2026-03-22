@@ -9,7 +9,7 @@ class GlobalState(BaseModel):
     """全局状态定义"""
     # 输入字段
     target_keywords: str = Field(..., description="目标客户关键词，例如：'美国电子产品批发商'")
-    website_url: str = Field(default="https://migac-website.pages.dev/products", description="产品网站URL")
+    website_url: str = Field(default="https://products.miga.cc", description="产品网站URL")
     
     # 中间数据
     product_info: str = Field(default="", description="从网站提取的产品信息")
@@ -24,7 +24,7 @@ class GlobalState(BaseModel):
 class GraphInput(BaseModel):
     """工作流的输入"""
     target_keywords: str = Field(..., description="目标客户关键词，例如：'美国电子产品批发商'")
-    website_url: str = Field(default="https://migac-website.pages.dev/products", description="产品网站URL")
+    website_url: str = Field(default="https://products.miga.cc", description="产品网站URL")
 
 # 工作流输出
 class GraphOutput(BaseModel):
