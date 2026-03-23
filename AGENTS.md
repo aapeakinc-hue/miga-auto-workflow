@@ -218,3 +218,182 @@ python main_data_driven.py --status
   - 1月: 40个（权重8%）
   - 10月: 50个（权重10% - 旺季）
   - 11月: 55个（权重11% - 旺季高峰）
+
+---
+
+## ☁️ 云端部署系统（新增）
+
+### 系统概述
+将整个外贸客户开发系统部署到云服务器，实现7x24小时全自动运行，无需人工干预。
+
+### 部署目标
+- ✅ 每日自动执行市场研究、客户开发、邮件发送
+- ✅ 自动生成并发送日报、周报、月报、年报
+- ✅ 基于数据自动调整月度目标
+- ✅ 系统全自动运行，稳定可靠
+
+### 部署文档
+- **CLOUD_DEPLOYMENT_GUIDE.md** - 完整部署指南（包含详细步骤、故障排查、安全建议）
+- **QUICK_START_CLOUD.md** - 5分钟快速开始（适合新手）
+- **CLOUD_DEPLOYMENT_README.md** - 部署文档包说明
+
+### 部署工具脚本
+- **deploy_on_server.sh** - 一键部署脚本
+  - 自动安装系统依赖
+  - 创建Python虚拟环境
+  - 安装所有Python包
+  - 生成配置文件模板
+  - 创建备份脚本
+  - 生成定时任务模板
+
+- **system_status.sh** - 系统状态监控脚本
+  - 检查系统基本信息
+  - 检查Python环境
+  - 检查数据库文件
+  - 检查定时任务
+  - 检查最近日志
+  - 检查系统资源
+  - 检查网络连接
+
+### 服务器要求
+- **操作系统**: Ubuntu 20.04+ / CentOS 7+ / Debian 10+
+- **配置建议**: 2核4GB、40GB硬盘、1Mbps网络
+- **推荐云服务商**: 腾讯云、阿里云、华为云、AWS、DigitalOcean
+
+### 部署后的目录结构
+```
+/opt/miga-crm/
+├── venv/                    # Python虚拟环境
+├── data/                    # 数据库文件
+│   ├── market_data.db
+│   ├── goals.db
+│   ├── daily_planner.db
+│   └── miga_crm.db
+├── logs/                    # 日志文件
+│   ├── daily_workflow.log
+│   ├── weekly_report.log
+│   ├── monthly_adjustment.log
+│   └── backup.log
+├── reports/                 # 报告文件
+├── backups/                 # 数据备份
+├── assets/                  # 资源文件
+├── main_data_driven.py      # 主程序
+├── .env                     # 环境变量配置
+├── backup.sh                # 备份脚本
+└── deploy_on_server.sh      # 部署脚本
+```
+
+### 定时任务配置
+```bash
+# 每天早上8:00执行每日工作流
+0 8 * * * cd /opt/miga-crm && source venv/bin/activate && python main_data_driven.py --daily
+
+# 每月1号凌晨1:00调整目标
+0 1 1 * * cd /opt/miga-crm && source venv/bin/activate && python main_data_driven.py --adjust_goals
+
+# 每周日凌晨2:00生成周报
+0 2 * * 0 cd /opt/miga-crm && source venv/bin/activate && python main_data_driven.py --weekly
+
+# 每天凌晨4:00备份数据
+0 4 * * * /opt/miga-crm/backup.sh
+
+# 每天凌晨3:00清理7天前的日志
+0 3 * * * find /opt/miga-crm/logs -name "*.log" -mtime +7 -delete
+```
+
+### 监控和维护
+```bash
+# 查看系统状态
+bash /opt/miga-crm/system_status.sh
+
+# 查看实时日志
+tail -f /opt/miga-crm/logs/daily_workflow.log
+
+# 查看定时任务
+crontab -l
+
+# 手动执行每日工作流
+cd /opt/miga-crm && source venv/bin/activate && python main_data_driven.py --daily
+
+# 手动备份数据
+bash /opt/miga-crm/backup.sh
+```
+
+### 部署检查清单
+- [ ] 云服务器已购买并可以SSH连接
+- [ ] Python 3.8+ 已安装
+- [ ] 项目文件已上传到 `/opt/miga-crm/`
+- [ ] 虚拟环境已创建
+- [ ] 所有依赖包已安装
+- [ ] 环境变量文件 `.env` 已配置
+- [ ] 系统初始化成功（4个数据库文件已创建）
+- [ ] 定时任务已配置（crontab -l 可见）
+- [ ] 手动执行每日工作流成功
+- [ ] 测试邮件成功发送到 info@miga.cc
+- [ ] 日志目录有正常输出
+
+### 部署优势
+1. **7x24小时运行**: 云服务器24小时在线，无需人工干预
+2. **自动化执行**: 每日工作流、周报、月报全自动生成
+3. **数据安全**: 定期自动备份，数据永不丢失
+4. **稳定可靠**: 专业云服务商，99.9%可用性
+5. **扩展性强**: 可根据业务需求随时升级配置
+6. **远程管理**: 随时随地通过SSH管理
+
+### 常见问题解决
+
+#### 问题1: 定时任务没有执行
+```bash
+# 检查Cron服务状态
+service cron status
+
+# 查看Cron日志
+sudo grep CRON /var/log/syslog | tail -20
+
+# 手动测试命令
+cd /opt/miga-crm && source venv/bin/activate && python main_data_driven.py --daily
+```
+
+#### 问题2: 邮件发送失败
+```bash
+# 检查环境变量配置
+cat /opt/miga-crm/.env
+
+# 查看错误日志
+tail -n 50 /opt/miga-crm/logs/daily_workflow.log
+```
+
+#### 问题3: 数据库文件损坏
+```bash
+# 使用备份恢复
+cp /opt/miga-crm/backups/backup_xxx/data/*.db /opt/miga-crm/data/
+
+# 或重新初始化
+cd /opt/miga-crm && source venv/bin/activate && python main_data_driven.py --init
+```
+
+### 快速部署步骤
+1. 购买云服务器（推荐：腾讯云、阿里云、华为云）
+2. SSH连接到服务器
+3. 上传项目文件到 `/opt/miga-crm/`
+4. 运行部署脚本：`sudo bash deploy_on_server.sh`
+5. 配置环境变量：`nano /opt/miga-crm/.env`
+6. 初始化系统：`python main_data_driven.py --init`
+7. 测试运行：`python main_data_driven.py --daily`
+8. 配置定时任务：`crontab -e`
+9. 完成！
+
+### 部署完成标志
+当以下条件全部满足时，说明部署成功：
+1. ✅ 可以SSH连接到服务器
+2. ✅ 项目文件在 `/opt/miga-crm/` 目录
+3. ✅ 运行 `bash system_status.sh` 显示全部绿色 ✅
+4. ✅ 定时任务已配置（crontab -l 可见）
+5. ✅ 手动执行工作流成功
+6. ✅ 测试邮件成功发送
+7. ✅ 次日早上8:00自动执行并收到邮件
+
+### 相关文档
+- 详细部署指南: [CLOUD_DEPLOYMENT_GUIDE.md](./CLOUD_DEPLOYMENT_GUIDE.md)
+- 快速开始指南: [QUICK_START_CLOUD.md](./QUICK_START_CLOUD.md)
+- 部署文档包说明: [CLOUD_DEPLOYMENT_README.md](./CLOUD_DEPLOYMENT_README.md)
