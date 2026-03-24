@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - MIGAC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button[type="submit"] {
+            background-color: #0066cc;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0052a3;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>联系我们</h1>
+        <p class="subtitle">MIGAC - 水晶烛台和工艺品制造商</p>
+
+        <div class="contact-info">
+            <h2>联系方式</h2>
+            <p><strong>邮箱：</strong> <a href="mailto:info@miga.cc">info@miga.cc</a></p>
+            <p><strong>电话：</strong> <a href="tel:+86-19879476613">+86-19879476613</a></p>
+            <p><strong>WhatsApp：</strong> <a href="https://wa.me/8619879476613">+86-19879476613</a></p>
+        </div>
+
+        <div id="success-message" class="success-message">
+            <strong>提交成功！</strong> 我们会尽快回复您的询盘。
+        </div>
+
+        <h2>发送询盘</h2>
+        <p style="margin-bottom: 20px; color: #666;">请填写以下表单，我们会尽快与您联系。</p>
+
+        <form
+            action="https://formspree.io/f/mpqyvjee"
+            method="POST"
+            id="contact-form"
+        >
+            <div class="form-group">
+                <label for="name">姓名 <span class="required">*</span></label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="请输入您的姓名"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">邮箱 <span class="required">*</span></label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="请输入您的邮箱"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="company">公司名称</label>
+                <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="请输入您的公司名称"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">电话</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="请输入您的电话号码"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="country">国家 <span class="required">*</span></label>
+                <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    required
+                    placeholder="请输入您的国家"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="subject">询盘类型</label>
+                <select id="subject" name="subject">
+                    <option value="product-inquiry">产品咨询</option>
+                    <option value="price-inquiry">价格咨询</option>
+                    <option value="custom-order">定制订单</option>
+                    <option value="wholesale">批发咨询</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">留言 <span class="required">*</span></label>
+                <textarea
+                    id="message"
+                    name="message"
+                    required
+                    placeholder="请详细描述您的需求，包括产品类型、数量、规格等信息"
+                ></textarea>
+            </div>
+
+            <button type="submit">提交询盘</button>
+        </form>
+    </div>
+
+    <script>
+        // 处理表单提交成功后的显示
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // 发送表单
+            const formData = new FormData(event.target);
+            const form = event.target;
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // 显示成功消息
+                    document.getElementById('success-message').style.display = 'block';
+                    // 清空表单
+                    form.reset();
+                    // 滚动到顶部
+                    window.scrollTo(0, 0);
+                } else {
+                    alert('提交失败，请稍后重试。');
+                }
+            })
+            .catch(error => {
+                alert('提交失败，请稍后重试。');
+            });
+        });
+    </script>
+</body>
+</html>
