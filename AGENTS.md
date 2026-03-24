@@ -161,6 +161,105 @@
 
 ---
 
+## 自动化配置
+
+### 方案对比
+
+| 方案 | 成本 | 难度 | 可靠性 | 推荐度 |
+|------|------|------|--------|--------|
+| **GitHub Actions** | 免费 | 简单 | ⭐⭐⭐⭐⭐ | ✅✅✅ 最推荐 |
+| Cloudflare Workers | 免费 | 中等 | ⭐⭐⭐⭐⭐ | ✅✅ 推荐 |
+| 本地 Cron | 免费 | 简单 | ⭐⭐⭐ | ❌ 需要电脑开机 |
+| 云服务器 | 付费 | 中等 | ⭐⭐⭐⭐⭐ | ✅ 推荐 |
+
+### 推荐方案：GitHub Actions
+
+**优势**：
+- ✅ 完全免费（每月 2000 分钟）
+- ✅ 无需服务器
+- ✅ 无需电脑开机
+- ✅ 配置简单（5 分钟搞定）
+- ✅ 支持直接运行 Python 代码
+- ✅ 可视化监控
+
+**配置文件**：
+- `.github/workflows/auto-workflow.yml` - GitHub Actions 配置
+- `src/auto_workflow.py` - 自动化脚本
+- `setup_github_actions.py` - 配置向导
+- `GITHUB_ACTIONS_GUIDE.md` - 详细部署指南
+- `SETUP_SUMMARY.md` - 快速配置总结
+
+**运行时间**：
+- 每天 UTC 1:00（北京时间上午 9:00）
+- 可手动触发运行
+
+**GitHub Secrets 需要配置**：
+- `SNOVIO_API_KEY` - Snov.io API Key
+- `RESEND_API_KEY` - Resend API Key
+
+**部署步骤**：
+1. 创建 GitHub 仓库
+2. 推送代码
+3. 配置 GitHub Secrets
+4. 手动测试运行
+5. 等待定时任务自动运行
+
+**查看运行记录**：
+- GitHub 仓库 → Actions 标签
+- 查看运行日志和发送记录
+
+**详细文档**：
+- 查看 `GITHUB_ACTIONS_GUIDE.md` 获取详细配置指南
+- 查看 `SETUP_SUMMARY.md` 获取快速配置总结
+
+### 备选方案：Cloudflare Workers
+
+**优势**：
+- ✅ 完全免费（每天 100,000 次请求）
+- ✅ 全球分布式
+- ✅ 无需服务器
+
+**限制**：
+- ⚠️ 不支持 Python 代码（需要 API 桥接）
+
+**相关文件**：
+- `cloudflare/worker.js` - Worker 代码
+- `cloudflare/wrangler.toml` - 配置文件
+- `cloudflare/DEPLOYMENT_GUIDE.md` - 部署指南
+
+### 备选方案：本地 Cron
+
+**优势**：
+- ✅ 免费
+- ✅ 简单
+
+**限制**：
+- ❌ 需要电脑 24 小时开机
+
+**相关文件**：
+- `src/monitor_cron.sh` - Cron 监控脚本
+- `config/crontab` - Cron 配置示例
+
+---
+
+## 日常工作流程
+
+### 每天自动完成
+
+✅ 自动搜索潜在客户
+✅ 自动发送开发邮件
+✅ 自动记录发送历史
+✅ 自动生成每日报告
+
+### 你只需要
+
+📧 **每天检查邮箱回复**（info@miga.cc）
+💬 **回复有兴趣的客户**
+📝 **跟进潜在客户**
+💰 **成交！**
+
+---
+
 ## 更新日志
 
 ### 2026-03-25
@@ -170,3 +269,11 @@
 - ✅ 修复 Resend API Key
 - ✅ 添加测试脚本
 - ✅ 更新 AGENTS.md 文档
+- ✅ 配置 GitHub Actions 自动化（推荐方案）
+- ✅ 添加自动化脚本 `src/auto_workflow.py`
+- ✅ 创建 GitHub Actions 配置 `.github/workflows/auto-workflow.yml`
+- ✅ 创建配置向导 `setup_github_actions.py`
+- ✅ 创建部署指南 `GITHUB_ACTIONS_GUIDE.md`
+- ✅ 创建配置总结 `SETUP_SUMMARY.md`
+- ✅ 配置 Cloudflare Workers 备选方案
+- ✅ 配置本地 Cron 定时任务

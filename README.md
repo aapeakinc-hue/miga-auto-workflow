@@ -1,308 +1,333 @@
-# 外贸客户开发工作流 - 使用指南
+# 外贸客户开发自动化工作流
 
-## 📋 目录
-1. [快速开始](#快速开始)
-2. [工作流说明](#工作流说明)
-3. [测试运行](#测试运行)
-4. [优化建议](#优化建议)
-5. [常见问题](#常见问题)
+> 🚀 **自动化外贸客户开发系统** - 每天自动搜索潜在客户、发送开发邮件，无需人工干预
+
+---
+
+## 🎯 项目简介
+
+这是一个完整的外贸客户开发自动化系统，实现从产品信息获取、客户搜索、邮箱获取、邮件生成到发送的全流程自动化。
+
+### 核心功能
+
+- ✅ **自动搜索潜在客户** - 基于关键词搜索全球客户
+- ✅ **自动获取邮箱** - 使用 Snov.io API 获取客户邮箱
+- ✅ **自动生成邮件** - 使用 AI 生成个性化开发邮件
+- ✅ **自动发送邮件** - 使用 Resend API 发送邮件
+- ✅ **自动记录历史** - 避免重复发送同一客户
+- ✅ **自动生成报告** - 每日统计发送结果
 
 ---
 
 ## 🚀 快速开始
 
-### 1. 测试单个客户
+### 1️⃣ 配置 GitHub Actions 自动化（推荐）
 
-```python
-from graphs.graph import main_graph
+**为什么选择 GitHub Actions？**
 
-params = {
-    "target_keywords": "crystal candle wholesale",
-    "website_url": "https://miga.cc"
-}
+- ✅ 完全免费（每月 2000 分钟）
+- ✅ 无需服务器
+- ✅ 无需电脑开机
+- ✅ 配置简单（5 分钟搞定）
 
-result = main_graph.invoke(params)
-```
+**详细配置步骤**：查看 [SETUP_SUMMARY.md](SETUP_SUMMARY.md)
 
-### 2. 使用不同关键词
+**快速配置**：
+```bash
+# 运行配置向导
+python setup_github_actions.py
 
-```python
-# 美国市场
-params = {
-    "target_keywords": "crystal candle holders wholesale USA",
-    "website_url": "https://miga.cc"
-}
-
-# 欧洲市场
-params = {
-    "target_keywords": "crystal candelabra importers Europe",
-    "website_url": "https://miga.cc"
-}
+# 按照向导指引完成配置
 ```
 
 ---
 
-## 🔄 工作流说明
+### 2️⃣ 手动运行工作流
 
-### 工作流程
-
-```
-1. 产品信息获取
-   ↓
-2. 客户搜索（支持中英文关键词）
-   ↓
-3. 邮箱获取（Snov.io API + 估计邮箱）
-   ↓
-4. 邮件生成（个性化开发邮件）
-   ↓
-5. 邮件发送（Resend API）
+```bash
+cd src
+python auto_workflow.py
 ```
 
-### 输入参数
-
-| 参数 | 类型 | 必填 | 说明 | 示例 |
-|-----|------|------|------|------|
-| target_keywords | string | ✅ | 目标客户关键词 | "crystal candle wholesale" |
-| website_url | string | ✅ | 产品网站URL | "https://miga.cc" |
-
-### 输出结果
-
+**输入示例**：
 ```json
 {
-  "send_results": {
-    "total": 3,
-    "success": 3,
-    "failed": 0,
-    "details": [
-      {
-        "to_email": "contact@example.com",
-        "to_company": "Example Company",
-        "status": "success",
-        "message_id": "abc123"
-      }
-    ]
-  }
+  "target_keywords": "crystal candle holders wholesale USA",
+  "website_url": "https://miga.cc"
 }
 ```
 
 ---
 
-## 🧪 测试运行
+## 📊 自动化方案对比
 
-### 方法1: 使用 test_run 工具
+| 方案 | 成本 | 难度 | 可靠性 | 推荐度 |
+|------|------|------|--------|--------|
+| **GitHub Actions** | 免费 | 简单 | ⭐⭐⭐⭐⭐ | ✅✅✅ |
+| Cloudflare Workers | 免费 | 中等 | ⭐⭐⭐⭐⭐ | ✅✅ |
+| 本地 Cron | 免费 | 简单 | ⭐⭐⭐ | ❌ |
+| 云服务器 | 付费 | 中等 | ⭐⭐⭐⭐⭐ | ✅ |
 
-```bash
-test_run params='{"target_keywords": "crystal candle wholesale", "website_url": "https://miga.cc"}'
-```
+---
 
-### 方法2: 运行测试脚本
-
-```bash
-python src/test_single_customer.py
-```
-
-### 预期结果
+## 📁 项目结构
 
 ```
-✅ 找到3-5个潜在客户
-✅ 获取3-5个邮箱地址
-✅ 生成3-5封个性化邮件
-✅ 成功发送3-5封邮件
+├── src/                          # 源代码
+│   ├── graphs/                   # 工作流代码
+│   │   ├── graph.py             # 主图编排
+│   │   ├── state.py             # 状态定义
+│   │   └── nodes/               # 节点实现
+│   │       ├── product_fetch_node.py
+│   │       ├── customer_search_node.py
+│   │       ├── email_fetch_node.py
+│   │       ├── email_generate_node.py
+│   │       └── email_send_node.py
+│   ├── auto_workflow.py         # 自动化脚本
+│   └── test_single_customer.py  # 测试脚本
+├── config/                       # 配置文件
+│   ├── email_generate_llm_cfg.json
+│   └── optimized_search_keywords.py
+├── .github/workflows/            # GitHub Actions
+│   └── auto-workflow.yml        # 自动化配置
+├── cloudflare/                   # Cloudflare Workers（备选）
+├── logs/                         # 日志文件
+├── AGENTS.md                     # 项目索引
+├── GITHUB_ACTIONS_GUIDE.md       # GitHub Actions 详细指南
+├── SETUP_SUMMARY.md              # 快速配置总结
+└── README.md                     # 本文件
 ```
 
 ---
 
-## 🎯 优化建议
+## 🔑 API 密钥配置
+
+### GitHub Secrets（GitHub Actions 方案）
+
+在 GitHub 仓库 Settings → Secrets and variables → Actions 中配置：
+
+- `SNOVIO_API_KEY` - Snov.io API Key
+- `RESEND_API_KEY` - Resend API Key
+
+### 本地环境变量
+
+```bash
+export SNOVIO_API_KEY="your-snovio-api-key"
+export RESEND_API_KEY="your-resend-api-key"
+```
+
+---
+
+## 📈 工作流程
+
+```
+1. 产品信息获取 (product_fetch)
+   ↓
+2. 客户搜索 (customer_search)
+   ↓
+3. 邮箱获取 (email_fetch)
+   ↓
+4. 邮件生成 (email_generate)
+   ↓
+5. 邮件发送 (email_send)
+   ↓
+完成
+```
+
+---
+
+## 🎯 日常工作
+
+### 自动化后
+
+**每天 9 点自动完成**：
+- 🔍 搜索 3-5 个潜在客户
+- 📧 发送 3-5 封开发邮件
+- 📊 记录发送历史
+- 📋 生成每日报告
+
+**你只需要**：
+- 📧 检查邮箱回复（info@miga.cc）
+- 💬 回复有兴趣的客户
+- 📝 跟进潜在客户
+- 💰 成交！
+
+---
+
+## 📚 文档
+
+### 核心文档
+
+- [AGENTS.md](AGENTS.md) - 项目索引和技术细节
+- [SETUP_SUMMARY.md](SETUP_SUMMARY.md) - GitHub Actions 快速配置
+- [GITHUB_ACTIONS_GUIDE.md](GITHUB_ACTIONS_GUIDE.md) - GitHub Actions 详细指南
+
+### 其他文档
+
+- [cloudflare/DEPLOYMENT_GUIDE.md](cloudflare/DEPLOYMENT_GUIDE.md) - Cloudflare Workers 部署指南
+- [AUTOMATION_GUIDE.md](AUTOMATION_GUIDE.md) - 自动化配置指南
+
+---
+
+## 🛠️ 技术栈
+
+- **Python 3.12** - 主要开发语言
+- **LangGraph** - 工作流编排框架
+- **Snov.io API** - 客户搜索和邮箱验证
+- **Resend API** - 邮件发送和追踪
+- **GitHub Actions** - 自动化定时任务
+- **Cloudflare Workers** - 备选自动化方案
+
+---
+
+## 🧪 测试
+
+### 测试单个客户
+
+```bash
+cd src
+python test_single_customer.py
+```
+
+### 测试自动化流程
+
+```bash
+cd src
+python auto_workflow.py
+```
+
+### 测试 GitHub Actions
+
+在 GitHub 仓库 → Actions → Run workflow
+
+---
+
+## 📊 发送记录
+
+### 查看本地发送记录
+
+```bash
+cat logs/sent_emails.json
+```
+
+### 查看每日报告
+
+```bash
+cat logs/daily_report_*.txt
+```
+
+### 查看 Resend 发送记录
+
+访问 https://resend.com
+
+---
+
+## 🔧 常见问题
+
+### Q: 如何修改运行时间？
+
+**A**: 编辑 `.github/workflows/auto-workflow.yml` 中的 cron 表达式。
+
+```yaml
+on:
+  schedule:
+    - cron: '0 1 * * *'  # UTC 时间
+```
+
+### Q: Actions 运行失败怎么办？
+
+**A**:
+1. 查看 Actions 日志
+2. 检查 GitHub Secrets 配置
+3. 确认 API Keys 有效
+
+### Q: 如何查看发送记录？
+
+**A**:
+1. 在 GitHub Actions 运行记录中下载日志附件
+2. 查看 `logs/sent_emails.json`
+3. 访问 Resend 控制台
+
+### Q: 会收费吗？
+
+**A**:
+- GitHub Actions: 免费（每月 2000 分钟）
+- Cloudflare Workers: 免费（每天 100,000 次请求）
+- 本地 Cron: 免费
+
+---
+
+## 💡 优化建议
 
 ### 搜索关键词优化
 
-#### ✅ 推荐的关键词格式
-
-**好的关键词**：
-```
-crystal candle holders wholesale USA
-crystal candelabra importers Europe
-wedding crystal suppliers UK
-luxury crystal decor buyers France
-```
-
-**不好的关键词**：
-```
-美国水晶烛台批发商
-水晶蜡烛
-candle
-```
-
-#### 优化策略
-
-1. **英文优先**: 使用英文关键词提高搜索准确性
-2. **包含位置**: 添加目标市场（USA, Europe, UK等）
-3. **具体产品**: 使用具体的产品名称（crystal candle holders）
-4. **客户类型**: 明确客户类型（wholesale, importer, distributor）
+1. 使用英文关键词提高搜索准确性
+2. 针对目标市场定制关键词
+3. 定期测试和优化关键词效果
 
 ### 邮件内容优化
 
-#### 邮件主题
+1. 个性化邮件内容
+2. 突出产品优势
+3. 明确行动号召
 
-**好的主题**：
-```
-Partnership Opportunity - Crystal Candle Holders Wholesale
-Crystal Decor Solutions for Your Business
-Premium Crystal Candelabra at Factory Prices
-```
+### 客户筛选优化
 
-#### 邮件正文要点
-
-1. **简洁明了**: 150-200词
-2. **突出价值**: 强调产品质量和服务
-3. **个性化**: 提及客户公司名称
-4. **明确CTA**: 请求回复或通话
-5. **专业署名**: 包含联系方式
-
----
-
-## ❓ 常见问题
-
-### Q1: 搜索结果为空怎么办？
-
-**原因**：关键词太具体或使用中文
-
-**解决**：
-- 使用英文关键词
-- 使用更宽泛的关键词
-- 参考优化关键词列表
-
----
-
-### Q2: 找不到客户邮箱怎么办？
-
-**原因**：
-- Snov.io API 没有返回邮箱
-- 客户网站没有公开邮箱
-
-**解决**：
-- 工作流会自动使用 `contact@{domain}` 作为估计邮箱
-- 估计邮箱虽然可能不准确，但至少可以尝试发送
-
----
-
-### Q3: 邮件发送失败怎么办？
-
-**原因**：
-- Resend API Key 无效
-- 邮箱地址不存在
-- 发送频率限制
-
-**解决**：
-- 检查 Resend API Key 是否正确
-- 在 Resend 控制台查看发送记录
-- 降低发送频率
-
----
-
-### Q4: 如何提高邮件打开率？
-
-**建议**：
-1. 优化邮件主题，使其更吸引人
-2. 个性化邮件内容
-3. 选择合适的发送时间（客户时区的周二至周四上午）
-4. 定期跟进（发送后3-7天跟进一次）
-
----
-
-### Q5: 如何避免被标记为垃圾邮件？
-
-**建议**：
-1. 控制发送频率（每天不超过20封）
-2. 使用专业的邮箱域名（如 info@company.com）
-3. 避免过度推销的语气
-4. 提供清晰的退订链接
-5. 在 Resend 中配置 SPF、DKIM 记录
-
----
-
-## 📊 性能指标
-
-### 工作流性能
-
-- 搜索客户: 3-5个
-- 获取邮箱: 3-5个
-- 生成邮件: 3-5封
-- 发送成功率: 90%+
-- 总耗时: 约30-60秒
-
-### 预期效果
-
-- 邮件打开率: 20-30%
-- 邮件回复率: 5-10%
-- 转化率: 1-5%
-
----
-
-## 🔧 技术栈
-
-- **工作流框架**: LangGraph
-- **大语言模型**: Doubao (seed-2.0-lite)
-- **搜索**: Web Search
-- **邮箱获取**: Snov.io API
-- **邮件发送**: Resend API
+1. 过滤无效网站（电商平台、B2B平台）
+2. 过滤中文网站（针对海外市场）
+3. 优先选择欧美客户
 
 ---
 
 ## 📞 支持
 
-如有问题，请检查：
-1. AGENTS.md - 项目文档
-2. src/test_single_customer.py - 测试脚本
-3. config/optimized_search_keywords.py - 关键词配置
+### 查看文档
+
+- [AGENTS.md](AGENTS.md) - 项目索引和技术细节
+- [GITHUB_ACTIONS_GUIDE.md](GITHUB_ACTIONS_GUIDE.md) - GitHub Actions 详细指南
+- [SETUP_SUMMARY.md](SETUP_SUMMARY.md) - 快速配置总结
+
+### 外部资源
+
+- LangGraph 文档: https://langchain-ai.github.io/langgraph/
+- Snov.io 文档: https://snov.io/api
+- Resend 文档: https://resend.com/docs
+- GitHub Actions 文档: https://docs.github.com/en/actions
 
 ---
 
-## 🎉 成功案例
+## 🎉 开始使用
 
-### 测试结果
+### 最快开始（推荐）
 
-**输入**：
-```json
-{
-  "target_keywords": "crystal candle wholesale",
-  "website_url": "https://miga.cc"
-}
+1. 运行配置向导：`python setup_github_actions.py`
+2. 按照 [SETUP_SUMMARY.md](SETUP_SUMMARY.md) 完成配置
+3. 等待第二天自动运行
+
+### 手动测试
+
+```bash
+cd src
+python auto_workflow.py
 ```
-
-**输出**：
-```json
-{
-  "send_results": {
-    "total": 3,
-    "success": 3,
-    "failed": 0,
-    "details": [
-      {
-        "to_email": "contact@www.candleswholesale.com",
-        "to_company": "CandlesWholesale.com",
-        "status": "success",
-        "message_id": "edb0dcc8-f502-49d4-b910-d127a8e6bd5d"
-      },
-      {
-        "to_email": "contact@crystalparade.co.uk",
-        "to_company": "Login to my account",
-        "status": "success",
-        "message_id": "2ad071c7-c1fc-4fdb-a838-e7e6f00eb80d"
-      },
-      {
-        "to_email": "contact@www.crystals.com",
-        "to_company": "Luxury Crystals for Home",
-        "status": "success",
-        "message_id": "983f3492-9111-4f7f-9c2b-d484aa554b65"
-      }
-    ]
-  }
-}
-```
-
-**结果**：✅ 所有邮件成功发送！
 
 ---
 
-**祝你开发顺利！** 🚀
+## 📄 许可证
+
+MIT License
+
+---
+
+## 🙏 致谢
+
+感谢以下服务提供的支持：
+- LangGraph
+- Snov.io
+- Resend
+- GitHub Actions
+- Cloudflare Workers
+
+---
+
+**配置完成后，工作流将每天自动运行！** 🚀
