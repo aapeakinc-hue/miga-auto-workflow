@@ -25,6 +25,10 @@ def email_generate_node(state: EmailGenerateInput, config: RunnableConfig, runti
     
     email_templates = []
     
+    # 如果没有客户信息，返回空列表
+    if not state.customers_with_email or len(state.customers_with_email) == 0:
+        return EmailGenerateOutput(email_templates=[])
+    
     # 为每个客户生成个性化邮件
     for customer in state.customers_with_email:
         company_name = customer.get("company_name", "")
@@ -62,7 +66,7 @@ def email_generate_node(state: EmailGenerateInput, config: RunnableConfig, runti
 - 邮件主题要简洁明了，吸引人打开
 - 邮件正文要有针对性，体现对客户公司的研究
 - 避免过度推销，强调价值而非价格
-- 包含发件人邮箱：aapeakinc@gmail.com
+- 包含发件人邮箱：info@miga.cc
 - 结尾要有专业的署名"""
         
         # 用户提示词

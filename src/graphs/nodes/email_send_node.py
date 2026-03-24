@@ -18,7 +18,7 @@ def email_send_node(state: EmailSendInput, config: RunnableConfig, runtime: Runt
     ctx = runtime.context
     
     # resend API 配置
-    resend_api_key = "re_cB3gsHB9_2rJhdZsAoFdCA6i12zynFm6F"
+    resend_api_key = "re_5pAqrE8V_6DgcPEqkjR8yyN3PzSRhStat"
     from_email = "info@miga.cc"
     
     # 统计结果

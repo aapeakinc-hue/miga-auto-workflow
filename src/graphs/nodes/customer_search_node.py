@@ -19,13 +19,29 @@ def customer_search_node(state: CustomerSearchInput, config: RunnableConfig, run
     # 初始化 SearchClient
     client = SearchClient(ctx=ctx)
     
-    # 针对水晶产品的精准搜索关键词组合
-    search_queries = [
-        f"{state.target_keywords} crystal candelabra wholesale",
-        f"{state.target_keywords} crystal decor importer",
-        f"{state.target_keywords} wedding supplies distributor",
-        f"{state.target_keywords} luxury home decor buyer"
-    ]
+    # 将中文关键词转换为英文搜索词
+    # 提取关键信息进行英文搜索
+    keyword_lower = state.target_keywords.lower()
+    
+    # 如果是中文关键词，使用预定义的英文搜索词
+    if any(ord(c) > 127 for c in state.target_keywords):
+        search_queries = [
+            "crystal candle holders wholesale distributors USA",
+            "crystal candelabra importers America",
+            "crystal home decor wholesalers USA",
+            "luxury crystal decor buyers United States",
+            "wedding supplies crystal distributors USA",
+            "crystal crafts wholesale America"
+        ]
+    else:
+        # 英文关键词，组合搜索
+        search_queries = [
+            f"{state.target_keywords} crystal candelabra wholesale",
+            f"{state.target_keywords} crystal decor importer",
+            f"{state.target_keywords} wedding supplies distributor",
+            f"{state.target_keywords} luxury home decor buyer",
+            f"{state.target_keywords} crystal products wholesalers"
+        ]
     
     # 收集所有搜索结果
     all_customers = []
