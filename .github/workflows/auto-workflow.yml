@@ -34,13 +34,11 @@ jobs:
       # 步骤4：运行自动化工作流
       - name: 运行自动化工作流
         env:
-          COZE_WORKSPACE_PATH: ${{ github.workspace }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}  # 如果需要
           SNOVIO_API_KEY: ${{ secrets.SNOVIO_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           cd src
-          python auto_workflow.py
+          python simple_auto_workflow.py
 
       # 步骤5：上传日志（可选）
       - name: 上传日志
