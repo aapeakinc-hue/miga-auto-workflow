@@ -1,0 +1,14 @@
+# 每天上午 9 点（北京时间）自动运行
+0 9 * * * cd /path/to/project && python src/auto_workflow.py >> logs/cron.log 2>&1
+
+# 或者每天上午 9 点和下午 3 点各运行一次
+0 9,15 * * * cd /path/to/project && python src/auto_workflow.py >> logs/cron.log 2>&1
+
+# 或者每隔 12 小时运行一次
+0 */12 * * * cd /path/to/project && python src/auto_workflow.py >> logs/cron.log 2>&1
+
+# 注意事项：
+# 1. 将 /path/to/project 替换为实际的项目路径
+# 2. 确保系统已安装 Python 和必要的依赖
+# 3. 确保 logs 目录存在且有写入权限
+# 4. 时区可能是 UTC，需要根据实际情况调整时间
