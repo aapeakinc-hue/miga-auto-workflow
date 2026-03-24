@@ -1,0 +1,13 @@
+# 外贸客户开发工作流 - 每天自动运行
+# 时间说明：
+# - UTC 凌晨 1 点 = 北京时间上午 9 点
+# - UTC 上午 9 点 = 北京时间下午 5 点
+
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+
+# 每天上午 9 点（北京时间）运行
+0 1 * * * cd /workspace/projects && /usr/bin/python src/auto_workflow.py >> logs/cron.log 2>&1
+
+# 如果你想每天运行两次，取消下面这行的注释：
+# 0 1,7 * * * cd /workspace/projects && /usr/bin/python src/auto_workflow.py >> logs/cron.log 2>&1
