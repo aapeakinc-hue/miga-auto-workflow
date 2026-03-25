@@ -72,6 +72,8 @@
 | **素材收集指南** | `assets/trust-building/MATERIAL_COLLECTION_GUIDE.md` | 4周素材收集计划 |
 | **客户询问回应话术** | `assets/trust-building/CLIENT_QUESTION_RESPONSES.md` | 6类客户询问的回应话术 |
 | **客户案例集** | `assets/trust-building/CLIENT_CASES.md` | 10个精选客户案例（实名+匿名） |
+| **客户深度分析** | `assets/trust-building/CLIENT_DEEP_ANALYSIS.md` | 客户画像、市场洞察、潜在客户挖掘策略 ⭐ NEW |
+| **客户搜索关键词** | `assets/trust-building/CUSTOMER_SEARCH_KEYWORDS.md` | 全球客户挖掘关键词清单 ⭐ NEW |
 
 #### 核心策略
 1. **经验背书**：强调"10+年经验"而非"持有证书"

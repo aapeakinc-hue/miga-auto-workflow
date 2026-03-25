@@ -197,6 +197,10 @@ export RESEND_API_KEY="your-resend-api-key"
 - [客户询问回应话术](assets/trust-building/CLIENT_QUESTION_RESPONSES.md) - 6类客户询问回应话术
 - [素材收集指南](assets/trust-building/MATERIAL_COLLECTION_GUIDE.md) - 4周素材收集计划
 
+### 客户深度分析文档 ⭐ NEW
+- [客户深度分析报告](assets/trust-building/CLIENT_DEEP_ANALYSIS.md) - 客户画像、市场洞察、潜在客户挖掘策略
+- [客户搜索关键词清单](assets/trust-building/CUSTOMER_SEARCH_KEYWORDS.md) - 全球客户挖掘关键词清单（可直接使用）
+
 ### 其他文档
 
 - [cloudflare/DEPLOYMENT_GUIDE.md](cloudflare/DEPLOYMENT_GUIDE.md) - Cloudflare Workers 部署指南
