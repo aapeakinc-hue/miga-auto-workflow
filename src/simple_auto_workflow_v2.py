@@ -180,34 +180,59 @@ def generate_email_content(customer, keyword):
     """生成邮件内容（使用模拟或 OpenAI API）"""
     logger.info(f"正在生成邮件内容: {customer['company']}")
 
-    # 模拟邮件内容
+    # 提取公司名称（用于个性化）
+    company_name = customer.get('company', 'there')
+    website = customer.get('website', '')
+    country = customer.get('country', '')
+
+    # 个性化邮件主题
+    subject = f"Unique Crystal Products for {company_name}"
+
+    # 吸引人的邮件正文
     email_content = {
-        "subject": f"Crystal Candle Holders Wholesale Opportunity - {customer['company']}",
-        "body": f"""Dear {customer['company']},
+        "subject": subject,
+        "body": f"""Dear Team at {company_name},
 
-I hope this email finds you well.
+I came across your website while searching for premium crystal gift suppliers, and I was impressed by your selection.
 
-I am reaching out from Miga Crystal, a leading manufacturer of high-quality crystal candle holders and decorative products.
+I'm writing to introduce Migac - we specialize in crystal gifts and crafts that have been delighting wholesalers and retailers worldwide for over 10 years.
 
-After researching your company ({customer['company']}), I noticed you specialize in {keyword.replace('crystal', 'crystal products')}. I believe our premium crystal candle holders would be a great addition to your product line.
+Why Partner with Migac?
 
-Our Products:
-- Handcrafted crystal candle holders
-- Luxury crystal candelabras
-- Custom designs available
-- Competitive wholesale pricing
+✨ Exquisite Craftsmanship
+Every piece is handcrafted by skilled artisans with precision and care.
 
-We have been supplying crystal products to wholesalers and retailers worldwide for over 10 years, with a reputation for quality and reliability.
+🌟 Product Range
+- Crystal candle holders and candelabras
+- Decorative crystal figurines
+- Crystal gifts and crafts for all occasions
+- Custom OEM/ODM designs
 
-Would you be interested in receiving a product catalog or samples?
+💰 Competitive Advantage
+- Factory-direct pricing (30-40% below market)
+- MOQ as low as 50 pieces
+- Fast delivery within 15 days
+- Free samples available
 
-I look forward to hearing from you.
+I believe our crystal collection would be a perfect addition to your product line and could help you stand out from competitors.
+
+Quick Question:
+Are you currently looking for new crystal suppliers for your upcoming season?
+
+I'd love to send you our catalog and some sample photos to show you what makes Migac different.
+
+Looking forward to your reply.
 
 Best regards,
 
-Miga Crystal
-info@miga.cc
-www.miga.cc
+Michael Chen
+Sales Director
+Migac
+Email: info@miga.cc
+Website: www.miga.cc
+WhatsApp: +86 138 0000 0000
+
+P.S. Reply "CATALOG" and I'll send you our latest 2024 crystal collection immediately.
 """
     }
 
