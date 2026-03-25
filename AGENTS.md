@@ -193,12 +193,47 @@
 
 | 节点名 | 文件位置 | 类型 | 功能描述 | 配置文件 |
 |-------|---------|------|---------|---------|
-| web_search | `src/tools/web_search_tool.py` | tool | 网络搜索 | - |
-| snovio_search | `src/tools/snovio_tool.py` | tool | Snov.io客户搜索 | - |
-| snovio_verify | `src/tools/snovio_tool.py` | tool | 邮箱验证 | - |
-| resend_send | `src/tools/resend_tool.py` | tool | 邮件发送 | - |
-| email_generation | - | agent | 邮件生成 | `config/email_generation_cfg.json` |
-| data_analysis | - | agent | 数据分析 | `config/analysis_cfg.json` |
+| product_fetch | `src/graphs/nodes/product_fetch_node.py` | task | 获取产品信息 | - |
+| customer_insight | `src/graphs/nodes/customer_insight_node.py` | task | 客户洞察分析 ⭐ NEW | `config/customer_insight_cfg.json` |
+| keyword_optimizer | `src/graphs/nodes/keyword_optimizer_node.py` | task | 关键词优化 ⭐ NEW | - |
+| customer_mining | `src/graphs/nodes/customer_mining_node.py` | task | 客户挖掘 ⭐ NEW | - |
+| customer_search | `src/tools/web_search_tool.py` | tool | 客户搜索 | - |
+| email_fetch | `src/tools/snovio_tool.py` | tool | 邮箱验证 | - |
+| email_generate | - | agent | 邮件生成 | `config/email_generation_cfg.json` |
+| email_send | `src/tools/resend_tool.py` | tool | 邮件发送 | - |
+
+**类型说明**: task(task节点) / agent(大模型) / condition(条件分支) / looparray(列表循环) / loopcond(条件循环)
+
+## 增强版工作流 ⭐ NEW
+
+### 工作流文件
+- **原工作流**: `src/graphs/graph.py` (基础版)
+- **增强工作流**: `src/graphs/graph_enhanced.py` (含客户洞察和挖掘)
+
+### 增强版新增功能
+1. **客户洞察分析** (customer_insight)
+   - 分析客户地域分布
+   - 识别高价值市场和客户类型
+   - 发现市场机会
+
+2. **关键词优化** (keyword_optimizer)
+   - 基于洞察优化搜索关键词
+   - 生成高转化关键词列表
+   - 制定挖掘策略
+
+3. **客户挖掘** (customer_mining)
+   - 基于优化关键词挖掘客户
+   - 智能识别高价值客户
+   - 按优先级排序
+
+### 使用方法
+```bash
+# 测试增强版工作流
+cd src
+python test_enhanced_workflow.py
+```
+
+详细文档：[增强版工作流使用指南](docs/ENHANCED_WORKFLOW_GUIDE.md)
 
 ---
 
@@ -256,6 +291,7 @@
 
 | 日期 | 版本 | 更新内容 |
 |------|------|---------|
+| 2026-03-25 | v1.2 | 新增增强版工作流（客户洞察、关键词优化、智能挖掘）⭐ NEW |
 | 2026-03-25 | v1.1 | 新增信任建设资源、客户数据分析、邮件模板对比 |
 | 2026-03-20 | v1.0 | 初始版本 |
 

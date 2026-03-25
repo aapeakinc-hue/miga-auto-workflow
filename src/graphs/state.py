@@ -17,6 +17,11 @@ class GlobalState(BaseModel):
     customers_with_email: List[Dict[str, Any]] = Field(default=[], description="包含邮箱的客户列表")
     email_templates: List[Dict[str, str]] = Field(default=[], description="生成的邮件模板列表")
     
+    # 客户洞察和挖掘数据
+    customer_insights: Dict[str, Any] = Field(default={}, description="客户洞察分析结果")
+    mining_keywords: List[str] = Field(default=[], description="优化后的挖掘关键词")
+    mining_strategy: Dict[str, Any] = Field(default={}, description="客户挖掘策略")
+    
     # 输出字段
     send_results: Dict[str, Any] = Field(default={}, description="邮件发送结果统计")
 
@@ -77,3 +82,35 @@ class EmailSendInput(BaseModel):
 class EmailSendOutput(BaseModel):
     """邮件发送节点的输出"""
     send_results: Dict[str, Any] = Field(..., description="邮件发送结果统计")
+
+# ========== 节点 6: 客户洞察分析节点 ==========
+class CustomerInsightInput(BaseModel):
+    """客户洞察分析节点的输入"""
+    customer_list: List[Dict[str, str]] = Field(default=[], description="现有客户列表")
+    customers_with_email: List[Dict[str, Any]] = Field(default=[], description="包含邮箱的客户列表")
+    target_keywords: str = Field(default="", description="目标客户关键词")
+
+class CustomerInsightOutput(BaseModel):
+    """客户洞察分析节点的输出"""
+    customer_insights: Dict[str, Any] = Field(..., description="客户洞察分析结果，包括地域分布、客户类型、高价值客户等")
+
+# ========== 节点 7: 关键词优化节点 ==========
+class KeywordOptimizerInput(BaseModel):
+    """关键词优化节点的输入"""
+    target_keywords: str = Field(default="", description="原始目标关键词")
+    customer_insights: Dict[str, Any] = Field(default={}, description="客户洞察结果")
+
+class KeywordOptimizerOutput(BaseModel):
+    """关键词优化节点的输出"""
+    mining_keywords: List[str] = Field(..., description="优化后的挖掘关键词列表")
+    mining_strategy: Dict[str, Any] = Field(..., description="挖掘策略，包括优先级、地区、客户类型")
+
+# ========== 节点 8: 客户挖掘节点 ==========
+class CustomerMiningInput(BaseModel):
+    """客户挖掘节点的输入"""
+    mining_keywords: List[str] = Field(default=[], description="优化后的挖掘关键词")
+    mining_strategy: Dict[str, Any] = Field(default={}, description="挖掘策略")
+
+class CustomerMiningOutput(BaseModel):
+    """客户挖掘节点的输出"""
+    new_customers: List[Dict[str, str]] = Field(..., description="新挖掘的客户列表")
