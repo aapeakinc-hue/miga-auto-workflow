@@ -11,13 +11,14 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
-# 添加 src 目录到路径
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# 添加项目根目录到路径
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 # 导入运维模块
-from monitoring.auto_monitor import WorkflowMonitor, AutoFixer, PerformanceTracker
-from monitoring.ab_testing import ABTestManager
-from monitoring.knowledge_base import KnowledgeBase
+from src.monitoring.auto_monitor import WorkflowMonitor, AutoFixer, PerformanceTracker
+from src.monitoring.ab_testing import ABTestManager
+from src.monitoring.knowledge_base import KnowledgeBase
 
 # 配置日志
 # 确保日志目录存在

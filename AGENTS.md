@@ -291,9 +291,27 @@ python test_enhanced_workflow.py
 
 | 日期 | 版本 | 更新内容 |
 |------|------|---------|
-| 2026-03-25 | v1.2 | 新增增强版工作流（客户洞察、关键词优化、智能挖掘）⭐ NEW |
+| 2026-03-25 | v1.3 | 修复GitHub Actions Python路径导入问题，新增配置指南 ⭐ NEW |
+| 2026-03-25 | v1.2 | 新增增强版工作流（客户洞察、关键词优化、智能挖掘） |
 | 2026-03-25 | v1.1 | 新增信任建设资源、客户数据分析、邮件模板对比 |
 | 2026-03-20 | v1.0 | 初始版本 |
+
+## GitHub Actions 问题修复记录
+
+### 问题 (2026-03-25)
+- 工作流运行失败
+- 模块导入错误
+
+### 解决方案
+- 修复 `src/simple_auto_workflow_v2.py` 的Python路径
+- 修复 `src/intelligent_auto_ops.py` 的Python路径
+- 创建配置指南文档
+
+### 相关文档
+- [GitHub Actions 故障排查](docs/GITHUB_ACTIONS_TROUBLESHOOTING.md)
+- [GitHub Actions 修复指南](docs/GITHUB_ACTIONS_FIX_GUIDE.md)
+- [GitHub Secrets 配置指南](docs/GITHUB_SECRETS_CONFIG_GUIDE.md)
+- [GitHub Actions 修复总结](docs/GITHUB_ACTIONS_FIX_SUMMARY.md)
 
 ---
 

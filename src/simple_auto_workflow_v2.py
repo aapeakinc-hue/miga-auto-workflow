@@ -10,11 +10,12 @@ import requests
 from datetime import datetime, timedelta
 import logging
 
-# 添加 utils 目录到路径
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# 添加项目根目录到路径
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 # 导入重试和健康检查工具
-from utils.retry_utils import retry_on_failure, APIHealthChecker, log_retry_attempt
+from src.utils.retry_utils import retry_on_failure, APIHealthChecker, log_retry_attempt
 
 # 设置日志
 logging.basicConfig(
