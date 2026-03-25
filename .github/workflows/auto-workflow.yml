@@ -36,14 +36,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      # 步骤4：运行自动化工作流
+      # 步骤4：运行自动化工作流（带自动重试和健康检查）
       - name: 运行自动化工作流
         env:
           SNOVIO_API_KEY: ${{ secrets.SNOVIO_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           cd src
-          python simple_auto_workflow.py
+          python simple_auto_workflow_v2.py
 
       # 步骤5：上传日志
       - name: 上传日志
