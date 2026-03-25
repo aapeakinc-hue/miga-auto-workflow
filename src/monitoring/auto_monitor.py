@@ -44,24 +44,31 @@ class WorkflowMonitor:
     def analyze_runs(self, runs: List[Dict]) -> Dict[str, Any]:
         """分析工作流运行情况"""
         if not runs:
-            return {}
+            return {
+                'total_runs': 0,
+                'success_runs': 0,
+                'failed_runs': 0,
+                'success_rate': 0,
+                'recent_failures': [],
+                'consecutive_failures': 0
+            }
 
         total_runs = len(runs)
-        success_runs = sum(1 for run in runs if run['conclusion'] == 'success')
-        failed_runs = sum(1 for run in runs if run['conclusion'] == 'failure')
+        success_runs = sum(1 for run in runs if run.get('conclusion') == 'success')
+        failed_runs = sum(1 for run in runs if run.get('conclusion') == 'failure')
 
         success_rate = (success_runs / total_runs * 100) if total_runs > 0 else 0
 
         # 获取最近的失败记录
         recent_failures = [
             run for run in runs
-            if run['conclusion'] == 'failure'
+            if run.get('conclusion') == 'failure'
         ][:5]
 
         # 检查是否有连续失败
         consecutive_failures = 0
         for run in runs:
-            if run['conclusion'] == 'failure':
+            if run.get('conclusion') == 'failure':
                 consecutive_failures += 1
             else:
                 break

@@ -105,6 +105,7 @@ jobs:
           pip install requests
 
       # 步骤4：运行智能自动化运维
+      - name: 运行智能自动化运维
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
