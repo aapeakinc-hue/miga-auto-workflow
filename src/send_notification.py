@@ -58,6 +58,9 @@ def send_notification(status, workflow_name, summary=""):
     # 邮件主题
     subject = f"{status_emoji[status]} {workflow_name} - {status_title[status]}"
 
+    # 根据状态设置背景色
+    header_bg = '#d4edda' if status == 'success' else '#f8d7da'
+
     # 邮件正文
     email_content = f"""
     <html>
@@ -65,7 +68,7 @@ def send_notification(status, workflow_name, summary=""):
         <style>
             body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
             .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
-            .header {{ background-color: {'#d4edda' if status == 'success' else '#f8d7da'}};
+            .header {{ background-color: {header_bg};
                        padding: 20px; border-radius: 5px; text-align: center; }}
             .status {{ font-size: 24px; font-weight: bold; }}
             .info {{ background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0; }}
