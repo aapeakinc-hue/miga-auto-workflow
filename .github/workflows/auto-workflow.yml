@@ -11,6 +11,9 @@ on:
   # 允许手动触发（用于测试）
   workflow_dispatch:
 
+env:
+  NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+
 jobs:
   # 主工作流：自动搜索客户和发送邮件
   run-auto-workflow:
@@ -60,6 +63,24 @@ jobs:
           echo "⏰ 执行时间: $(date -u)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "📋 查看详细日志请下载附件" >> $GITHUB_STEP_SUMMARY
+
+      # 步骤7：发送成功通知
+      - name: 发送成功通知
+        if: success()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+        run: |
+          python src/send_notification.py success "外贸客户开发工作流" "工作流成功完成"
+
+      # 步骤8：发送失败通知
+      - name: 发送失败通知
+        if: failure()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+        run: |
+          python src/send_notification.py failure "外贸客户开发工作流" "工作流执行失败，请查看日志"
 
   # 自动化运维任务：监控、优化、分析
   auto-ops:
@@ -117,3 +138,21 @@ jobs:
           echo "⏰ 运维时间: $(date -u)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "📋 查看详细报告请下载附件" >> $GITHUB_STEP_SUMMARY
+
+      # 步骤8：发送运维成功通知
+      - name: 发送运维成功通知
+        if: success()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+        run: |
+          python src/send_notification.py success "智能自动化运维" "自动化运维成功完成"
+
+      # 步骤9：发送运维失败通知
+      - name: 发送运维失败通知
+        if: failure()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+        run: |
+          python src/send_notification.py failure "智能自动化运维" "自动化运维执行失败，请查看日志"
