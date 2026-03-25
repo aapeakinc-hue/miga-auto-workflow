@@ -206,12 +206,12 @@ Looking forward to your reply.
 
 Best regards,
 
-Michael Chen
+Aldrich Qi
 Sales Director
 Migac
 Email: info@miga.cc
 Website: www.miga.cc
-WhatsApp: +86 138 0000 0000
+Phone/WhatsApp: 19879476613
 
 P.S. Reply "CATALOG" and I'll send you our latest 2024 crystal collection immediately.
 """
