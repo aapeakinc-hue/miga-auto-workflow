@@ -1,0 +1,497 @@
+[
+  {
+    "filename": "PI.XLS",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "PI.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "PI WILL USA.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "PI William.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "PI 厄瓜多尔.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "PI-Azamat.xlsx",
+    "client_name": "PI no.: 9989618   Date: 2014.4.12",
+    "company": null,
+    "address": null,
+    "country": "China",
+    "email": null,
+    "phone": null,
+    "product": null,
+    "quantity": null,
+    "amount": null,
+    "date": null,
+    "raw_data": [
+      [
+        "PROFOMA INVOICE",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "PI no.: 9989618   Date: 2014.4.12 ",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Issuer: Kamong Crystal Art&Crafts Co.,LTD.",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Add.: No.231,Lane Xiaobeimen,Pujiang county,322200, Zhejiang provience, China",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Tel:+86-579-84135681 Mobil:+86-13065909703",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "To: Azamat Abdyldaev",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Ozherele, 2-Novaya 16, Russia ",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Tel + 7 926 710 26 74",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Item Description",
+        "",
+        "Quantity",
+        "Unit/USD",
+        "Amount/USD"
+      ],
+      [
+        "Translation assistance during the Fair",
+        "",
+        "1",
+        "USD455",
+        "USD455"
+      ],
+      [
+        "",
+        "",
+        "",
+        "Total:",
+        "USD455"
+      ],
+      [
+        "Our bank information as below:\n\nBeneficiary's Bank for internationl:\nBank of Communications Offshore Banking Center Shanghai,PRC\nSWIFT Code:COMMCN3XOBU\nAccount number: OSA82 7532 9305 4550\nBeneficiary's Company: Kamong crystal arts and crafts company limited   Bank address: No.188, Yincheng Zhong Road, Shanghai, China             \nTel.: +86-21-58791234\n\nWestern Union\nFirst name: LEIGUANG\nLast name: QI\n",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "filename": "PI-Franpa.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "PI.XLS",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Debbie.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Dillon.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Jose.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Martin.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Orit.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Ph.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Renaud.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q Sahsan.xlsx",
+    "client_name": "CRYSTAL ITEMS SHOWING (2015/03/30)",
+    "company": null,
+    "address": null,
+    "country": null,
+    "email": "sawsantrad@hotmail.com",
+    "phone": null,
+    "product": null,
+    "quantity": null,
+    "amount": null,
+    "date": null,
+    "raw_data": [
+      [
+        "CRYSTAL ITEMS SHOWING (2015/03/30)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "To:",
+        "",
+        "",
+        "From:",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Sawsan Trad",
+        "",
+        "",
+        "Aldrich Qi",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "Kamong crystal arts and craft co ltd",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Email: sawsantrad@hotmail.com",
+        "",
+        "",
+        "E-mail: aldrich.qi@kymoncrystal.com",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Phone: 962-79-7152525",
+        "",
+        "",
+        "Web:www.kamong.com.cn",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Tall Candelabra Crystal",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Picture",
+        "Item No.",
+        "Tall/size(cm)",
+        "Packing",
+        "EXW Unit price(USD)",
+        "",
+        ""
+      ],
+      [
+        "",
+        "CC-10",
+        "85 cm tall wtih 9 arms",
+        "safe packing with foam and paper carton",
+        "90",
+        "",
+        ""
+      ],
+      [
+        "",
+        "CC-11",
+        "75 cm tall with 5 arms",
+        "safe packing with foam and paper carton",
+        "40",
+        "",
+        ""
+      ],
+      [
+        "",
+        "CC-12",
+        "85 cm tall wtih 9 arms",
+        "safe packing with foam and paper carton",
+        "91.3",
+        "",
+        ""
+      ],
+      [
+        "",
+        "CC-13",
+        "75 cm tall with 5 arms",
+        "safe packing with foam and paper carton",
+        "70",
+        "",
+        ""
+      ],
+      [
+        "",
+        "CC-14",
+        "80 cm tall with 5 arms",
+        "safe packing with foam and paper carton",
+        "65",
+        "",
+        ""
+      ],
+      [
+        "",
+        "CC-18",
+        "5arms 52 cm tall",
+        "safe packing with foam and paper carton",
+        "48.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "CC-19",
+        "5 arms 75 cm tall",
+        "safe packing with foam and paper carton",
+        "68.8",
+        "",
+        ""
+      ],
+      [
+        "Tall Flower Stand",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Picture",
+        "Item No.",
+        "Tall/size(cm)",
+        "Packing",
+        "EXW Unit price(USD)",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-13",
+        "H80CM",
+        "safe packing with foam and paper carton",
+        "56.3",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-14",
+        "H80CM",
+        "safe packing with foam and paper carton",
+        "17.5",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-15",
+        "H100CM",
+        "safe packing with foam and paper carton",
+        "25",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-16",
+        "H120CM",
+        "safe packing with foam and paper carton",
+        "33.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-17",
+        "H120CM",
+        "safe packing with foam and paper carton",
+        "68.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-18",
+        "H80CM",
+        "safe packing with foam and paper carton",
+        "43.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-19",
+        "H60CM",
+        "safe packing with foam and paper carton",
+        "43.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "DD-20",
+        "H80CM",
+        "safe packing with foam and paper carton",
+        "68.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Packing details :",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Valid: 2 months",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "filename": "Q Steve.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q jennie 模型.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "Q kevin.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  },
+  {
+    "filename": "pi Yair.xls",
+    "error": "openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format."
+  }
+]

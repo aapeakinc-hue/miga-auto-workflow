@@ -1,0 +1,1164 @@
+{
+  "summary": {
+    "total_clients": 163,
+    "clients_with_email": 80,
+    "unique_emails": 32,
+    "clients_with_country": 157
+  },
+  "country_distribution": {
+    "Australia": 10,
+    "China": 88,
+    "USA": 34,
+    "Canada": 5,
+    "UK": 8,
+    "Germany": 3,
+    "France": 2,
+    "Spain": 1,
+    "Korea": 1,
+    "UAE": 4,
+    "Italy": 1
+  },
+  "clients": [
+    {
+      "filename": "PI.XLS",
+      "client_name": null,
+      "country": "Australia",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI.xls",
+      "client_name": null,
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI WILL USA.xls",
+      "client_name": "WILL",
+      "country": "USA",
+      "email": "aldrich.qi@kymoncrystal.com",
+      "phone": null
+    },
+    {
+      "filename": "PI William.xls",
+      "client_name": "William",
+      "country": "Australia",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI 厄瓜多尔.xls",
+      "client_name": null,
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI-Azamat.xlsx",
+      "client_name": null,
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI-Franpa.xls",
+      "client_name": null,
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI.XLS",
+      "client_name": null,
+      "country": "Australia",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "Q Debbie.xls",
+      "client_name": "Debbie",
+      "country": "USA",
+      "email": "debbie.chui@r-pac.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Dillon.xls",
+      "client_name": "Dillon",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Jose.xls",
+      "client_name": "Jose",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Martin.xls",
+      "client_name": "Martin",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Orit.xls",
+      "client_name": "Orit",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Ph.xls",
+      "client_name": "Ph",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Renaud.xls",
+      "client_name": "Renaud",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Sahsan.xlsx",
+      "client_name": "Sahsan",
+      "country": null,
+      "email": "sawsantrad@hotmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Steve.xls",
+      "client_name": "Steve",
+      "country": "USA",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q jennie 模型.xls",
+      "client_name": "jennie",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Yair.xls",
+      "client_name": "Yair",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Zarina.xls",
+      "client_name": "Zarina",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "形式发票中英文 7-15马来西亚.xls",
+      "client_name": null,
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "Q Sahsan.xlsx",
+      "client_name": "Sahsan",
+      "country": null,
+      "email": "sawsantrad@hotmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Q Steve.xls",
+      "client_name": "Steve",
+      "country": "USA",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "SAMPLE PI.XLS",
+      "client_name": null,
+      "country": "Australia",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "形式发票中英文 7-15马来西亚.xls",
+      "client_name": null,
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI  bubu.XLS",
+      "client_name": "bubu",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI - Crystal ball.xls",
+      "client_name": null,
+      "country": "Canada",
+      "email": "earthgems@live.ca",
+      "phone": null
+    },
+    {
+      "filename": "PI - Diamond.xls",
+      "client_name": null,
+      "country": "USA",
+      "email": "1585115625@qq.com",
+      "phone": null
+    },
+    {
+      "filename": "PI - Lamp.xls",
+      "client_name": null,
+      "country": "China",
+      "email": "mkatselis@hotmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI ASH.XLS",
+      "client_name": "ASH",
+      "country": "Australia",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Akbari.xls",
+      "client_name": "Akbari",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Alfred.XLS",
+      "client_name": "Alfred",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Amanda.xls",
+      "client_name": "Amanda",
+      "country": "Australia",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Amber.xls",
+      "client_name": "Amber",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Anna 香港.xls",
+      "client_name": "Anna",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Aylin.xls",
+      "client_name": "Aylin",
+      "country": "UK",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Busola.xls",
+      "client_name": "Busola",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Charles.XLS",
+      "client_name": "Charles",
+      "country": "USA",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Colleen.xls",
+      "client_name": "Colleen",
+      "country": "USA",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Danelle.xls",
+      "client_name": "Danelle",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI David DE.xls",
+      "client_name": "David",
+      "country": "Germany",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI David.xls",
+      "client_name": "David",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Davidx NZ.xls",
+      "client_name": "Davidx",
+      "country": "UK",
+      "email": "dmhook@icloud.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Fischer.xls",
+      "client_name": "Fischer",
+      "country": "France",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Greg.xls",
+      "client_name": "Greg",
+      "country": "USA",
+      "email": "tgreg@wmerchandising.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Hanaa.xls",
+      "client_name": "Hanaa",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Harvey.xls",
+      "client_name": "Harvey",
+      "country": "UK",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Helmut.xls",
+      "client_name": "Helmut",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Honor.xls",
+      "client_name": "Honor",
+      "country": "Australia",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI bibi.xls",
+      "client_name": "bibi",
+      "country": "Australia",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI carta.xls",
+      "client_name": "carta",
+      "country": "Spain",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI element.XLS",
+      "client_name": "element",
+      "country": "Canada",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI for Mr Kim.xls",
+      "client_name": "for",
+      "country": "Korea",
+      "email": "kingsfy@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI glenn.xls",
+      "client_name": "glenn",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "Pi Aireen.XLS",
+      "client_name": "Aireen",
+      "country": "UAE",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Abdalla.xls",
+      "client_name": "Abdalla",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Alfrando.xls",
+      "client_name": "Alfrando",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Anette.XLS",
+      "client_name": "Anette",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Anjon.xls",
+      "client_name": "Anjon",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Arif.xls",
+      "client_name": "Arif",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Barry.XLS",
+      "client_name": "Barry",
+      "country": "USA",
+      "email": "barryd@jcharles.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Capt.xls",
+      "client_name": "Capt",
+      "country": "China",
+      "email": "aldrich.qi@kymoncrystal.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Clinton.xls",
+      "client_name": "Clinton",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Dante.xls",
+      "client_name": "Dante",
+      "country": null,
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi David Black.XLS",
+      "client_name": "David",
+      "country": null,
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Deanne.xls",
+      "client_name": "Deanne",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Diane.xls",
+      "client_name": "Diane",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Dimeyena.xls",
+      "client_name": "Dimeyena",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Divita.xls",
+      "client_name": "Divita",
+      "country": "USA",
+      "email": "davita34@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Dominique.xls",
+      "client_name": "Dominique",
+      "country": "China",
+      "email": "dominique.luyun@acco.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Edward.xls",
+      "client_name": "Edward",
+      "country": "Canada",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Esther Pang.xls",
+      "client_name": "Esther",
+      "country": "China",
+      "email": "sales003@kymoncrystal.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Firoz.xls",
+      "client_name": "Firoz",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Gamidi.xls",
+      "client_name": "Gamidi",
+      "country": "UK",
+      "email": "himabindu7848@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Ghafir.XLS",
+      "client_name": "Ghafir",
+      "country": "France",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi HOPE.XLS",
+      "client_name": "HOPE",
+      "country": null,
+      "email": "yearscrystal@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Henry.xls",
+      "client_name": "Henry",
+      "country": "USA",
+      "email": "Henri.beneliezer@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi bob.XLS",
+      "client_name": "bob",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi budiman.XLS",
+      "client_name": "budiman",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi carla.XLS",
+      "client_name": "carla",
+      "country": "Australia",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi david gacia.xls",
+      "client_name": "david",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi fahad.xls",
+      "client_name": "fahad",
+      "country": "China",
+      "email": "alrumaithi@hotmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi gEGHAM.XLS",
+      "client_name": "gEGHAM",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi hinna.XLS",
+      "client_name": "hinna",
+      "country": "China",
+      "email": "hjan@globalessence.com",
+      "phone": null
+    },
+    {
+      "filename": "PI IGOR.XLS",
+      "client_name": "IGOR",
+      "country": "Germany",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Iata.XLS",
+      "client_name": "Iata",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI James.xls",
+      "client_name": "James",
+      "country": "UK",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Jenny.xls",
+      "client_name": "Jenny",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Jeroline.xls",
+      "client_name": "Jeroline",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Joacim.xls",
+      "client_name": "Joacim",
+      "country": "Germany",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Jon.xls",
+      "client_name": "Jon",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Kailesh.xls",
+      "client_name": "Kailesh",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Lok Man Tang.XLS",
+      "client_name": "Lok",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Lubna.xls",
+      "client_name": "Lubna",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Maciej.xls",
+      "client_name": "Maciej",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Maggi.xls",
+      "client_name": "Maggi",
+      "country": "Australia",
+      "email": "maggibrown@yahoo.com.au",
+      "phone": null
+    },
+    {
+      "filename": "PI Mark.xlsx",
+      "client_name": "Mark",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Mars.xls",
+      "client_name": "Mars",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Nam Lee.xls",
+      "client_name": "Nam",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Natasha.xls",
+      "client_name": "Natasha",
+      "country": "UK",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Nitin.xlsx",
+      "client_name": "Nitin",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Praveen.xls",
+      "client_name": "Praveen",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Prrincess.xls",
+      "client_name": "Prrincess",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Rasak.xls",
+      "client_name": "Rasak",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Regina.xls",
+      "client_name": "Regina",
+      "country": "Canada",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Sumber.xls",
+      "client_name": "Sumber",
+      "country": "USA",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI Sumit.xls",
+      "client_name": "Sumit",
+      "country": "UK",
+      "email": "sean_gualti@yahoo.co.uk",
+      "phone": null
+    },
+    {
+      "filename": "PI Tawa.xls",
+      "client_name": "Tawa",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "PI Tharwat.xls",
+      "client_name": "Tharwat",
+      "country": "China",
+      "email": "tharwat@alsada-gen.com",
+      "phone": null
+    },
+    {
+      "filename": "PI jessie.xls",
+      "client_name": "jessie",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI jim.xls",
+      "client_name": "jim",
+      "country": "USA",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI leola.xls",
+      "client_name": "leola",
+      "country": "USA",
+      "email": "healthyhairsociety@yahoo.com",
+      "phone": null
+    },
+    {
+      "filename": "PI peter.xls",
+      "client_name": "peter",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI polly.xls",
+      "client_name": "polly",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI raymond cheng.xls",
+      "client_name": "raymond",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI tammy.xls",
+      "client_name": "tammy",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI waife.xls",
+      "client_name": "waife",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "PI wendy.xls",
+      "client_name": "wendy",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "Pi Walaa.xls",
+      "client_name": "Walaa",
+      "country": "China",
+      "email": "Kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Husain.xls",
+      "client_name": "Husain",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Jeff.xls",
+      "client_name": "Jeff",
+      "country": "USA",
+      "email": "jcurryphotography@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Jones.xls",
+      "client_name": "Jones",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Jordi.xls",
+      "client_name": "Jordi",
+      "country": "China",
+      "email": "jordi@berensonwatch.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Karen.xls",
+      "client_name": "Karen",
+      "country": "USA",
+      "email": "kytolbert@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Kevin.xls",
+      "client_name": "Kevin",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Khaled .xls",
+      "client_name": "Khaled",
+      "country": "China",
+      "email": "sales004@kymoncrystal.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Kraft.xls",
+      "client_name": "Kraft",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Lannel.xls",
+      "client_name": "Lannel",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Lim Wong.xls",
+      "client_name": "Lim",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Luis.xls",
+      "client_name": "Luis",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Mahjel.xls",
+      "client_name": "Mahjel",
+      "country": "UAE",
+      "email": "info@medemirates.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Malka.XLS",
+      "client_name": "Malka",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Manie.xls",
+      "client_name": "Manie",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Maryanne.xls",
+      "client_name": "Maryanne",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Max.xls",
+      "client_name": "Max",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Mette.xls",
+      "client_name": "Mette",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Nancy.xls",
+      "client_name": "Nancy",
+      "country": "UAE",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Nazeer.xls",
+      "client_name": "Nazeer",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Paul.xls",
+      "client_name": "Paul",
+      "country": "UAE",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Pawel.xls",
+      "client_name": "Pawel",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Piero.XLS",
+      "client_name": "Piero",
+      "country": "Italy",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Rachel us.XLS",
+      "client_name": "Rachel",
+      "country": "China",
+      "email": "paullrachel@hotmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Rachel.xls",
+      "client_name": "Rachel",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Rene.xls",
+      "client_name": "Rene",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Requel.xls",
+      "client_name": "Requel",
+      "country": "China",
+      "email": "quel_leal@hotmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Riaz.xls",
+      "client_name": "Riaz",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Ryan.XLS",
+      "client_name": "Ryan",
+      "country": "Canada",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Sabah.XLS",
+      "client_name": "Sabah",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Slovlano.xls",
+      "client_name": "Slovlano",
+      "country": "China",
+      "email": "sales004@kymoncrystal.com",
+      "phone": null
+    },
+    {
+      "filename": "pi Usman.XLS",
+      "client_name": "Usman",
+      "country": null,
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Wadid.xls",
+      "client_name": "Wadid",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Waleed.xls",
+      "client_name": "Waleed",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi Wendy Dew.xls",
+      "client_name": "Wendy",
+      "country": "UK",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi jack.xls",
+      "client_name": "jack",
+      "country": "China",
+      "email": "kamongco@gmail.com",
+      "phone": null
+    },
+    {
+      "filename": "pi jennie.xls",
+      "client_name": "jennie",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi joseph.xls",
+      "client_name": "joseph",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi joseph大马.xls",
+      "client_name": "joseph",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi lars.XLS",
+      "client_name": "lars",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi nick animal.XLS",
+      "client_name": "nick",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi nick.xls",
+      "client_name": "nick",
+      "country": "USA",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi rananjaya.xls",
+      "client_name": "rananjaya",
+      "country": "China",
+      "email": "KAMONGCO@GMAIL.COM",
+      "phone": null
+    },
+    {
+      "filename": "pi rodrigo.xls",
+      "client_name": "rodrigo",
+      "country": "China",
+      "email": null,
+      "phone": null
+    },
+    {
+      "filename": "pi vitor.XLS",
+      "client_name": "vitor",
+      "country": "China",
+      "email": null,
+      "phone": null
+    }
+  ]
+}
