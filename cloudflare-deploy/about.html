@@ -3,338 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Crystal Candle Holder Manufacturer - MIGAC | Factory Direct | Free Quote</title>
+    <meta name="description" content="Learn about MIGAC Crystal Crafts - A professional crystal candle holder manufacturer with 10+ years experience, serving 182+ international clients worldwide.">
+    <title>About Us - MIGAC Crystal Crafts | Professional Manufacturer</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(135deg, rgba(26, 35, 126, 0.95) 0%, rgba(13, 71, 161, 0.95) 100%), url('images/hero-banner.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .logo span {
-            color: #ffd700;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: #ffd700;
-        }
-
-        .header-contact {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .header-contact a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .header-contact a:hover {
-            color: #ffd700;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
-            color: white;
-            padding: 60px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 42px;
+        .about-hero h1 {
+            font-size: 56px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
-        .hero p {
-            font-size: 18px;
+        .about-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
             opacity: 0.95;
         }
 
-        /* Content Section */
-        .content {
-            padding: 80px 20px;
+        .story-section {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .story-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 36px;
+            color: #1a237e;
+            margin-bottom: 30px;
+        }
+
+        .story-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .story-image {
+            position: relative;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        .timeline-section {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+
+        .timeline-container {
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .section {
+        .timeline-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a237e;
             margin-bottom: 60px;
-        }
-
-        .section h2 {
-            font-size: 32px;
-            color: #1a237e;
-            margin-bottom: 20px;
-        }
-
-        .section h3 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .section p {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .feature-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 4px solid #ffd700;
-        }
-
-        .feature-card h3 {
-            color: #1a237e;
-            margin-bottom: 10px;
         }
 
         .timeline {
             position: relative;
-            padding-left: 30px;
+            padding: 20px 0;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 50%;
             top: 0;
             bottom: 0;
-            width: 2px;
-            background: #ffd700;
+            width: 3px;
+            background: linear-gradient(to bottom, #ffd700, #1a237e);
+            transform: translateX(-50%);
         }
 
         .timeline-item {
             position: relative;
-            padding-bottom: 30px;
+            padding: 30px;
+            width: 45%;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: auto;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-right: auto;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -35px;
-            top: 0;
-            width: 12px;
-            height: 12px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
             background: #ffd700;
+            border: 4px solid white;
             border-radius: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        .timeline-item h3 {
+        .timeline-item:nth-child(odd)::before {
+            left: -38px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            right: -38px;
+        }
+
+        .timeline-year {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            font-weight: bold;
             color: #1a237e;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
-        .timeline-item p {
+        .timeline-desc {
+            font-size: 14px;
             color: #666;
-            margin-bottom: 0;
+            line-height: 1.6;
         }
 
-        /* Stats Section */
-        .stats {
-            background: #f8f9fa;
-            padding: 60px 20px;
-            margin: 60px 0;
+        .capabilities-section {
+            padding: 100px 20px;
         }
 
-        .stats-content {
-            max-width: 1000px;
+        .capabilities-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a237e;
+            margin-bottom: 60px;
+        }
+
+        .capabilities-grid {
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .capability-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 4px solid #ffd700;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .capability-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .capability-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+
+        .capability-desc {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .capability-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .quality-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+        }
+
+        .quality-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .quality-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+
+        .quality-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             text-align: center;
         }
 
-        .stat-item {
-            padding: 20px;
+        .quality-step {
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
         }
 
-        .stat-number {
+        .quality-step-number {
             font-size: 48px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .quality-step-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .quality-step-desc {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .values-section {
+            padding: 100px 20px;
+        }
+
+        .values-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a237e;
+            margin-bottom: 60px;
+        }
+
+        .values-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .value-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+
+        .value-desc {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .certifications-section {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+
+        .certifications-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a237e;
+            margin-bottom: 60px;
+        }
+
+        .certs-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .cert-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .cert-title {
+            font-size: 20px;
             font-weight: bold;
             color: #1a237e;
             margin-bottom: 10px;
         }
 
-        .stat-label {
-            font-size: 16px;
+        .cert-desc {
+            font-size: 14px;
             color: #666;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .btn-primary {
-            background: #ffd700;
-            color: #1a237e;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            display: inline-block;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            background: #ffed4a;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a237e;
-            color: white;
-            padding: 40px 20px 20px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #ffd700;
-        }
-
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .footer-section a:hover {
-            color: #ffd700;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            text-decoration: none;
-            box-shadow: 0 5px 20px rgba(37,211,102,0.4);
-            z-index: 1000;
-            transition: all 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 10px;
+            .about-hero h1 {
+                font-size: 36px;
             }
 
-            .nav-menu {
-                gap: 15px;
-                font-size: 14px;
+            .story-content {
+                grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 32px;
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .timeline-item::before {
+                left: -32px !important;
+                right: auto !important;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -343,165 +407,255 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">MIGAC<span>.</span></div>
-            <nav class="nav-menu">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <img src="images/MIGAC_logo.png" alt="MIGAC Logo" style="height: 50px;">
+                </a>
+            </div>
+            <nav class="nav">
                 <a href="index.html">Home</a>
-                <a href="products.html">Product</a>
-                <a href="about.html" style="color: #ffd700;">About Us</a>
-                <a href="#contact">Contact Us</a>
+                <a href="products.html">Products</a>
+                <a href="about.html" style="color: #ffc107;">About Us</a>
+                <a href="contact.html">Contact</a>
             </nav>
-            <div class="header-contact">
-                <a href="mailto:info@miga.cc">📧 info@miga.cc</a>
+            <div class="header-cta">
+                <a href="contact.html" class="btn-primary" style="padding: 10px 25px; font-size: 14px;">Get Free Quote</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>关于 MIGAC</h1>
-        <p>专业水晶工艺品制造商，10+Years Experience</p>
+    <section class="about-hero">
+        <h1>About MIGAC Crystal Crafts</h1>
+        <p>Your trusted partner for premium crystal candle holders and decorative crafts since 2014</p>
     </section>
 
-    <!-- Content -->
-    <div class="content">
-        <div class="section">
-            <h2>Company Profile</h2>
-            <p>MIGAC 是一家专注于水晶工艺品制造的专业厂家，总部位于中国浙江浦江县——世界闻名的"水晶之都"。我们拥有10+年的行业经验，专业生产各类水晶烛台、水晶吊灯、水晶装饰品等高品质Product。</p>
-            <p>我们的工厂占地面积5000平方米，拥有先进的生产设备和经验丰富的技术团队。从设计、开发到生产、质检，每一个环节都严格把控，确保Product质量达到国际标准。</p>
-            <p>凭借优质的Product和专业的服务，我们的Product远销美国、欧洲、中东、东南亚等50多个Country和地区，已服务182+International Clients，包括批发商、零售商、酒店、婚庆公司等。</p>
+    <!-- Our Story Section -->
+    <section class="story-section">
+        <div class="story-content">
+            <div class="story-text">
+                <h2>Our Story</h2>
+                <p><strong>Founded in 2014</strong>, MIGAC Crystal Crafts Co., Ltd. has grown from a small family workshop into a leading manufacturer of premium crystal candle holders and decorative crafts. Our journey began with a simple mission: to bring the elegance and beauty of crystal craftsmanship to customers worldwide.</p>
+                <p><strong>Located in Pujiang County, Zhejiang Province</strong> – known as China's "Crystal Capital" – we benefit from access to the finest raw materials and a skilled workforce with generations of crystal crafting expertise. This strategic location enables us to maintain exceptional quality while keeping costs competitive.</p>
+                <p>Over the past <strong>10+ years</strong>, we've invested heavily in advanced production technology, quality control systems, and talent development. Our commitment to excellence has earned us the trust of <strong>182+ international clients</strong> across <strong>50+ countries</strong> and regions.</p>
+                <p>Today, our <strong>5,000 square meter factory</strong> produces over <strong>5,000 different product styles</strong>, ranging from elegant candle holders to stunning decorative pieces. Each product reflects our dedication to craftsmanship, innovation, and customer satisfaction.</p>
+            </div>
+            <div class="story-image">
+                <img src="images/product-1.jpg" alt="Crystal Workshop">
+            </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Company History</h2>
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <h2>Our Journey</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>2014年</h3>
-                    <p>公司成立，专注水晶工艺品制造</p>
+                    <div class="timeline-year">2014</div>
+                    <div class="timeline-title">Company Founded</div>
+                    <div class="timeline-desc">MIGAC established as a small family workshop focusing on crystal candle holder production.</div>
                 </div>
                 <div class="timeline-item">
-                    <h3>2016年</h3>
-                    <p>扩大生产规模，引入先进设备</p>
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-title">Expansion Phase</div>
+                    <div class="timeline-desc">Expanded production facilities and introduced advanced manufacturing equipment. Doubled production capacity.</div>
                 </div>
                 <div class="timeline-item">
-                    <h3>2018年</h3>
-                    <p>获得ISO 9001质量认证</p>
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-title">Quality Certification</div>
+                    <div class="timeline-desc">Obtained ISO 9001:2015 Quality Management System certification, demonstrating commitment to quality.</div>
                 </div>
                 <div class="timeline-item">
-                    <h3>2020年</h3>
-                    <p>Product出口突破30个Country</p>
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-title">Global Reach</div>
+                    <div class="timeline-desc">Exported products to 30+ countries. Established long-term partnerships with major European and American wholesalers.</div>
                 </div>
                 <div class="timeline-item">
-                    <h3>2022年</h3>
-                    <p>服务客户超过150家</p>
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-title">Digital Transformation</div>
+                    <div class="timeline-desc">Launched e-commerce platform and implemented digital design systems. Served 150+ international clients.</div>
                 </div>
                 <div class="timeline-item">
-                    <h3>2024年</h3>
-                    <p>服务客户突破182家，Product出口50+Country</p>
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-title">New Heights</div>
+                    <div class="timeline-desc">Expanded to 5,000 sqm factory. Served 182+ clients in 50+ countries. Launched global brand strategy.</div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>核心优势</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>🏭 工厂直销</h3>
-                    <p>自有工厂，直接对接客户，省去中间环节，提供有竞争力的价格</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🎨 OEM/ODM定制</h3>
-                    <p>专业设计团队，支持客户定制需求，从设计到生产一站式服务</p>
-                </div>
-                <div class="feature-card">
-                    <h3>✅ 质量保证</h3>
-                    <p>ISO 9001质量体系认证，严格质检流程，确保Product品质</p>
-                </div>
-                <div class="feature-card">
-                    <h3>📦 小批量起订</h3>
-                    <p>灵活的MOQ政策，支持小批量试单，降低客户风险</p>
-                </div>
-                <div class="feature-card">
-                    <h3>⚡ 快速响应</h3>
-                    <p>专业销售团队，24小时内回复询盘，准时交付</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🌍 全球配送</h3>
-                    <p>完善的物流体系，支持全球配送，清关能力强</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Company Culture</h2>
-            <h3>使命</h3>
-            <p>为全球客户提供高品质的水晶工艺品，传递美丽与优雅</p>
-            
-            <h3>愿景</h3>
-            <p>成为全球领先的水晶工艺品制造商，树立行业标杆</p>
-            
-            <h3>价值观</h3>
-            <p>品质第一、客户至上、诚信经营、持续创新</p>
-        </div>
-    </div>
-
-    <!-- Stats -->
-    <section class="stats">
-        <div class="stats-content">
-            <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">182+</div>
-                <div class="stat-label">International Clients</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5000+</div>
-                <div class="stat-label">Product款式</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Export Countries</div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section" id="contact">
-        <h2>准备好与我们合作了吗？</h2>
-        <p>立即Contact Us，Get Free Quote和Product目录</p>
-        <a href="mailto:info@miga.cc?subject=关于MIGAC的合作咨询" class="btn-primary">Contact Us</a>
+    <!-- Production Capabilities -->
+    <section class="capabilities-section">
+        <h2>Our Capabilities</h2>
+        <div class="capabilities-grid">
+            <div class="capability-card">
+                <div class="capability-number">5,000</div>
+                <div class="capability-title">Square Meters</div>
+                <div class="capability-desc">State-of-the-art production facility with modern equipment and efficient production lines.</div>
+            </div>
+            <div class="capability-card">
+                <div class="capability-number">100+</div>
+                <div class="capability-title">Skilled Workers</div>
+                <div class="capability-desc">Experienced craftsmen with average 8+ years of crystal manufacturing expertise.</div>
+            </div>
+            <div class="capability-card">
+                <div class="capability-number">50+</div>
+                <div class="capability-title">Export Countries</div>
+                <div class="capability-desc">Global supply chain with logistics partners in major markets worldwide.</div>
+            </div>
+            <div class="capability-card">
+                <div class="capability-number">5,000+</div>
+                <div class="capability-title">Product Styles</div>
+                <div class="capability-desc">Extensive product portfolio covering various designs and customization options.</div>
+            </div>
+            <div class="capability-card">
+                <div class="capability-icon">⚡</div>
+                <div class="capability-title">Production Capacity</div>
+                <div class="capability-desc">Monthly output of 50,000+ pieces with flexible scheduling for urgent orders.</div>
+            </div>
+            <div class="capability-card">
+                <div class="capability-icon">🎯</div>
+                <div class="capability-title">Quality Control</div>
+                <div class="capability-desc">4-stage QC process ensuring 99%+ defect-free rate before shipment.</div>
+            </div>
+        </div>
     </section>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/8619879476613?text=你好，我想了解MIGAC公司" class="whatsapp-float" target="_blank">
-        💬
-    </a>
+    <!-- Quality Control -->
+    <section class="quality-section">
+        <div class="quality-content">
+            <h2>Quality Control Process</h2>
+            <div class="quality-steps">
+                <div class="quality-step">
+                    <div class="quality-step-number">1</div>
+                    <div class="quality-step-title">Raw Material</div>
+                    <div class="quality-step-desc">Premium K9 crystal selection and inspection for clarity and purity.</div>
+                </div>
+                <div class="quality-step">
+                    <div class="quality-step-number">2</div>
+                    <div class="quality-step-title">In-Process</div>
+                    <div class="quality-step-desc">Continuous monitoring during cutting, grinding, and polishing stages.</div>
+                </div>
+                <div class="quality-step">
+                    <div class="quality-step-number">3</div>
+                    <div class="quality-step-title">Final Inspection</div>
+                    <div class="quality-step-desc">Comprehensive quality check including dimensions, finish, and packaging.</div>
+                </div>
+                <div class="quality-step">
+                    <div class="quality-step-number">4</div>
+                    <div class="quality-step-title">Pre-Shipment</div>
+                    <div class="quality-step-desc">Final verification and detailed quality report before shipping.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="values-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">💎</div>
+                <div class="value-title">Quality First</div>
+                <div class="value-desc">We never compromise on quality. Every product undergoes rigorous testing before reaching our customers.</div>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <div class="value-title">Customer Focus</div>
+                <div class="value-desc">Our customers' success is our success. We listen, understand, and deliver solutions that exceed expectations.</div>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🔒</div>
+                <div class="value-title">Integrity</div>
+                <div class="value-desc">We conduct business with honesty and transparency, building trust through consistent actions.</div>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💡</div>
+                <div class="value-title">Innovation</div>
+                <div class="value-desc">We continuously improve and innovate to bring new designs and better products to market.</div>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🌍</div>
+                <div class="value-title">Sustainability</div>
+                <div class="value-desc">We're committed to environmentally responsible manufacturing and sustainable business practices.</div>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">⚡</div>
+                <div class="value-title">Efficiency</div>
+                <div class="value-desc">We optimize every process to deliver value faster without sacrificing quality.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications-section">
+        <h2>Certifications & Standards</h2>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <div class="cert-icon">✅</div>
+                <div class="cert-title">ISO 9001:2015</div>
+                <div class="cert-desc">Quality Management System Certification</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🔬</div>
+                <div class="cert-title">SGS Tested</div>
+                <div class="cert-desc">Third-party quality verification</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🌱</div>
+                <div class="cert-title">Lead-Free</div>
+                <div class="cert-desc">Environmentally friendly materials</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🏆</div>
+                <div class="cert-title">CE Certified</div>
+                <div class="cert-desc">European safety standards compliance</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="catalog-section">
+        <h2>Ready to Partner with MIGAC?</h2>
+        <p>Get in touch with us today for free quotes, samples, and customized solutions</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn-primary">Contact Us Now</a>
+            <a href="products.html" class="btn-secondary">View Products</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <a href="about.html">Company Profile</a>
-                <a href="about.html">Company History</a>
-                <a href="about.html">Company Culture</a>
+                <h3>MIGAC Crystal Crafts</h3>
+                <p>Professional crystal candle holder manufacturer with 10+ years of experience.</p>
+                <p>Serving 182+ international clients worldwide.</p>
             </div>
             <div class="footer-section">
-                <h3>Product中心</h3>
-                <a href="products.html">Product目录</a>
-                <a href="products.html">热销Product</a>
-                <a href="products.html">Custom Services</a>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="footer-section">
-                <h3>联系方式</h3>
+                <h3>Products</h3>
+                <a href="products.html">Crystal Candle Holders</a>
+                <a href="products.html">Candelabras</a>
+                <a href="products.html">Decorative Crafts</a>
+                <a href="products.html">Custom Designs</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
                 <p>📧 info@miga.cc</p>
-                <p>📞 +86-19879476613</p>
+                <p>📱 WhatsApp: +86 19879476613</p>
                 <p>🌐 www.miga.cc</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 MIGAC. All Rights Reserved.</p>
+            <p>&copy; 2024 MIGAC Crystal Crafts Co., Ltd. All Rights Reserved.</p>
         </div>
     </footer>
 </body>

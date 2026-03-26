@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <defs>
+    <style>
+      .logo-text {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        fill: #1a237e;
+        letter-spacing: 2px;
+      }
+      .logo-dot {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        fill: #FFD700;
+      }
+    </style>
+  </defs>
+
+  <text x="10" y="35" class="logo-text">MIGAC</text>
+  <text x="115" y="35" class="logo-dot">.</text>
+
+  <!-- Small Crystal -->
+  <g transform="translate(145, 5)">
+    <polygon points="15,0 30,10 30,30 15,40 0,30 0,10" fill="#1a237e" opacity="0.9"/>
+    <polygon points="15,8 24,16 24,24 15,32 6,24 6,16" fill="#FFD700" opacity="0.6"/>
+  </g>
+</svg>

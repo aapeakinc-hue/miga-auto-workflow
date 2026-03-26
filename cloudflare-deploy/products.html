@@ -3,144 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MIGAC - Professional crystal candle holder manufacturer with 10+ years experience. Serving 182+ international clients, factory direct, supporting OEM/ODM customization. Get free quote and product catalog.">
-    <meta name="keywords" content="水晶烛台目录, crystal candle holder catalog, 水晶工艺品Product, 水晶吊灯, 烛台批发">
-    <title>Professional Crystal Candle Holder Manufacturer - MIGAC | Factory Direct | Free Quote</title>
-
-    <link rel="canonical" href="https://miga.cc/products">
-
+    <title>Products - MIGAC Crystal Crafts | Premium Collection</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+        .products-hero {
+            background: linear-gradient(135deg, rgba(26, 35, 126, 0.95) 0%, rgba(13, 71, 161, 0.95) 100%), url('images/hero-banner.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 80px 20px;
+            text-align: center;
         }
 
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 28px;
+        .products-hero h1 {
+            font-size: 48px;
             font-weight: bold;
-            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
 
-        .logo span {
-            color: #ffd700;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
-        .nav-links a.active {
-            color: #ffd700;
-            font-weight: bold;
-        }
-
-        /* Hero Section */
-        .page-hero {
-            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
-            color: white;
+        .catalog-download {
+            background: #ffc107;
+            color: #1a237e;
             padding: 60px 20px;
             text-align: center;
         }
 
-        .page-hero h1 {
-            font-size: 42px;
+        .catalog-download h2 {
+            font-size: 32px;
+            color: #1a237e;
             margin-bottom: 15px;
         }
 
-        .page-hero p {
-            font-size: 18px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Filter Section */
-        .filter-section {
-            background: #f8f9fa;
-            padding: 30px 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .filter-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .filter-tabs {
+        .catalog-buttons {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+            gap: 20px;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .filter-tab {
-            padding: 10px 25px;
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .filter-tab:hover,
-        .filter-tab.active {
+        .catalog-btn {
             background: #1a237e;
             color: white;
-            border-color: #1a237e;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
         }
 
-        /* Products Section */
+        .catalog-btn:hover {
+            background: #0d47a1;
+        }
+
         .products-section {
-            padding: 60px 20px;
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .products-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a237e;
+            margin-bottom: 60px;
         }
 
         .products-grid {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -148,83 +83,37 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            cursor: pointer;
-            border: 1px solid #f0f0f0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            transform: translateY(-10px);
         }
 
         .product-image {
             width: 100%;
             height: 280px;
-            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-image::before {
-            content: '📷';
-            font-size: 60px;
-            opacity: 0.3;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: #ff5722;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .product-badge.new {
-            background: #4caf50;
-        }
-
-        .product-badge.custom {
-            background: #1a237e;
+            background: #f8f9fa;
         }
 
         .product-info {
             padding: 20px;
         }
 
-        .product-info h3 {
+        .product-title {
             font-size: 18px;
-            color: #333;
-            margin-bottom: 10px;
             font-weight: bold;
-        }
-
-        .product-category {
-            font-size: 12px;
-            color: #999;
-            text-transform: uppercase;
+            color: #1a237e;
             margin-bottom: 10px;
         }
 
-        .product-description {
+        .product-desc {
             font-size: 14px;
             color: #666;
-            margin-bottom: 15px;
             line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         .product-features {
@@ -235,11 +124,11 @@
         }
 
         .feature-tag {
-            background: #e3f2fd;
+            background: #f8f9fa;
             color: #1a237e;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
             font-weight: 500;
         }
 
@@ -248,545 +137,234 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 15px;
-            border-top: 1px solid #f0f0f0;
+            border-top: 1px solid #e9ecef;
         }
 
-        .product-moq {
-            font-size: 13px;
-            color: #666;
-        }
-
-        .product-moq span {
+        .btn-inquire {
+            background: #ffc107;
             color: #1a237e;
-            font-weight: bold;
-        }
-
-        .inquire-btn {
-            background: #1a237e;
-            color: white;
             padding: 8px 20px;
             border-radius: 20px;
             text-decoration: none;
-            font-size: 13px;
             font-weight: bold;
+            font-size: 14px;
             transition: all 0.3s;
-            display: inline-block;
         }
 
-        .inquire-btn:hover {
-            background: #0d47a1;
-            transform: translateY(-2px);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .cta-content p {
-            font-size: 16px;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: #ffd700;
-            color: #1a237e;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
+        .btn-inquire:hover {
             background: #ffed4a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255,215,0,0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s;
-            border: 2px solid white;
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #1a237e;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a237e;
-            color: white;
-            padding: 40px 20px 20px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #ffd700;
-        }
-
-        .footer-section p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .footer-section a:hover {
-            color: #ffd700;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-        }
-
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            text-decoration: none;
-            box-shadow: 0 5px 20px rgba(37,211,102,0.4);
-            z-index: 1000;
-            transition: all 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 30px rgba(37,211,102,0.6);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .page-hero h1 {
-                font-size: 32px;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">MIGAC<span>.</span></div>
-            <nav class="nav-links">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <img src="images/MIGAC_logo.png" alt="MIGAC Logo" style="height: 50px;">
+                </a>
+            </div>
+            <nav class="nav">
                 <a href="index.html">Home</a>
-                <a href="products.html" class="active">Product</a>
+                <a href="products.html" style="color: #ffc107;">Products</a>
                 <a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="MIGAC_Product_Catalog_2024.pdf" download style="background: #ffd700; color: #1a237e; padding: 5px 15px; border-radius: 15px; margin-left: 10px;">📥 下载目录</a>
+                <a href="contact.html">Contact</a>
             </nav>
+            <div class="header-cta">
+                <a href="contact.html" class="btn-primary" style="padding: 10px 25px; font-size: 14px;">Get Free Quote</a>
+            </div>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <h1>Product目录</h1>
-        <p>探索我们的水晶烛台和工艺品系列，发现适合您市场的完美Product</p>
+    <section class="products-hero">
+        <h1>Our Product Collection</h1>
+        <p>Discover our premium range of crystal candle holders and decorative crafts</p>
+        <a href="#download-catalog" style="background: #ffc107; color: #1a237e; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">Download Catalog</a>
     </section>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="filter-content">
-            <div class="filter-tabs">
-                <div class="filter-tab active" data-filter="all">全部Product</div>
-                <div class="filter-tab" data-filter="candle-holder">水晶烛台</div>
-                <div class="filter-tab" data-filter="candelabra">吊灯烛台</div>
-                <div class="filter-tab" data-filter="tealight">茶烛灯</div>
-                <div class="filter-tab" data-filter="decor">装饰摆件</div>
-                <div class="filter-tab" data-filter="chandelier">吊灯</div>
-            </div>
+    <section class="catalog-download" id="download-catalog">
+        <h2>📥 Download Our Product Catalog</h2>
+        <p>Get the complete product collection with specifications and pricing</p>
+        <div class="catalog-buttons">
+            <a href="MIGAC_Product_Catalog_EN_2024.pdf" download class="catalog-btn" target="_blank">
+                🇬🇧 English Catalog (PDF)
+            </a>
+            <a href="MIGAC_Product_Catalog_2024.pdf" download class="catalog-btn" target="_blank">
+                🇨🇳 中文目录 (PDF)
+            </a>
         </div>
     </section>
 
-    <!-- Products Section -->
     <section class="products-section">
+        <h2>Featured Products</h2>
         <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card" data-category="candle-holder">
-                <div class="product-image">
-                    <span class="product-badge">热销</span>
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="https://via.placeholder.com/400x300?text=Classic+Candle+Holder" alt="经典水晶烛台">
-                </div>
+            <div class="product-card">
+                <img src="images/product-1.jpg" alt="Crystal Candle Holder" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">水晶烛台</div>
-                    <h3>经典水晶烛台 - 型号CH-001</h3>
-                    <p class="product-description">
-                        优雅的三足设计，采用优质K9水晶制作，切割工艺精湛，光线折射效果出色。适合婚庆、家居装饰、酒店宴会等多种场景。
-                    </p>
+                    <h3 class="product-title">Premium Crystal Candle Holder</h3>
+                    <p class="product-desc">Elegant design with superior K9 crystal, perfect for luxury venues.</p>
                     <div class="product-features">
-                        <span class="feature-tag">K9水晶</span>
-                        <span class="feature-tag">手工抛光</span>
-                        <span class="feature-tag">多种尺寸</span>
-                        <span class="feature-tag">支持定制</span>
+                        <span class="feature-tag">K9 Crystal</span>
+                        <span class="feature-tag">Luxury</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>50 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Candle Holder</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 2 -->
-            <div class="product-card" data-category="candelabra">
-                <div class="product-image">
-                    <span class="product-badge custom">定制款</span>
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="images/product-1.jpg" alt="奢华水晶吊灯烛台">
-                </div>
+            <div class="product-card">
+                <img src="images/product-2.jpg" alt="Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">吊灯烛台</div>
-                    <h3>奢华水晶吊灯烛台 - 型号CD-002</h3>
-                    <p class="product-description">
-                        高端酒店专用设计，多层水晶吊坠，华丽大气。可作为酒店大堂、宴会厅、餐厅的主灯，彰显尊贵品质。
-                    </p>
+                    <h3 class="product-title">5-Arms Crystal Candelabra</h3>
+                    <p class="product-desc">Classic 5-arm design with sparkling crystals, ideal for dining tables.</p>
                     <div class="product-features">
-                        <span class="feature-tag">高端水晶</span>
-                        <span class="feature-tag">多层设计</span>
-                        <span class="feature-tag">酒店工程</span>
-                        <span class="feature-tag">定制颜色</span>
+                        <span class="feature-tag">5 Arms</span>
+                        <span class="feature-tag">Wedding</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>10 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Candelabra</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 3 -->
-            <div class="product-card" data-category="tealight">
-                <div class="product-image">
-                    <span class="product-badge new">新品</span>
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="https://via.placeholder.com/400x300?text=Crystal+Tealight" alt="水晶茶烛灯">
-                </div>
+            <div class="product-card">
+                <img src="images/product-3.jpg" alt="9-Arms Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">茶烛灯</div>
-                    <h3>水晶茶烛灯 - 型号TL-003</h3>
-                    <p class="product-description">
-                        精致小巧的茶烛灯，适合作为桌摆、节日装饰。LED茶烛安全环保，光线柔和，营造温馨浪漫的氛围。
-                    </p>
+                    <h3 class="product-title">9-Arms Crystal Candelabra</h3>
+                    <p class="product-desc">Majestic 9-arm centerpiece for grand occasions and hotels.</p>
                     <div class="product-features">
-                        <span class="feature-tag">小巧精致</span>
-                        <span class="feature-tag">LED茶烛</span>
-                        <span class="feature-tag">节日礼品</span>
-                        <span class="feature-tag">批发优惠</span>
+                        <span class="feature-tag">9 Arms</span>
+                        <span class="feature-tag">Hotel</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>100 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Candelabra</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 4 -->
-            <div class="product-card" data-category="decor">
-                <div class="product-image">
-                    <span class="product-badge">工艺精品</span>
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="images/product-4.jpg" alt="水晶装饰摆件">
-                </div>
+            <div class="product-card">
+                <img src="images/product-4.jpg" alt="Crystal Tea Light Holder" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">装饰摆件</div>
-                    <h3>水晶装饰摆件 - 型号DP-004</h3>
-                    <p class="product-description">
-                        工艺精湛的水晶摆件，可用于客厅、办公室、展会等场所的装饰。提升空间品味，展现高端品质。
-                    </p>
+                    <h3 class="product-title">Crystal Tea Light Holder</h3>
+                    <p class="product-desc">Compact and elegant tea light holder for ambient lighting.</p>
                     <div class="product-features">
-                        <span class="feature-tag">艺术摆件</span>
-                        <span class="feature-tag">多用途</span>
-                        <span class="feature-tag">独特设计</span>
-                        <span class="feature-tag">礼盒包装</span>
+                        <span class="feature-tag">Tea Light</span>
+                        <span class="feature-tag">Votive</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>30 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Tea Light</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 5 -->
-            <div class="product-card" data-category="chandelier">
-                <div class="product-image">
-                    <span class="product-badge custom">工程款</span>
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="images/product-6.jpg" alt="水晶吊灯">
-                </div>
+            <div class="product-card">
+                <img src="images/product-5.jpg" alt="Crystal Bubble Stand" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">吊灯</div>
-                    <h3>水晶吊灯 - 型号CHL-005</h3>
-                    <p class="product-description">
-                        奢华大气的吊灯设计，数百颗水晶组成，光芒璀璨。适合别墅、酒店、会所等高端场所的照明与装饰。
-                    </p>
+                    <h3 class="product-title">Crystal Bubble Stand</h3>
+                    <p class="product-desc">Unique bubble design creating stunning light effects.</p>
                     <div class="product-features">
-                        <span class="feature-tag">豪华配置</span>
-                        <span class="feature-tag">别墅专用</span>
-                        <span class="feature-tag">工程定制</span>
-                        <span class="feature-tag">上门安装</span>
+                        <span class="feature-tag">Bubble</span>
+                        <span class="feature-tag">Modern</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>5 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Decorative</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 6 -->
-            <div class="product-card" data-category="candle-holder">
-                <div class="product-image">
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="https://via.placeholder.com/400x300?text=Modern+Candle+Holder" alt="现代水晶烛台">
-                </div>
+            <div class="product-card">
+                <img src="images/product-6.jpg" alt="Crystal Candlestick" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">水晶烛台</div>
-                    <h3>现代水晶烛台 - 型号CH-006</h3>
-                    <p class="product-description">
-                        现代简约风格，线条流畅，适合现代家居装饰。采用高品质水晶，光泽度高，经久耐用。
-                    </p>
+                    <h3 class="product-title">Crystal Candlestick</h3>
+                    <p class="product-desc">Traditional candlestick with crystal accents for classic settings.</p>
                     <div class="product-features">
-                        <span class="feature-tag">现代风格</span>
-                        <span class="feature-tag">简约设计</span>
-                        <span class="feature-tag">家居装饰</span>
-                        <span class="feature-tag">品质保证</span>
+                        <span class="feature-tag">Classic</span>
+                        <span class="feature-tag">Elegant</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>50 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Candlestick</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 7 -->
-            <div class="product-card" data-category="candelabra">
-                <div class="product-image">
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="https://via.placeholder.com/400x300?text=Royal+Candelabra" alt="皇家水晶烛台">
-                </div>
+            <div class="product-card">
+                <img src="images/product-7.jpg" alt="Crystal Pillar Holder" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">吊灯烛台</div>
-                    <h3>皇家水晶烛台 - 型号CD-007</h3>
-                    <p class="product-description">
-                        皇家风格设计，金色边框搭配水晶，奢华尊贵。适合豪华酒店、别墅、婚庆等高端场合。
-                    </p>
+                    <h3 class="product-title">Crystal Pillar Holder</h3>
+                    <p class="product-desc">Designed for pillar candles with beautiful crystal cuts.</p>
                     <div class="product-features">
-                        <span class="feature-tag">皇家风格</span>
-                        <span class="feature-tag">金色边框</span>
-                        <span class="feature-tag">高端定制</span>
-                        <span class="feature-tag">豪华包装</span>
+                        <span class="feature-tag">Pillar</span>
+                        <span class="feature-tag">Stable</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>20 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Pillar Holder</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 8 -->
-            <div class="product-card" data-category="tealight">
-                <div class="product-image">
-                    <span class="product-badge new">新品</span>
-                    <!-- TODO: 替换为真实Product图片 -->
-                    <img src="https://via.placeholder.com/400x300?text=Colorful+Tealight" alt="彩色茶烛灯">
-                </div>
+            <div class="product-card">
+                <img src="images/product-8.jpg" alt="Color Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <div class="product-category">茶烛灯</div>
-                    <h3>彩色茶烛灯系列 - 型号TL-008</h3>
-                    <p class="product-description">
-                        多种颜色可选，适合节日装饰、派对布置。小巧便携，营造多彩氛围。
-                    </p>
+                    <h3 class="product-title">Color 5-Arms Candelabra</h3>
+                    <p class="product-desc">5-arm candelabra with colored crystal accents for vibrant displays.</p>
                     <div class="product-features">
-                        <span class="feature-tag">多种颜色</span>
-                        <span class="feature-tag">节日装饰</span>
-                        <span class="feature-tag">派对必备</span>
-                        <span class="feature-tag">超值套装</span>
+                        <span class="feature-tag">Colored</span>
+                        <span class="feature-tag">Vibrant</span>
                     </div>
                     <div class="product-footer">
-                        <div class="product-moq">起订量: <span>100 PCS</span></div>
-                        <a href="contact.html#contact" class="inquire-btn">立即询盘</a>
+                        <span class="product-type">Candelabra</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>找不到您需要的Product？</h2>
-            <p>我们支持OEM/ODMCustom Services，可根据您的需求设计和生产专属水晶Product</p>
-            <div class="cta-buttons">
-                <a href="contact.html#contact" class="btn-primary">立即咨询定制</a>
-                <a href="mailto:info@miga.cc?subject=索要完整Product目录" class="btn-secondary">下载完整Product目录</a>
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: #f8f9fa; border-radius: 10px;">
+            <p style="color: #666; margin-bottom: 20px; font-size: 18px;">📦 Showing 8 featured products. We have <strong>50+ products</strong> available!</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="MIGAC_Product_Catalog_EN_2024.pdf" download class="btn-primary" style="padding: 15px 40px;">Download Full Catalog (50+ Products)</a>
+                <a href="contact.html" class="btn-secondary" style="padding: 15px 40px;">Request More Info</a>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/8619879476613?text=你好，我想了解Product详情" class="whatsapp-float" target="_blank" title="WhatsApp联系">
-        💬
-    </a>
+    <section class="catalog-section" style="margin-top: 0;">
+        <h2>Custom Design Available</h2>
+        <p>We offer OEM/ODM customization services. Share your design ideas with us!</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn-primary">Request Custom Design</a>
+        </div>
+    </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>MIGAC 是专业的水晶工艺品制造商，拥有10+Years Experience，服务182+International Clients，提供高品质水晶烛台和工艺品。</p>
+                <h3>MIGAC Crystal Crafts</h3>
+                <p>Professional crystal candle holder manufacturer with 10+ years of experience.</p>
             </div>
-
             <div class="footer-section">
-                <h3>快速链接</h3>
-                <a href="contact.html">Home</a>
-                <a href="products.html">Product目录</a>
-                <a href="contact.html#contact">Contact Us</a>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
             </div>
-
             <div class="footer-section">
-                <h3>联系方式</h3>
+                <h3>Contact</h3>
                 <p>📧 info@miga.cc</p>
-                <p>📞 +86-19879476613</p>
-                <p>🌐 www.miga.cc</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Business Hours</h3>
-                <p>Monday to Friday</p>
-                <p>9:00 - 18:00 (北京时间)</p>
+                <p>📱 WhatsApp: +86 19879476613</p>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2024 MIGAC. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2024 MIGAC Crystal Crafts Co., Ltd. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Filter functionality
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        const productCards = document.querySelectorAll('.product-card');
-
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                filterTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
-
-                const filter = tab.getAttribute('data-filter');
-
-                // Show/hide products based on filter
-                productCards.forEach(card => {
-                    const category = card.getAttribute('data-category');
-
-                    if (filter === 'all' || category === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
