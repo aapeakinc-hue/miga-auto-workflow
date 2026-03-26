@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - MIGAC | 专业水晶烛台制造商</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+
+        .header-contact {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-contact a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .header-contact a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .feature-card h3 {
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ffd700;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #ffd700;
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            color: #1a237e;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 60px 0;
+        }
+
+        .stats-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn-primary {
+            background: #ffd700;
+            color: #1a237e;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #ffed4a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a237e;
+            color: white;
+            padding: 40px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37,211,102,0.4);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-menu {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">MIGAC<span>.</span></div>
+            <nav class="nav-menu">
+                <a href="index.html">首页</a>
+                <a href="products.html">产品</a>
+                <a href="about.html" style="color: #ffd700;">关于我们</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+            <div class="header-contact">
+                <a href="mailto:info@miga.cc">📧 info@miga.cc</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>关于 MIGAC</h1>
+        <p>专业水晶工艺品制造商，10+年行业经验</p>
+    </section>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="section">
+            <h2>公司简介</h2>
+            <p>MIGAC 是一家专注于水晶工艺品制造的专业厂家，总部位于中国浙江浦江县——世界闻名的"水晶之都"。我们拥有10+年的行业经验，专业生产各类水晶烛台、水晶吊灯、水晶装饰品等高品质产品。</p>
+            <p>我们的工厂占地面积5000平方米，拥有先进的生产设备和经验丰富的技术团队。从设计、开发到生产、质检，每一个环节都严格把控，确保产品质量达到国际标准。</p>
+            <p>凭借优质的产品和专业的服务，我们的产品远销美国、欧洲、中东、东南亚等50多个国家和地区，已服务182+国际客户，包括批发商、零售商、酒店、婚庆公司等。</p>
+        </div>
+
+        <div class="section">
+            <h2>发展历程</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>2014年</h3>
+                    <p>公司成立，专注水晶工艺品制造</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2016年</h3>
+                    <p>扩大生产规模，引入先进设备</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2018年</h3>
+                    <p>获得ISO 9001质量认证</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2020年</h3>
+                    <p>产品出口突破30个国家</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2022年</h3>
+                    <p>服务客户超过150家</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2024年</h3>
+                    <p>服务客户突破182家，产品出口50+国家</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>核心优势</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🏭 工厂直销</h3>
+                    <p>自有工厂，直接对接客户，省去中间环节，提供有竞争力的价格</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎨 OEM/ODM定制</h3>
+                    <p>专业设计团队，支持客户定制需求，从设计到生产一站式服务</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✅ 质量保证</h3>
+                    <p>ISO 9001质量体系认证，严格质检流程，确保产品品质</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📦 小批量起订</h3>
+                    <p>灵活的MOQ政策，支持小批量试单，降低客户风险</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ 快速响应</h3>
+                    <p>专业销售团队，24小时内回复询盘，准时交付</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 全球配送</h3>
+                    <p>完善的物流体系，支持全球配送，清关能力强</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>企业文化</h2>
+            <h3>使命</h3>
+            <p>为全球客户提供高品质的水晶工艺品，传递美丽与优雅</p>
+            
+            <h3>愿景</h3>
+            <p>成为全球领先的水晶工艺品制造商，树立行业标杆</p>
+            
+            <h3>价值观</h3>
+            <p>品质第一、客户至上、诚信经营、持续创新</p>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-content">
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">年行业经验</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">182+</div>
+                <div class="stat-label">国际客户</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">产品款式</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">出口国家</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+        <h2>准备好与我们合作了吗？</h2>
+        <p>立即联系我们，获取免费报价和产品目录</p>
+        <a href="mailto:info@miga.cc?subject=关于MIGAC的合作咨询" class="btn-primary">联系我们</a>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/8619879476613?text=你好，我想了解MIGAC公司" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <a href="about.html">公司简介</a>
+                <a href="about.html">发展历程</a>
+                <a href="about.html">企业文化</a>
+            </div>
+            <div class="footer-section">
+                <h3>产品中心</h3>
+                <a href="products.html">产品目录</a>
+                <a href="products.html">热销产品</a>
+                <a href="products.html">定制服务</a>
+            </div>
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>📧 info@miga.cc</p>
+                <p>📞 +86-19879476613</p>
+                <p>🌐 www.miga.cc</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MIGAC. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
