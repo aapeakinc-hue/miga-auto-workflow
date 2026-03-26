@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGA网站文件下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #1a365d;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .download-section {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #d4af37 0%, #f6e05e 100%);
+            color: #1a365d;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin: 10px 0;
+            transition: transform 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .info {
+            color: #4a5568;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .steps {
+            margin-top: 30px;
+        }
+
+        .step {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #edf2f7;
+            border-radius: 5px;
+        }
+
+        .step h3 {
+            color: #1a365d;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📥 MIGA网站文件下载</h1>
+
+        <div class="download-section">
+            <h2 style="color: #1a365d; margin-bottom: 15px;">🎯 下载压缩包（推荐）</h2>
+            <a href="miga-website-final.tar.gz" class="download-btn" download>
+                ⬇️ 点击下载 miga-website-final.tar.gz (17KB)
+            </a>
+            <p class="info">下载后解压得到 cloudflare-deploy 文件夹</p>
+        </div>
+
+        <div class="download-section">
+            <h2 style="color: #1a365d; margin-bottom: 15px;">📁 单个文件下载</h2>
+            <a href="index.html" class="download-btn">
+                📄 下载 index.html (32KB)
+            </a>
+            <a href="products.html" class="download-btn">
+                📄 下载 products.html (28KB)
+            </a>
+            <a href="DEPLOY_NOW.md" class="download-btn">
+                📖 下载 DEPLOY_NOW.md (部署指南)
+            </a>
+        </div>
+
+        <div class="steps">
+            <h2 style="color: #1a365d; margin-bottom: 15px;">🚀 下载后的操作步骤</h2>
+
+            <div class="step">
+                <h3>步骤1: 解压文件</h3>
+                <p>右键点击下载的压缩包，选择"解压到当前文件夹"</p>
+            </div>
+
+            <div class="step">
+                <h3>步骤2: 打开Cloudflare</h3>
+                <p>访问 <a href="https://dash.cloudflare.com/" target="_blank" style="color: #d4af37;">https://dash.cloudflare.com/</a></p>
+            </div>
+
+            <div class="step">
+                <h3>步骤3: 上传文件</h3>
+                <p>Workers & Pages → Upload assets → 拖拽 cloudflare-deploy 文件夹 → Deploy</p>
+            </div>
+
+            <div class="step">
+                <h3>步骤4: 配置域名</h3>
+                <p>Custom domains → 添加 miga.cc → Activate</p>
+            </div>
+
+            <div class="step">
+                <h3>步骤5: 验证网站</h3>
+                <p>访问 <span class="highlight">https://miga.cc</span> 和 <span class="highlight">https://miga.cc/products.html</span></p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px; color: #4a5568; font-size: 14px;">
+            预计总时间: <span class="highlight">3分钟</span>
+        </p>
+    </div>
+</body>
+</html>

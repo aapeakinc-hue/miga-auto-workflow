@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGA网站文件下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: #1a365d;
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #d4af37 0%, #f6e05e 100%);
+            color: #1a365d;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 20px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .info {
+            color: #4a5568;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+
+        .steps {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #edf2f7;
+            border-radius: 8px;
+        }
+
+        .step {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .step:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .folder-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #4a5568;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .folder-link:hover {
+            background: #2d3748;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📥 MIGA网站部署文件下载</h1>
+
+        <a href="cloudflare-deploy/miga-website-final.tar.gz" class="download-btn" download>
+            ⬇️ 点击下载完整部署包 (17KB)
+        </a>
+
+        <div class="info">
+            <h3>📦 包含文件：</h3>
+            <p style="margin-top: 10px; color: #4a5568;">
+                ✅ index.html (优化后的联系页面)<br>
+                ✅ products.html (产品展示页面)<br>
+                ✅ images/ (图片目录)<br>
+                ✅ 部署文档
+            </p>
+        </div>
+
+        <a href="cloudflare-deploy/" class="folder-link">
+            📁 查看文件夹内容
+        </a>
+
+        <div class="steps">
+            <h2 style="color: #1a365d; margin-bottom: 15px;">🚀 3步完成部署</h2>
+
+            <div class="step">
+                <strong>步骤1:</strong> 下载并解压文件（10秒）
+            </div>
+
+            <div class="step">
+                <strong>步骤2:</strong> 上传到Cloudflare Pages（2分钟）
+            </div>
+
+            <div class="step">
+                <strong>步骤3:</strong> 配置域名并访问（1分钟）
+            </div>
+
+            <p style="margin-top: 15px; text-align: center; color: #1a365d; font-weight: bold;">
+                总时间: <span class="highlight">3分钟</span>
+            </p>
+        </div>
+
+        <p style="margin-top: 20px; color: #4a5568; font-size: 12px;">
+            下载后请访问 <a href="https://dash.cloudflare.com/" target="_blank" style="color: #d4af37;">Cloudflare Dashboard</a> 上传文件
+        </p>
+    </div>
+</body>
+</html>
