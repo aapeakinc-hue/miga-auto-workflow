@@ -2,11 +2,16 @@
 客户挖掘节点
 功能：基于优化后的关键词和策略，挖掘新的潜在客户
 """
+import logging
 from typing import Dict, List, Any
 from langchain_core.runnables import RunnableConfig
 from langgraph.runtime import Runtime
 from coze_coding_utils.runtime_ctx.context import Context
 from graphs.state import CustomerMiningInput, CustomerMiningOutput
+
+# 配置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def customer_mining_node(
     state: CustomerMiningInput,
@@ -67,6 +72,6 @@ def customer_mining_node(
     priority_order = {"⭐⭐⭐⭐⭐": 5, "⭐⭐⭐⭐": 4, "⭐⭐⭐": 3, "⭐⭐": 2, "⭐": 1}
     new_customers.sort(key=lambda x: priority_order.get(x.get("priority", "⭐⭐⭐"), 3), reverse=True)
     
-    ctx.logger.info(f"客户挖掘完成：发现{len(new_customers)}个新客户，覆盖{len(focus_markets)}个市场")
-    
+    logger.info(f"客户挖掘完成：发现{len(new_customers)}个新客户，覆盖{len(focus_markets)}个市场")
+
     return CustomerMiningOutput(new_customers=new_customers)

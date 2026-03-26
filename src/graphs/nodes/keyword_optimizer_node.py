@@ -3,12 +3,17 @@
 功能：基于客户洞察，优化搜索关键词，生成挖掘策略
 """
 import json
+import logging
 import os
 from typing import Dict, List, Any
 from langchain_core.runnables import RunnableConfig
 from langgraph.runtime import Runtime
 from coze_coding_utils.runtime_ctx.context import Context
 from graphs.state import KeywordOptimizerInput, KeywordOptimizerOutput
+
+# 配置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def keyword_optimizer_node(
     state: KeywordOptimizerInput,
@@ -27,7 +32,7 @@ def keyword_optimizer_node(
         with open('assets/trust-building/CUSTOMER_SEARCH_KEYWORDS.md', 'r', encoding='utf-8') as f:
             keywords_guide = f.read()
     except Exception as e:
-        ctx.logger.warning(f"无法读取关键词清单: {e}")
+        logger.warning(f"无法读取关键词清单: {e}")
         keywords_guide = ""
     
     # 基于客户洞察生成优化关键词
@@ -183,8 +188,8 @@ def keyword_optimizer_node(
         }
     }
     
-    ctx.logger.info(f"关键词优化完成：生成{len(optimized_keywords)}个优化关键词，{len(mining_strategy['focus_markets'])}个重点市场")
-    
+    logger.info(f"关键词优化完成：生成{len(optimized_keywords)}个优化关键词，{len(mining_strategy['focus_markets'])}个重点市场")
+
     return KeywordOptimizerOutput(
         mining_keywords=optimized_keywords,
         mining_strategy=mining_strategy

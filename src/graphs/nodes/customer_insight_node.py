@@ -3,11 +3,16 @@
 功能：分析现有客户数据，生成客户洞察报告
 """
 import json
+import logging
 from typing import Dict, List, Any
 from langchain_core.runnables import RunnableConfig
 from langgraph.runtime import Runtime
 from coze_coding_utils.runtime_ctx.context import Context
 from graphs.state import CustomerInsightInput, CustomerInsightOutput
+
+# 配置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def customer_insight_node(
     state: CustomerInsightInput,
@@ -26,23 +31,23 @@ def customer_insight_node(
         with open('assets/clients_full_analysis.json', 'r', encoding='utf-8') as f:
             client_data = json.load(f)
     except Exception as e:
-        ctx.logger.warning(f"无法读取客户数据: {e}")
+        logger.warning(f"无法读取客户数据: {e}")
         client_data = {"summary": {}, "country_distribution": {}, "clients": []}
-    
+
     # 读取客户深度分析报告
     try:
         with open('assets/trust-building/CLIENT_DEEP_ANALYSIS.md', 'r', encoding='utf-8') as f:
             deep_analysis = f.read()
     except Exception as e:
-        ctx.logger.warning(f"无法读取深度分析报告: {e}")
+        logger.warning(f"无法读取深度分析报告: {e}")
         deep_analysis = ""
-    
+
     # 读取客户搜索关键词清单
     try:
         with open('assets/trust-building/CUSTOMER_SEARCH_KEYWORDS.md', 'r', encoding='utf-8') as f:
             keywords_guide = f.read()
     except Exception as e:
-        ctx.logger.warning(f"无法读取关键词清单: {e}")
+        logger.warning(f"无法读取关键词清单: {e}")
         keywords_guide = ""
     
     # 分析地域分布
@@ -142,6 +147,6 @@ def customer_insight_node(
         ]
     }
     
-    ctx.logger.info(f"客户洞察分析完成：共分析{total_clients}个客户，识别{len(high_value_markets)}个高价值市场")
-    
+    logger.info(f"客户洞察分析完成：共分析{total_clients}个客户，识别{len(high_value_markets)}个高价值市场")
+
     return CustomerInsightOutput(customer_insights=insights)
