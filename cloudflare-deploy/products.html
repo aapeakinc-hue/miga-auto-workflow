@@ -61,54 +61,77 @@
 
         .products-hero h1 {
             font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
         }
 
         .products-hero p {
             font-size: 18px;
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto 30px;
-            opacity: 0.95;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: #1a237e;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-btn:hover {
+            background: #0d47a1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 35, 126, 0.3);
         }
 
         .catalog-download {
-            background: #ffc107;
-            color: #1a237e;
-            padding: 50px 20px;
+            background: #f8f9fa;
+            padding: 40px 20px;
+        }
+
+        .catalog-content {
+            max-width: 600px;
+            margin: 0 auto;
             text-align: center;
         }
 
-        .catalog-download h2 {
-            font-size: 28px;
+        .catalog-content h2 {
+            font-size: 24px;
             color: #1a237e;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
-        .catalog-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
+        .catalog-content p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
         .catalog-btn {
+            display: inline-block;
             background: #1a237e;
             color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
+            padding: 12px 40px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
             transition: all 0.3s;
         }
 
         .catalog-btn:hover {
             background: #0d47a1;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
         .category-section {
@@ -267,17 +290,17 @@
     </header>
 
     <section class="products-hero">
-        <h1>Premium Crystal Candle Holders & Decorative Crafts</h1>
-        <p>Exquisite designs for luxury hotels, weddings, and fine dining. Factory direct wholesale prices.</p>
-        <a href="#download-catalog" style="background: #ffc107; color: #1a237e; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">Download Product Catalog</a>
+        <h1>Premium Crystal Candle Holders</h1>
+        <p>Manufacturer of luxury crystal candle holders for hotels, weddings, and fine dining</p>
+        <a href="#catalog" class="hero-btn">Download Catalog</a>
     </section>
 
-    <section class="catalog-download" id="download-catalog">
-        <h2>Download Complete Product Catalog</h2>
-        <p>Full product specifications, pricing, and customization options</p>
-        <div class="catalog-buttons">
+    <section class="catalog-download" id="catalog">
+        <div class="catalog-content">
+            <h2>Product Catalog</h2>
+            <p>Complete collection with specifications and pricing</p>
             <a href="MIGAC_Product_Catalog_EN_2024.pdf" download class="catalog-btn" target="_blank">
-                Download Catalog (PDF)
+                Download PDF
             </a>
         </div>
     </section>
@@ -285,13 +308,13 @@
     <!-- Category 1: Crystal Candelabras -->
     <section class="category-section">
         <h2>Crystal Candelabras</h2>
-        <p>Elegant multi-arm crystal candelabras perfect for luxury hotels, weddings, and fine dining establishments.</p>
+        <p>Multi-arm crystal candelabras for luxury hotels, weddings, and fine dining</p>
         <div class="products-grid">
             <div class="product-card">
                 <img src="images/5 arms candelabra.jpg" alt="5-Arm Crystal Candelabra" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">5-Arm Crystal Candelabra</h3>
-                    <p class="product-desc">Premium K9 crystal with elegant faceted design. Perfect for weddings and banquets.</p>
+                    <p class="product-desc">Premium K9 crystal with faceted design. Ideal for weddings.</p>
                     <div class="product-features">
                         <span class="feature-tag">5 Arms</span>
                         <span class="feature-tag">K9 Crystal</span>
@@ -325,7 +348,7 @@
                 <img src="images/9 arms candelabra.jpg" alt="9-Arm Crystal Candelabra" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">9-Arm Crystal Candelabra</h3>
-                    <p class="product-desc">Majestic centerpiece for grand occasions. Crystal beads and prisms for stunning effect.</p>
+                    <p class="product-desc">Majestic centerpiece with crystal beads and prisms.</p>
                     <div class="product-features">
                         <span class="feature-tag">9 Arms</span>
                         <span class="feature-tag">Grand</span>
@@ -394,7 +417,7 @@
     <!-- Category 2: Tea Light & Votive Holders -->
     <section class="category-section category-alt">
         <h2>Tea Light & Votive Holders</h2>
-        <p>Compact and elegant tea light holders perfect for ambient lighting. Ideal for restaurants, spas, and home decoration.</p>
+        <p>Compact holders for ambient lighting in restaurants, spas, and homes</p>
         <div class="products-grid">
             <div class="product-card">
                 <img src="images/candle holder.jpg" alt="Crystal Candle Holder" class="product-image">
@@ -469,7 +492,7 @@
     <!-- Category 3: Pillar Holders -->
     <section class="category-section">
         <h2>Crystal Pillar Holders</h2>
-        <p>Designed for pillar candles with stable crystal bases. Perfect for churches, hotels, and home decor.</p>
+        <p>Stable crystal bases for pillar candles in churches, hotels, and homes</p>
         <div class="products-grid">
             <div class="product-card">
                 <img src="images/stand.jpg" alt="Crystal Pillar Candle Holder" class="product-image">
@@ -544,7 +567,7 @@
     <!-- Category 4: Candlesticks -->
     <section class="category-section category-alt">
         <h2>Crystal Candlesticks</h2>
-        <p>Traditional and modern crystal candlesticks for taper candles. Perfect for dining tables and mantelpieces.</p>
+        <p>Traditional and modern candlesticks for taper candles</p>
         <div class="products-grid">
             <div class="product-card">
                 <img src="images/candlestick.jpg" alt="Crystal Candlestick Pair" class="product-image">
@@ -602,7 +625,7 @@
     <!-- Category 5: Decorative Crafts -->
     <section class="category-section">
         <h2>Crystal Decorative Crafts</h2>
-        <p>Beautiful crystal decorative pieces for interior design, gifts, and collectibles.</p>
+        <p>Artistic crystal pieces for interior design and collectibles</p>
         <div class="products-grid">
             <div class="product-card">
                 <img src="images/crystal bubble stand.jpg" alt="Crystal Bubble Stand" class="product-image">
