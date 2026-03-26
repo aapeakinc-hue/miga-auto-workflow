@@ -1,0 +1,14 @@
+# robots.txt for MIGAC Crystal Crafts
+
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Sitemap
+Sitemap: https://miga.cc/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
