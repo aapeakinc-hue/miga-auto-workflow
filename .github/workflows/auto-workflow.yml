@@ -36,14 +36,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 步骤4：运行自动化工作流（带自动重试和健康检查）
+      # 步骤4：运行自动化工作流（使用真实 API）
       - name: 运行自动化工作流
         env:
           SNOVIO_API_KEY: ${{ secrets.SNOVIO_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           cd src
-          python simple_auto_workflow_v2.py
+          python auto_workflow_with_real_api.py --keywords "美国水晶工艺品批发商" --website "https://www.miga.cc"
 
       # 步骤5：上传日志
       - name: 上传日志
