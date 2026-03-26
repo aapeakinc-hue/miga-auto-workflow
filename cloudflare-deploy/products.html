@@ -3,8 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - MIGAC Crystal Crafts | Premium Collection</title>
+    <meta name="description" content="Premium crystal candle holders, candelabras, and decorative crafts. Factory direct pricing, 50+ product styles, ISO 9001 certified. Wholesale and OEM/ODM services available.">
+    <meta name="keywords" content="crystal candle holder, crystal candelabra, tea light holder, pillar holder, crystal crafts, wholesale crystal candlesticks, hotel candle holder, wedding candle holder, OEM crystal products">
+    <meta name="author" content="MIGAC Crystal Crafts">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Crystal Candle Holders & Decorative Crafts | MIGAC Crystal Crafts">
+    <meta property="og:description" content="50+ premium crystal candle holders and decorative crafts. Factory direct wholesale prices.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miga.cc/products.html">
+    <meta property="og:image" content="https://miga.cc/images/hero-banner.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://miga.cc/products.html">
+
+    <title>Crystal Candle Holders & Decorative Crafts | MIGAC Crystal Crafts</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Crystal Candle Holders",
+        "description": "Premium quality crystal candle holders and decorative crafts",
+        "brand": {
+            "@type": "Brand",
+            "name": "MIGAC Crystal Crafts"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "MIGAC Crystal Crafts Co., Ltd.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN",
+                "addressRegion": "Zhejiang"
+            }
+        },
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
     <style>
         .products-hero {
             background: linear-gradient(135deg, rgba(26, 35, 126, 0.95) 0%, rgba(13, 71, 161, 0.95) 100%), url('images/hero-banner.jpg');
@@ -21,15 +65,22 @@
             margin-bottom: 20px;
         }
 
+        .products-hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
         .catalog-download {
             background: #ffc107;
             color: #1a237e;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         .catalog-download h2 {
-            font-size: 32px;
+            font-size: 28px;
             color: #1a237e;
             margin-bottom: 15px;
         }
@@ -57,18 +108,27 @@
 
         .catalog-btn:hover {
             background: #0d47a1;
+            transform: translateY(-2px);
         }
 
-        .products-section {
-            padding: 80px 20px;
+        .category-section {
+            padding: 60px 20px;
             background: white;
         }
 
-        .products-section h2 {
+        .category-section h2 {
             text-align: center;
-            font-size: 36px;
+            font-size: 32px;
             color: #1a237e;
-            margin-bottom: 60px;
+            margin-bottom: 10px;
+        }
+
+        .category-section p {
+            text-align: center;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 16px;
         }
 
         .products-grid {
@@ -85,10 +145,12 @@
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            border: 1px solid #e9ecef;
         }
 
         .product-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
         .product-image {
@@ -107,6 +169,7 @@
             font-weight: bold;
             color: #1a237e;
             margin-bottom: 10px;
+            line-height: 1.4;
         }
 
         .product-desc {
@@ -114,6 +177,7 @@
             color: #666;
             line-height: 1.6;
             margin-bottom: 15px;
+            min-height: 50px;
         }
 
         .product-features {
@@ -140,6 +204,12 @@
             border-top: 1px solid #e9ecef;
         }
 
+        .product-type {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+        }
+
         .btn-inquire {
             background: #ffc107;
             color: #1a237e;
@@ -153,6 +223,26 @@
 
         .btn-inquire:hover {
             background: #ffed4a;
+            transform: scale(1.05);
+        }
+
+        .category-alt {
+            background: #f8f9fa;
+        }
+
+        @media (max-width: 768px) {
+            .products-hero h1 {
+                font-size: 36px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .product-image {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -161,7 +251,7 @@
         <div class="header-content">
             <div class="logo">
                 <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <img src="images/MIGAC_logo.png" alt="MIGAC Logo" style="height: 50px;">
+                    <img src="images/MIGAC_logo.png" alt="MIGAC Crystal Crafts Logo" style="height: 50px;">
                 </a>
             </div>
             <nav class="nav">
@@ -177,50 +267,34 @@
     </header>
 
     <section class="products-hero">
-        <h1>Our Product Collection</h1>
-        <p>Discover our premium range of crystal candle holders and decorative crafts</p>
-        <a href="#download-catalog" style="background: #ffc107; color: #1a237e; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">Download Catalog</a>
+        <h1>Premium Crystal Candle Holders & Decorative Crafts</h1>
+        <p>50+ exquisite designs. Factory direct wholesale prices. ISO 9001 certified quality.</p>
+        <a href="#download-catalog" style="background: #ffc107; color: #1a237e; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">Download Product Catalog</a>
     </section>
 
     <section class="catalog-download" id="download-catalog">
-        <h2>📥 Download Our Product Catalog</h2>
-        <p>Get the complete product collection with specifications and pricing</p>
+        <h2>📥 Download Complete Product Catalog</h2>
+        <p>Full product specifications, pricing, and customization options</p>
         <div class="catalog-buttons">
             <a href="MIGAC_Product_Catalog_EN_2024.pdf" download class="catalog-btn" target="_blank">
-                🇬🇧 English Catalog (PDF)
-            </a>
-            <a href="MIGAC_Product_Catalog_2024.pdf" download class="catalog-btn" target="_blank">
-                🇨🇳 中文目录 (PDF)
+                📄 English Catalog (PDF)
             </a>
         </div>
     </section>
 
-    <section class="products-section">
-        <h2>Featured Products</h2>
+    <!-- Category 1: Crystal Candelabras -->
+    <section class="category-section">
+        <h2>Crystal Candelabras</h2>
+        <p>Elegant multi-arm crystal candelabras perfect for luxury hotels, weddings, and fine dining establishments. Available in 5-arm, 7-arm, and 9-arm configurations.</p>
         <div class="products-grid">
             <div class="product-card">
-                <img src="images/product-1.jpg" alt="Crystal Candle Holder" class="product-image">
+                <img src="images/product-1.jpg" alt="Luxury 5-Arm Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Premium Crystal Candle Holder</h3>
-                    <p class="product-desc">Elegant design with superior K9 crystal, perfect for luxury venues.</p>
-                    <div class="product-features">
-                        <span class="feature-tag">K9 Crystal</span>
-                        <span class="feature-tag">Luxury</span>
-                    </div>
-                    <div class="product-footer">
-                        <span class="product-type">Candle Holder</span>
-                        <a href="contact.html" class="btn-inquire">Inquire</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="images/product-2.jpg" alt="Crystal Candelabra" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">5-Arms Crystal Candelabra</h3>
-                    <p class="product-desc">Classic 5-arm design with sparkling crystals, ideal for dining tables.</p>
+                    <h3 class="product-title">Luxury 5-Arm Crystal Candelabra</h3>
+                    <p class="product-desc">Premium K9 crystal 5-arm candelabra with faceted design. Perfect for weddings and banquets. Height: 35cm.</p>
                     <div class="product-features">
                         <span class="feature-tag">5 Arms</span>
+                        <span class="feature-tag">K9 Crystal</span>
                         <span class="feature-tag">Wedding</span>
                     </div>
                     <div class="product-footer">
@@ -231,12 +305,13 @@
             </div>
 
             <div class="product-card">
-                <img src="images/product-3.jpg" alt="9-Arms Crystal Candelabra" class="product-image">
+                <img src="images/product-2.jpg" alt="Classic 5-Arm Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">9-Arms Crystal Candelabra</h3>
-                    <p class="product-desc">Majestic 9-arm centerpiece for grand occasions and hotels.</p>
+                    <h3 class="product-title">Classic 5-Arm Crystal Candelabra</h3>
+                    <p class="product-desc">Traditional design with sparkling crystal accents. Ideal for tapered candles. Height: 40cm.</p>
                     <div class="product-features">
-                        <span class="feature-tag">9 Arms</span>
+                        <span class="feature-tag">5 Arms</span>
+                        <span class="feature-tag">Classic</span>
                         <span class="feature-tag">Hotel</span>
                     </div>
                     <div class="product-footer">
@@ -247,75 +322,63 @@
             </div>
 
             <div class="product-card">
-                <img src="images/product-4.jpg" alt="Crystal Tea Light Holder" class="product-image">
+                <img src="images/product-3.jpg" alt="Grand 9-Arm Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Crystal Tea Light Holder</h3>
-                    <p class="product-desc">Compact and elegant tea light holder for ambient lighting.</p>
+                    <h3 class="product-title">Grand 9-Arm Crystal Candelabra</h3>
+                    <p class="product-desc">Majestic 9-arm centerpiece for grand occasions. Crystal beads and prisms. Height: 60cm.</p>
                     <div class="product-features">
-                        <span class="feature-tag">Tea Light</span>
-                        <span class="feature-tag">Votive</span>
+                        <span class="feature-tag">9 Arms</span>
+                        <span class="feature-tag">Grand</span>
+                        <span class="feature-tag">Luxury</span>
                     </div>
                     <div class="product-footer">
-                        <span class="product-type">Tea Light</span>
+                        <span class="product-type">Candelabra</span>
                         <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="images/product-5.jpg" alt="Crystal Bubble Stand" class="product-image">
+                <img src="images/product-13.jpg" alt="Modern 5-Arms Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Crystal Bubble Stand</h3>
-                    <p class="product-desc">Unique bubble design creating stunning light effects.</p>
+                    <h3 class="product-title">Modern 5-Arms Crystal Candelabra</h3>
+                    <p class="product-desc">Contemporary design with clean lines. Premium K9 crystal construction. Height: 38cm.</p>
                     <div class="product-features">
-                        <span class="feature-tag">Bubble</span>
+                        <span class="feature-tag">5 Arms</span>
                         <span class="feature-tag">Modern</span>
+                        <span class="feature-tag">K9 Crystal</span>
                     </div>
                     <div class="product-footer">
-                        <span class="product-type">Decorative</span>
+                        <span class="product-type">Candelabra</span>
                         <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="images/product-6.jpg" alt="Crystal Candlestick" class="product-image">
+                <img src="images/product-14.jpg" alt="9-Arms Crystal Chandelier Candelabra" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Crystal Candlestick</h3>
-                    <p class="product-desc">Traditional candlestick with crystal accents for classic settings.</p>
+                    <h3 class="product-title">9-Arms Crystal Chandelier Candelabra</h3>
+                    <p class="product-desc">Chandelier-style candelabra with crystal drops. Stunning centerpiece. Height: 55cm.</p>
                     <div class="product-features">
-                        <span class="feature-tag">Classic</span>
-                        <span class="feature-tag">Elegant</span>
+                        <span class="feature-tag">9 Arms</span>
+                        <span class="feature-tag">Chandelier</span>
+                        <span class="feature-tag">Drop Crystal</span>
                     </div>
                     <div class="product-footer">
-                        <span class="product-type">Candlestick</span>
+                        <span class="product-type">Candelabra</span>
                         <a href="contact.html" class="btn-inquire">Inquire</a>
                     </div>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="images/product-7.jpg" alt="Crystal Pillar Holder" class="product-image">
+                <img src="images/product-43.jpg" alt="Color 5-Arms Crystal Candelabra" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Crystal Pillar Holder</h3>
-                    <p class="product-desc">Designed for pillar candles with beautiful crystal cuts.</p>
+                    <h3 class="product-title">Color 5-Arms Crystal Candelabra</h3>
+                    <p class="product-desc">Vibrant colored crystal accents. Available in red, blue, or green. Height: 38cm.</p>
                     <div class="product-features">
-                        <span class="feature-tag">Pillar</span>
-                        <span class="feature-tag">Stable</span>
-                    </div>
-                    <div class="product-footer">
-                        <span class="product-type">Pillar Holder</span>
-                        <a href="contact.html" class="btn-inquire">Inquire</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="images/product-8.jpg" alt="Color Crystal Candelabra" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Color 5-Arms Candelabra</h3>
-                    <p class="product-desc">5-arm candelabra with colored crystal accents for vibrant displays.</p>
-                    <div class="product-features">
+                        <span class="feature-tag">5 Arms</span>
                         <span class="feature-tag">Colored</span>
                         <span class="feature-tag">Vibrant</span>
                     </div>
@@ -326,21 +389,373 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <div style="text-align: center; margin-top: 60px; padding: 40px; background: #f8f9fa; border-radius: 10px;">
-            <p style="color: #666; margin-bottom: 20px; font-size: 18px;">📦 Showing 8 featured products. We have <strong>50+ products</strong> available!</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="MIGAC_Product_Catalog_EN_2024.pdf" download class="btn-primary" style="padding: 15px 40px;">Download Full Catalog (50+ Products)</a>
-                <a href="contact.html" class="btn-secondary" style="padding: 15px 40px;">Request More Info</a>
+    <!-- Category 2: Tea Light & Votive Holders -->
+    <section class="category-section category-alt">
+        <h2>Tea Light & Votive Holders</h2>
+        <p>Compact and elegant tea light holders perfect for ambient lighting. Ideal for restaurants, spas, and home decoration.</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/product-4.jpg" alt="Crystal Tea Light Holder" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Tea Light Holder</h3>
+                    <p class="product-desc">Elegant tea light holder with faceted crystal design. Creates beautiful light reflections. Diameter: 8cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Tea Light</span>
+                        <span class="feature-tag">Faceted</span>
+                        <span class="feature-tag">Ambient</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Tea Light</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-24.jpg" alt="Crystal Votive Holder Set" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Votive Holder Set</h3>
+                    <p class="product-desc">Set of 6 crystal votive holders. Perfect for table settings and events. Diameter: 7cm each.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Set of 6</span>
+                        <span class="feature-tag">Votive</span>
+                        <span class="feature-tag">Event</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Votive</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-34.jpg" alt="Mini Crystal Tea Light Holder" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Mini Crystal Tea Light Holder</h3>
+                    <p class="product-desc">Compact design for small spaces. Perfect for intimate settings. Diameter: 6cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Mini</span>
+                        <span class="feature-tag">Tea Light</span>
+                        <span class="feature-tag">Compact</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Tea Light</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-35.jpg" alt="Crystal Votive Holder with Lid" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Votive Holder with Lid</h3>
+                    <p class="product-desc">Elegant votive holder with removable crystal lid. Diameter: 8cm, Height: 10cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">With Lid</span>
+                        <span class="feature-tag">Votive</span>
+                        <span class="feature-tag">Elegant</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Votive</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="catalog-section" style="margin-top: 0;">
-        <h2>Custom Design Available</h2>
-        <p>We offer OEM/ODM customization services. Share your design ideas with us!</p>
+    <!-- Category 3: Pillar Holders -->
+    <section class="category-section">
+        <h2>Crystal Pillar Holders</h2>
+        <p>Designed for pillar candles with stable crystal bases. Perfect for churches, hotels, and home decor.</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/product-7.jpg" alt="Crystal Pillar Candle Holder" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Pillar Candle Holder</h3>
+                    <p class="product-desc">Fits standard pillar candles. Heavy crystal base for stability. Height: 15cm, Diameter: 10cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Pillar</span>
+                        <span class="feature-tag">Stable</span>
+                        <span class="feature-tag">Church</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Pillar Holder</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-25.jpg" alt="Large Crystal Pillar Holder" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Large Crystal Pillar Holder</h3>
+                    <p class="product-desc">Extra-large holder for 3-inch pillar candles. Weighted base. Height: 20cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Large</span>
+                        <span class="feature-tag">3-inch</span>
+                        <span class="feature-tag">Weighted</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Pillar Holder</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-26.jpg" alt="Crystal Pillar Holder Trio" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Pillar Holder Trio</h3>
+                    <p class="product-desc">Set of 3 graduated pillar holders. Heights: 12cm, 15cm, 18cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Set of 3</span>
+                        <span class="feature-tag">Graduated</span>
+                        <span class="feature-tag">Pillar</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Pillar Holder</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-32.jpg" alt="Tapered Crystal Pillar Holder" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Tapered Crystal Pillar Holder</h3>
+                    <p class="product-desc">Elegant tapered design for pillar candles. Height: 18cm, Top diameter: 8cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Tapered</span>
+                        <span class="feature-tag">Pillar</span>
+                        <span class="feature-tag">Elegant</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Pillar Holder</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 4: Candlesticks -->
+    <section class="category-section category-alt">
+        <h2>Crystal Candlesticks</h2>
+        <p>Traditional and modern crystal candlesticks for taper candles. Perfect for dining tables and mantelpieces.</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/product-6.jpg" alt="Crystal Candlestick Pair" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Candlestick Pair</h3>
+                    <p class="product-desc">Pair of classic crystal candlesticks for taper candles. Height: 25cm each.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Pair</span>
+                        <span class="feature-tag">Classic</span>
+                        <span class="feature-tag">Taper</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Candlestick</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-37.jpg" alt="Modern Crystal Candlestick" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Modern Crystal Candlestick</h3>
+                    <p class="product-desc">Contemporary design with sleek crystal stem. Height: 30cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Modern</span>
+                        <span class="feature-tag">Sleek</span>
+                        <span class="feature-tag">Taper</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Candlestick</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-44.jpg" alt="Antique Style Crystal Candlestick" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Antique Style Crystal Candlestick</h3>
+                    <p class="product-desc">Vintage-inspired design with crystal accents. Height: 28cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Antique</span>
+                        <span class="feature-tag">Vintage</span>
+                        <span class="feature-tag">Decor</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Candlestick</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 5: Decorative Crafts -->
+    <section class="category-section">
+        <h2>Crystal Decorative Crafts</h2>
+        <p>Beautiful crystal decorative pieces for interior design, gifts, and collectibles.</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/product-5.jpg" alt="Crystal Bubble Stand" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Bubble Stand</h3>
+                    <p class="product-desc">Unique bubble design creating stunning light effects. Height: 12cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Bubble</span>
+                        <span class="feature-tag">Modern</span>
+                        <span class="feature-tag">Decor</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Decorative</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-8.jpg" alt="Crystal Decorative Centerpiece" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Decorative Centerpiece</h3>
+                    <p class="product-desc">Elegant centerpiece with crystal accents. Perfect for dining tables. Height: 15cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Centerpiece</span>
+                        <span class="feature-tag">Decor</span>
+                        <span class="feature-tag">Table</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Decorative</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-19.jpg" alt="Crystal Sculpture" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Sculpture</h3>
+                    <p class="product-desc">Artistic crystal sculpture for display. Hand-polished finish. Height: 20cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Sculpture</span>
+                        <span class="feature-tag">Artistic</span>
+                        <span class="feature-tag">Hand-polished</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Decorative</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-30.jpg" alt="Crystal Geometric Decor" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Geometric Decor</h3>
+                    <p class="product-desc">Modern geometric design. Creates beautiful reflections. Height: 10cm.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Geometric</span>
+                        <span class="feature-tag">Modern</span>
+                        <span class="feature-tag">Decor</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Decorative</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Products Section -->
+    <section class="category-section category-alt">
+        <h2>Additional Premium Products</h2>
+        <p>More exclusive crystal candle holders and decorative designs available upon request.</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/product-9.jpg" alt="Premium Crystal Collection" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Premium Crystal Collection</h3>
+                    <p class="product-desc">Exclusive crystal candle holders in set. Various sizes included.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Set</span>
+                        <span class="feature-tag">Premium</span>
+                        <span class="feature-tag">Collection</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Collection</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-10.jpg" alt="Crystal Decorative Piece" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Decorative Piece</h3>
+                    <p class="product-desc">Standalone decorative crystal for interior design.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Decor</span>
+                        <span class="feature-tag">Interior</span>
+                        <span class="feature-tag">Design</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Decorative</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-11.jpg" alt="Wedding Centerpiece" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Wedding Centerpiece</h3>
+                    <p class="product-desc">Romantic centerpiece designed for weddings and receptions.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Wedding</span>
+                        <span class="feature-tag">Romantic</span>
+                        <span class="feature-tag">Centerpiece</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Wedding</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product-12.jpg" alt="Crystal Holder Collection" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Crystal Holder Collection</h3>
+                    <p class="product-desc">Diverse collection of crystal holders for various candles.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Collection</span>
+                        <span class="feature-tag">Versatile</span>
+                        <span class="feature-tag">Multi-use</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-type">Collection</span>
+                        <a href="contact.html" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog CTA -->
+    <section class="catalog-section">
+        <h2>Custom Design & OEM/ODM Services Available</h2>
+        <p>We offer customization services. Share your design ideas for bespoke crystal products.</p>
         <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
             <a href="contact.html" class="btn-primary">Request Custom Design</a>
+            <a href="MIGAC_Product_Catalog_EN_2024.pdf" download class="btn-secondary" target="_blank">Download Full Catalog</a>
         </div>
     </section>
 
@@ -348,18 +763,28 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>MIGAC Crystal Crafts</h3>
-                <p>Professional crystal candle holder manufacturer with 10+ years of experience.</p>
+                <p>Professional crystal candle holder manufacturer with 8+ years of experience.</p>
+                <p>ISO 9001:2015 certified. Serving 182+ international clients.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
                 <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <a href="products.html">Crystal Candelabras</a>
+                <a href="products.html">Tea Light Holders</a>
+                <a href="products.html">Pillar Holders</a>
+                <a href="products.html">Decorative Crafts</a>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
                 <p>📧 info@miga.cc</p>
                 <p>📱 WhatsApp: +86 19879476613</p>
+                <p>🌐 www.miga.cc</p>
             </div>
         </div>
         <div class="footer-bottom">

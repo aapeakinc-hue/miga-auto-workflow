@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+创建透明背景的SVG Logo
+"""
+
+svg_logo_transparent = '''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
   <defs>
     <style>
@@ -43,4 +49,46 @@
     <!-- Highlight -->
     <polygon points="40,25 55,40 40,55 25,40" fill="white" opacity="0.3"/>
   </g>
-</svg>
+</svg>'''
+
+# 保存透明背景SVG
+with open('cloudflare-deploy/images/MIGAC_logo.svg', 'w', encoding='utf-8') as f:
+    f.write(svg_logo_transparent)
+
+# 小版本
+svg_logo_small_transparent = '''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <defs>
+    <style>
+      .logo-text {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        fill: #1a237e;
+        letter-spacing: 2px;
+      }
+      .logo-dot {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        fill: #FFD700;
+      }
+    </style>
+  </defs>
+
+  <text x="10" y="35" class="logo-text">MIGAC</text>
+  <text x="115" y="35" class="logo-dot">.</text>
+
+  <!-- Small Crystal -->
+  <g transform="translate(145, 5)">
+    <polygon points="15,0 30,10 30,30 15,40 0,30 0,10" fill="#1a237e" opacity="0.9"/>
+    <polygon points="15,8 24,16 24,24 15,32 6,24 6,16" fill="#FFD700" opacity="0.6"/>
+  </g>
+</svg>'''
+
+with open('cloudflare-deploy/images/MIGAC_logo_small.svg', 'w', encoding='utf-8') as f:
+    f.write(svg_logo_small_transparent)
+
+print("✅ Transparent background SVG logos created")
+print("   - MIGAC_logo.svg (400x120)")
+print("   - MIGAC_logo_small.svg (200x50)")
