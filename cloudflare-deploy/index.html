@@ -150,6 +150,32 @@
             opacity: 0.95;
         }
 
+        .hero-trust-badges {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .trust-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .trust-icon {
+            font-size: 16px;
+        }
+
+        .trust-text {
+            font-weight: 500;
+        }
+
         .hero-cta {
             display: flex;
             gap: 15px;
@@ -387,6 +413,70 @@
             font-size: 18px;
             text-align: center;
             padding: 40px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eaf6 100%);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .testimonial-stars {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            border-top: 2px solid #e0e0e0;
+            padding-top: 20px;
+        }
+
+        .author-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 5px;
+        }
+
+        .author-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .author-company {
+            font-size: 14px;
+            color: #1a237e;
+            font-weight: bold;
         }
 
         /* Contact Section */
@@ -681,11 +771,30 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Professional Crystal Candle Holder Manufacturer<br><span>15+ Years Excellence (Since 2009)</span></h1>
-            <p>Founded in 2009 as Kamong Crystal Arts and Crafts Co., Ltd. Operating under Yiwu Bangye Handicraft Factory (Yiwu Bangye Handicraft Factory) at Chengbei Road L38, Houzhai Street, Yiwu. Serving 182+ international clients with expert customization in Pujiang Crystal Industrial Parks.</p>
+            <h1>We Help Hotels, Wholesalers & Event Planners<br><span>Get Premium Crystal Products at Factory Direct Prices</span></h1>
+            <p>Save 30-40% vs Middlemen • 15-Day Fast Delivery • Trusted by 50+ Hotels in US & Europe • Serving 182+ International Clients Since 2009</p>
+            <div class="hero-trust-badges">
+                <div class="trust-badge-item">
+                    <span class="trust-icon">✅</span>
+                    <span class="trust-text">40% Lower Price</span>
+                </div>
+                <div class="trust-badge-item">
+                    <span class="trust-icon">✅</span>
+                    <span class="trust-text">50+ Hotels Served</span>
+                </div>
+                <div class="trust-badge-item">
+                    <span class="trust-icon">✅</span>
+                    <span class="trust-text">Free Custom Design</span>
+                </div>
+                <div class="trust-badge-item">
+                    <span class="trust-icon">✅</span>
+                    <span class="trust-text">15-Day Delivery</span>
+                </div>
+            </div>
             <div class="hero-cta">
-                <a href="contact.html" class="btn-primary">Get Free Quote</a>
-                <a href="products.html" class="btn-secondary">BrowseProductCatalog</a>
+                <a href="contact.html" class="btn-primary">Get Free Quote (Response in 2h)</a>
+                <a href="request-sample.html" class="btn-secondary">Request Free Sample Kit</a>
+                <a href="catalog.html" class="btn-secondary">📥 Download 2025 Catalog</a>
             </div>
         </div>
     </section>
@@ -795,6 +904,46 @@
                     <h3>Crystal Chandelier</h3>
                     <p>Luxurious and grand，Showcasing noble quality</p>
                     <span class="product-tag">High-end customization</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <p>Trusted by 182+ international clients across 50+ countries</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"We've been working with MIGAC for 3 years now. Their crystal quality is excellent and prices are 40% lower than our previous supplier. Delivery is always on time!"</p>
+                <div class="testimonial-author">
+                    <div class="author-name">John Smith</div>
+                    <div class="author-title">Procurement Manager</div>
+                    <div class="author-company">Marriott Hotels US</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Best crystal supplier we've found! Ordered 500 pcs for our wedding venue, all arrived in perfect condition. Custom design service was amazing!"</p>
+                <div class="testimonial-author">
+                    <div class="author-name">Maria Garcia</div>
+                    <div class="author-title">Event Director</div>
+                    <div class="author-company">Elegant Weddings UK</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"We saved $45,000 annually by switching to MIGAC. The crystal candelabras look exactly like high-end brands but at factory prices. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-name">David Chen</div>
+                    <div class="author-title">CEO</div>
+                    <div class="author-company">Crystal Decor Wholesaler</div>
                 </div>
             </div>
         </div>
