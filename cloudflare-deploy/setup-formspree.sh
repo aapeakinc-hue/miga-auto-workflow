@@ -5,7 +5,7 @@
 # ========================================
 
 # 你的 Formspree Form ID（从 Formspree Dashboard 获取）
-FORM_ID="YOUR_FORM_ID"
+FORM_ID="mgopvdqo"
 
 # 备份原文件
 echo "📦 备份原文件..."
