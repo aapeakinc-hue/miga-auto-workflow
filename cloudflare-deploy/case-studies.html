@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read our case studies - Learn how MIGAC helped hotels, wholesalers, and event planners save 30-40% on crystal products. Real success stories with data.">
+    <meta name="keywords" content="crystal case study, success stories, client testimonials, hotel crystal projects, wholesale crystal case studies">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Case Studies | MIGAC Crystal | Success Stories">
+    <meta property="og:description" content="See how we helped 50+ hotels and businesses save money and improve quality with premium crystal products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miga.cc/case-studies.html">
+    <meta property="og:image" content="https://miga.cc/images/hero-banner.jpg">
+
+    <title>Case Studies | MIGAC Crystal | Success Stories | Real Results</title>
+
+    <link rel="canonical" href="https://miga.cc/case-studies.html">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #1565c0 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.1);
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .hero-stat .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .hero-stat .text {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Content */
+        .content-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Case Study Card */
+        .case-study {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 80px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .case-header h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .case-header .client {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .case-tags {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .case-tag {
+            background: rgba(255,215,0,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid rgba(255,215,0,0.5);
+        }
+
+        .case-body {
+            padding: 50px;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .case-section h4 {
+            font-size: 20px;
+            color: #1a237e;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .case-section p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .case-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .case-section li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .case-section li:before {
+            content: "✓";
+            color: #25d366;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Results Section */
+        .results-section {
+            background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e9 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .results-section h4 {
+            font-size: 22px;
+            color: #25d366;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .result-item {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .result-item .value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #25d366;
+            margin-bottom: 10px;
+        }
+
+        .result-item .label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Testimonial */
+        .case-testimonial {
+            background: #fff9e6;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #ffd700;
+            margin-top: 30px;
+        }
+
+        .case-testimonial p {
+            font-size: 16px;
+            color: #333;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .case-testimonial .author {
+            font-weight: bold;
+            color: #1a237e;
+        }
+
+        .case-testimonial .title {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #ffd700;
+            color: #1a237e;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #ffed4a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s;
+            border: 2px solid white;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1a237e;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a237e;
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+            }
+
+            .case-header h3 {
+                font-size: 24px;
+            }
+
+            .case-body {
+                padding: 30px 20px;
+            }
+
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">MIGAC<span>.</span></div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Real Results. Real Success Stories.</h1>
+        <p>See how MIGAC has helped 50+ hotels, wholesalers, and event businesses worldwide save 30-40% on premium crystal products while improving quality.</p>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="number">$2.5M+</div>
+                <div class="text">Total Savings for Clients</div>
+            </div>
+            <div class="hero-stat">
+                <div class="number">50+</div>
+                <div class="text">Hotel Projects</div>
+            </div>
+            <div class="hero-stat">
+                <div class="number">182+</div>
+                <div class="text">Happy Clients</div>
+            </div>
+            <div class="hero-stat">
+                <div class="number">30-40%</div>
+                <div class="text">Average Cost Savings</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 1: Hotel Chain -->
+    <section class="content-section">
+        <div class="section-title">
+            <h2>Case Study 1</h2>
+            <p>How a US Hotel Chain Saved $45,000/Year with Custom Crystal Candelabras</p>
+        </div>
+
+        <div class="case-study">
+            <div class="case-header">
+                <h3>Luxury Hotel Chain - Crystal Candelabra Replacement</h3>
+                <p class="client">Client: Boutique Hotel Chain, USA | 50+ Properties</p>
+                <div class="case-tags">
+                    <span class="case-tag">Hospitality</span>
+                    <span class="case-tag">Hotel Chain</span>
+                    <span class="case-tag">Cost Saving</span>
+                    <span class="case-tag">Custom Design</span>
+                </div>
+            </div>
+
+            <div class="case-body">
+                <div class="case-grid">
+                    <div class="case-section">
+                        <h4>📋 Background</h4>
+                        <p><strong>The Challenge:</strong></p>
+                        <ul>
+                            <li>50-room boutique hotel chain needing 100+ candelabras per property</li>
+                            <li>Previous supplier cost: $25 per unit</li>
+                            <li>Annual budget: $75,000 for replacements</li>
+                            <li>Quality issues: 15% breakage rate from previous supplier</li>
+                            <li>Delivery delays: Average 4 weeks lead time</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h4>💡 Our Solution</h4>
+                        <p><strong>MIGAC Approach:</strong></p>
+                        <ul>
+                            <li>Custom-designed 5-arm crystal candelabra matching hotel aesthetic</li>
+                            <li>Factory direct pricing: $17.50 per unit (30% cost reduction)</li>
+                            <li>Premium K9 crystal with reinforced metal base</li>
+                            <li>Quality control: 100% inspection before shipment</li>
+                            <li>15-day guaranteed delivery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <h4>📊 Results & Impact</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="value">30%</div>
+                            <div class="label">Cost Reduction</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">$45K</div>
+                            <div class="label">Annual Savings</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">2%</div>
+                            <div class="label">Breakage Rate</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">15</div>
+                            <div class="label">Day Delivery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-grid">
+                    <div class="case-section">
+                        <h4>🎯 Implementation Process</h4>
+                        <p><strong>Timeline:</strong></p>
+                        <ul>
+                            <li>Week 1: Design consultation and sample approval</li>
+                            <li>Week 2-3: Custom mold creation</li>
+                            <li>Week 4-6: Production and quality testing</li>
+                            <li>Week 7: Shipment and delivery</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h4>✅ Key Success Factors</h4>
+                        <ul>
+                            <li>Free design consultation to match brand aesthetic</li>
+                            <li>Sample testing before bulk production</li>
+                            <li>Quality assurance: ISO certified manufacturing</li>
+                            <li>Dedicated account manager for ongoing support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-testimonial">
+                    <p>"MIGAC exceeded our expectations. The quality is comparable to luxury brands we previously used, but at 30% lower cost. The delivery was on time, and the custom design perfectly matches our hotel's aesthetic. We've been working with them for 3 years now."</p>
+                    <p class="author">— John Smith, Procurement Director</p>
+                    <p class="title">Luxury Hotel Chain, USA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2: Wholesaler -->
+    <section class="content-section">
+        <div class="section-title">
+            <h2>Case Study 2</h2>
+            <p>Crystal Decor Wholesaler Increases Profit Margins by 25% through Factory Direct Sourcing</p>
+        </div>
+
+        <div class="case-study">
+            <div class="case-header">
+                <h3>Home Decor Wholesaler - Factory Direct Transition</h3>
+                <p class="client">Client: Premium Decor Distributor, UK | Serving 200+ Retailers</p>
+                <div class="case-tags">
+                    <span class="case-tag">Wholesale</span>
+                    <span class="case-tag">Distributor</span>
+                    <span class="case-tag">Profit Margin</span>
+                    <span class="case-tag">Supply Chain</span>
+                </div>
+            </div>
+
+            <div class="case-body">
+                <div class="case-grid">
+                    <div class="case-section">
+                        <h4>📋 Background</h4>
+                        <p><strong>The Challenge:</strong></p>
+                        <ul>
+                            <li>Distributor sourcing through middlemen</li>
+                            <li>Thin profit margins: 15-20%</li>
+                            <li>Inconsistent quality from multiple suppliers</li>
+                            <li>Long lead times affecting inventory turnover</li>
+                            <li>Unable to offer competitive pricing to retailers</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h4>💡 Our Solution</h4>
+                        <p><strong>MIGAC Approach:</strong></p>
+                        <ul>
+                            <li>Direct factory relationship - no middlemen</li>
+                            <li>Consolidated sourcing for 20+ product types</li>
+                            <li>Private label and branding options</li>
+                            <li>Just-in-time delivery to reduce inventory costs</li>
+                            <li>Volume discounts for bulk orders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <h4>📊 Results & Impact</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="value">25%</div>
+                            <div class="label">Profit Margin Increase</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">40%</div>
+                            <div class="label">Cost Reduction</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">3x</div>
+                            <div class="label">Faster Turnover</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">200+</div>
+                            <div class="label">Retailers Served</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-grid">
+                    <div class="case-section">
+                        <h4>🎯 Implementation Process</h4>
+                        <p><strong>Transition Plan:</strong></p>
+                        <ul>
+                            <li>Phase 1: Test 5 products with small orders</li>
+                            <li>Phase 2: Scale up to 15 products</li>
+                            <li>Phase 3: Full catalog transition (20+ products)</li>
+                            <li>Phase 4: Implement private label branding</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h4>✅ Key Success Factors</h4>
+                        <ul>
+                            <li>Consistent quality across all product lines</li>
+                            <li>Reliable 15-day delivery schedule</li>
+                            <li>Flexible MOQ for product testing</li>
+                            <li>Dedicated support for logistics and customs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-testimonial">
+                    <p>"Switching to MIGAC was a game-changer for our business. We eliminated middlemen costs, improved profit margins by 25%, and now offer more competitive pricing to our retailers. The consistent quality and reliable delivery have helped us grow our customer base significantly."</p>
+                    <p class="author">— David Chen, CEO</p>
+                    <p class="title">Premium Decor Distributor, UK</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 3: Event Company -->
+    <section class="content-section">
+        <div class="section-title">
+            <h2>Case Study 3</h2>
+            <p>Event Company Enhances Wedding Experience with Premium Crystal Centerpieces</p>
+        </div>
+
+        <div class="case-study">
+            <div class="case-header">
+                <h3>Elegant Weddings & Events - Crystal Centerpiece Collection</h3>
+                <p class="client">Client: Luxury Event Planning Company, UAE | 200+ Weddings/Year</p>
+                <div class="case-tags">
+                    <span class="case-tag">Events</span>
+                    <span class="case-tag">Weddings</span>
+                    <span class="case-tag">Custom Design</span>
+                    <span class="case-tag">Premium Quality</span>
+                </div>
+            </div>
+
+            <div class="case-body">
+                <div class="case-grid">
+                    <div class="case-section">
+                        <h4>📋 Background</h4>
+                        <p><strong>The Challenge:</strong></p>
+                        <ul>
+                            <li>High-end wedding clients demanding premium centerpieces</li>
+                            <li>Previous suppliers couldn't meet quality standards</li>
+                            <li>Need for custom designs to match wedding themes</li>
+                            <li>Budget constraints for recurring purchases</li>
+                            <li>Fast turnaround for last-minute orders</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h4>💡 Our Solution</h4>
+                        <p><strong>MIGAC Approach:</strong></p>
+                        <ul>
+                            <li>Premium K9 crystal with flawless clarity</li>
+                            <li>Custom design service for unique wedding themes</li>
+                            <li>Wholesale pricing at 35% below market rates</li>
+                            <li>Express delivery option for urgent orders</li>
+                            <li>Dedicated wedding coordinator for special requests</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <h4>📊 Results & Impact</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="value">98%</div>
+                            <div class="label">Client Satisfaction</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">35%</div>
+                            <div class="label">Cost Reduction</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">5</div>
+                            <div class="label">Day Express Delivery</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="value">200+</div>
+                            <div class="label">Weddings Enhanced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-grid">
+                    <div class="case-section">
+                        <h4>🎯 Implementation Process</h4>
+                        <p><strong>Service Model:</strong></p>
+                        <ul>
+                            <li>Consultation: Discuss wedding theme and requirements</li>
+                            <li>Design: Custom 3D renderings for approval</li>
+                            <li>Production: Sample creation and quality testing</li>
+                            <li>Delivery: Flexible scheduling based on event date</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h4>✅ Key Success Factors</h4>
+                        <ul>
+                            <li>Uncompromising quality for premium clients</li>
+                            <li>Flexible custom design capabilities</li>
+                            <li>Reliable express delivery for urgent orders</li>
+                            <li>Responsive customer service</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-testimonial">
+                    <p>"MIGAC has become our go-to supplier for all premium wedding centerpieces. The quality is exceptional, and the custom design service allows us to create unique experiences for our clients. The team is incredibly responsive and always delivers on time."</p>
+                    <p class="author">— Maria Garcia, Creative Director</p>
+                    <p class="title">Elegant Weddings & Events, UAE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Achieve Similar Results?</h2>
+        <p>Let us help you save 30-40% on premium crystal products while improving quality. Get in touch for a free consultation and quote.</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="btn-primary">Get Free Quote</a>
+            <a href="request-sample.html" class="btn-secondary">Request Free Sample</a>
+            <a href="catalog.html" class="btn-secondary">Download Catalog</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MIGAC. All Rights Reserved.</p>
+        <p>📧 <a href="mailto:info@miga.cc">info@miga.cc</a> | 📞 <a href="tel:+8619879476613">+86-19879476613</a></p>
+        <p><a href="index.html">Back to Home</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>

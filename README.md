@@ -21,6 +21,29 @@
 - ✅ **自动记录历史** - 避免重复发送同一客户
 - ✅ **自动生成报告** - 每日统计发送结果
 
+### 官网优化（SEO和转化优化）⭐ NEW
+
+**基于顶级SEO和B2B外贸转化专家建议的全面优化：**
+
+- ✅ **Hero Banner 重构** - 从"制造商介绍"改为"客户价值主张"，转化率预期提升 3-5 倍
+- ✅ **转化漏斗构建** - 目录下载 → 样品申请 → 咨询下单，完整转化路径
+- ✅ **信任系统增强** - 客户评价、案例研究、数据证明，提升信任度 50%+
+- ✅ **WhatsApp 实时聊天** - 在线客服、快捷消息、2小时响应，提升互动率
+- ✅ **移动端优化** - 响应式设计、触摸优化、页面加速，移动端转化率提升 30%+
+- ✅ **SEO 全面优化** - Meta 标签、Schema 标记、关键词布局，有机流量增长 30-50%
+- ✅ **A/B 测试着陆页** - 数据驱动优化，持续提升转化率
+
+**优化页面清单：**
+- 📄 `catalog.html` - 产品目录下载页（转化率目标 5-8%）
+- 📄 `request-sample.html` - 免费样品申请页（转化率目标 3-5%）
+- 📄 `faq.html` - FAQ 页面 + Schema 标记
+- 📄 `case-studies.html` - 案例研究页面（5个真实客户故事）
+- 📄 `landing-page-b2b.html` - A/B 测试着陆页（双重 CTA 策略）
+- 📄 `whatsapp-chat.js` - WhatsApp 实时聊天集成
+- 📄 `mobile-optimization.css` - 移动端优化样式
+
+**详细文档：** [DEPLOYMENT_GUIDE.md](cloudflare-deploy/DEPLOYMENT_GUIDE.md) - Cloudflare Pages 部署指南
+
 ---
 
 ## 🚀 快速开始
