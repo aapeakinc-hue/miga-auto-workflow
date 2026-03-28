@@ -68,13 +68,13 @@ img {
 
 .nav {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .nav a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     transition: all 0.3s;
 }
