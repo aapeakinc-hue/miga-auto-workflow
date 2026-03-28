@@ -1,0 +1,53 @@
+name: 测试通知功能
+
+# 仅允许手动触发
+on:
+  workflow_dispatch:
+
+jobs:
+  test-notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 步骤1：检出代码
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      # 步骤2：设置 Python 环境
+      - name: 设置 Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 步骤3：测试安装 resend
+      - name: 测试安装 resend
+        run: |
+          echo "🔧 测试安装 resend..."
+          python -m pip install resend
+          echo "✅ resend 安装完成"
+          python -c "import resend; print('✅ resend 模块导入成功')"
+
+      # 步骤4：测试安装 requests
+      - name: 测试安装 requests
+        run: |
+          echo "🔧 测试安装 requests..."
+          python -m pip install requests
+          echo "✅ requests 安装完成"
+          python -c "import requests; print('✅ requests 模块导入成功')"
+
+      # 步骤5：发送测试通知
+      - name: 发送测试通知
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+        run: |
+          echo "📤 准备发送测试通知..."
+          python src/send_notification.py success "通知功能测试" "这是一条测试通知"
+
+      # 步骤6：总结
+      - name: 测试总结
+        if: always()
+        run: |
+          echo "## 📊 通知功能测试完成" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "⏰ 测试时间: $(date -u)" >> $GITHUB_STEP_SUMMARY
