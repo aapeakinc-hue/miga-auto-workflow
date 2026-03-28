@@ -18,10 +18,97 @@
     <title>Luxury Crystal Candelabras for Weddings & Events | MIGAC</title>
 
     <link rel="canonical" href="https://miga.cc">
-    <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Hero Section - 首页特定样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: #ffd700;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-btn {
+            background: #ffd700;
+            color: #1a237e;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .header-btn:hover {
+            background: #ffeb3b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+        }
+
+        /* Hero Section - 终极版本 */
         .hero {
             background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #1565c0 100%);
             color: white;
@@ -122,19 +209,199 @@
             color: #ffd700;
         }
 
-        /* Application Section - 首页特定样式 */
+        /* Application Section - 场景入口 */
         .application-section {
             padding: 80px 20px;
             background: #f8f9fa;
         }
 
-        /* Best Sellers Section - 首页特定样式 */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .application-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .application-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: #ffd700;
+        }
+
+        .application-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .application-card h3 {
+            font-size: 24px;
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .application-card p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .application-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .application-btn:hover {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26,35,126,0.3);
+        }
+
+        /* Best Sellers Section */
         .bestsellers-section {
             padding: 80px 20px;
             background: white;
         }
 
-        /* View All Button - 首页特定样式 */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid #f0f0f0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: #ffd700;
+        }
+
+        .product-image {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 20px;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: #ff5252;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .product-info h3 {
+            font-size: 20px;
+            color: #1a237e;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .product-info p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .spec-item {
+            background: #f5f5f5;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .product-btn {
+            display: block;
+            background: #ffd700;
+            color: #1a237e;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .product-btn:hover {
+            background: #ffeb3b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+        }
+
         .view-all-btn {
             display: block;
             text-align: center;
@@ -158,7 +425,56 @@
             box-shadow: 0 8px 20px rgba(26,35,126,0.4);
         }
 
-        /* Trust Section - 首页特定样式 */
+        /* Why Choose Section */
+        .why-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+        }
+
+        .why-section .section-title {
+            color: white;
+        }
+
+        .why-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid rgba(255,215,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .why-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 22px;
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .why-card p {
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Trust Section - Factory & Packaging */
         .trust-section {
             padding: 80px 20px;
             background: #f8f9fa;
@@ -192,7 +508,7 @@
             line-height: 1.6;
         }
 
-        /* CTA Section - 首页特定样式 */
+        /* CTA Section */
         .cta-section {
             padding: 100px 20px;
             background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
@@ -236,6 +552,56 @@
             box-shadow: 0 8px 25px rgba(255,215,0,0.4);
         }
 
+        /* Footer */
+        .footer {
+            background: #1a237e;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -244,6 +610,10 @@
 
             .hero-subheadline {
                 font-size: 18px;
+            }
+
+            .nav {
+                display: none;
             }
 
             .section-title {
@@ -261,6 +631,7 @@
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -298,44 +669,44 @@
 
             <div class="hero-buttons">
                 <a href="free-audit.html" class="hero-btn-primary">Get Free Quote</a>
-                <a href="best-sellers.html" class="hero-btn-secondary">View Products</a>
+                <a href="best-sellers.html" class="hero-btn-secondary">View Best Sellers</a>
             </div>
         </div>
     </section>
 
-    <!-- Application Section -->
+    <!-- Shop by Application Section -->
     <section class="application-section">
         <div class="section-container">
             <h2 class="section-title">Shop by Application</h2>
-            <p class="section-subtitle">Find the Perfect Crystal Candelabras for Your Specific Needs</p>
+            <p class="section-subtitle">Find the perfect crystal candelabra for your specific needs</p>
 
             <div class="application-grid">
                 <div class="application-card">
                     <div class="application-icon">💒</div>
                     <h3>Wedding Centerpieces</h3>
-                    <p>Perfect for wedding receptions, bridal tables, and ceremony decorations</p>
-                    <a href="wedding-collection.html" class="application-btn">View Collection</a>
+                    <p>Elegant designs for romantic table settings and unforgettable wedding ceremonies</p>
+                    <a href="wedding-collection.html" class="application-btn">View Products</a>
                 </div>
 
                 <div class="application-card">
                     <div class="application-icon">🎉</div>
                     <h3>Event Decoration</h3>
-                    <p>Ideal for gala dinners, corporate events, and private parties</p>
-                    <a href="event-collection.html" class="application-btn">View Collection</a>
+                    <p>Perfect for banquets, parties, corporate events, and venue decorations</p>
+                    <a href="event-collection.html" class="application-btn">View Products</a>
                 </div>
 
                 <div class="application-card">
-                    <div class="application-icon">💼</div>
-                    <h3>Rental Business</h3>
-                    <p>Durable and commercial-grade designs for rental companies</p>
-                    <a href="rental-collection.html" class="application-btn">View Collection</a>
+                    <div class="application-icon">🏢</div>
+                    <h3>Rental Business Picks</h3>
+                    <p>Durable & profitable designs for repeated use in event rental businesses</p>
+                    <a href="rental-collection.html" class="application-btn">View Products</a>
                 </div>
 
                 <div class="application-card">
-                    <div class="application-icon">🏨</div>
+                    <div class="application-icon">👑</div>
                     <h3>Luxury Decoration</h3>
-                    <p>High-end statement pieces for premium clients and luxury hotels</p>
-                    <a href="luxury-collection.html" class="application-btn">View Collection</a>
+                    <p>High-end statement pieces for premium clients and luxury hotel projects</p>
+                    <a href="luxury-collection.html" class="application-btn">View Products</a>
                 </div>
             </div>
         </div>
@@ -397,39 +768,39 @@
                 </div>
             </div>
 
-            <a href="best-sellers.html" class="view-all-btn">View All Products</a>
+            <a href="best-sellers.html" class="view-all-btn">View Top 10 Best Sellers</a>
         </div>
     </section>
 
     <!-- Why Choose Section -->
     <section class="why-section">
         <div class="section-container">
-            <h2 class="section-title">Why Choose MIGAC?</h2>
-            <p class="section-subtitle">Direct from China's Crystal Capital - No Middleman</p>
+            <h2 class="section-title">Why Choose MIGAC</h2>
+            <p class="section-subtitle">15+ years of experience serving global clients</p>
 
             <div class="why-grid">
                 <div class="why-card">
                     <div class="why-icon">🏭</div>
-                    <h3>Factory Direct</h3>
-                    <p>Located in Pujiang Crystal Industrial Park - the world's largest crystal manufacturing cluster</p>
+                    <h3>15+ Years Manufacturing Experience</h3>
+                    <p>Established in 2009. Professional factory with 5000㎡ production area and 100+ skilled workers</p>
                 </div>
 
                 <div class="why-card">
-                    <div class="why-icon">✓</div>
-                    <h3>50+ Designs</h3>
-                    <p>Extensive collection of crystal candelabras to meet all your needs</p>
+                    <div class="why-icon">✅</div>
+                    <h3>Strict Quality Inspection Before Shipping</h3>
+                    <p>100% full inspection with ISO9001:2015 certified quality management system</p>
                 </div>
 
                 <div class="why-card">
-                    <div class="why-icon">🌍</div>
-                    <h3>Global Export</h3>
-                    <p>Exported to 30+ countries, trusted by 182+ international clients</p>
+                    <div class="why-icon">📦</div>
+                    <h3>Safe Packaging for Fragile Products</h3>
+                    <p>Custom foam packaging + sturdy export cartons. Zero damage record to 30+ countries</p>
                 </div>
 
                 <div class="why-card">
-                    <div class="why-icon">💎</div>
-                    <h3>Premium Quality</h3>
-                    <p>15+ years of expertise, 5M+ pieces produced annually</p>
+                    <div class="why-icon">⚡</div>
+                    <h3>Fast Production & Stable Delivery</h3>
+                    <p>15-20 working days lead time. Annual output 5M+ pieces with 6 automated production lines</p>
                 </div>
             </div>
         </div>
@@ -438,28 +809,23 @@
     <!-- Trust Section - Factory & Packaging -->
     <section class="trust-section">
         <div class="section-container">
-            <h2 class="section-title">Reliable Factory & Professional Packaging</h2>
-            <p class="section-subtitle">Every crystal candelabra is meticulously crafted and carefully packaged for safe delivery</p>
+            <h2 class="section-title">Our Factory & Packaging</h2>
+            <p class="section-subtitle">Professional production and safe international shipping</p>
 
             <div class="trust-grid">
                 <div class="trust-item">
-                    <h3>🏭 Factory Capacity</h3>
-                    <p>Production in Pujiang Crystal Industrial Parks with complete industry chain</p>
+                    <h3>Professional Production Line</h3>
+                    <p>State-of-the-art manufacturing facility with skilled workers and advanced equipment. We ensure every crystal candelabra meets the highest quality standards.</p>
                 </div>
 
                 <div class="trust-item">
-                    <h3>📦 Professional Packaging</h3>
-                    <p>Each candelabra is individually packed in a carton box with bubble wrap for safe delivery</p>
+                    <h3>Safe Export Packaging</h3>
+                    <p>Custom foam packaging and sturdy export cartons protect your products during international shipping. We've delivered to 30+ countries with zero damage claims.</p>
                 </div>
 
                 <div class="trust-item">
-                    <h3>🚚 Efficient Logistics</h3>
-                    <p>Strategic location in Yiwu - China's trade hub, ensuring fast delivery</p>
-                </div>
-
-                <div class="trust-item">
-                    <h3>✅ Quality Control</h3>
-                    <p>Strict quality inspection before shipping to ensure 100% satisfaction</p>
+                    <h3>Experienced International Shipping</h3>
+                    <p>Years of experience in international logistics. We handle all customs documentation and ensure smooth delivery to your warehouse anywhere in the world.</p>
                 </div>
             </div>
         </div>
@@ -468,9 +834,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Ready to Elevate Your Events?</h2>
-            <p>Get a free quote today and discover why event planners worldwide choose MIGAC crystal candelabras</p>
-            <a href="free-audit.html" class="cta-btn">Get Your Free Quote</a>
+            <h2>Get Your Product List & Quote Today</h2>
+            <p>Tell us your needs, we will recommend the best models for your market</p>
+            <a href="free-audit.html" class="cta-btn">Get Free Quote</a>
         </div>
     </section>
 
@@ -508,10 +874,12 @@
             <p>&copy; 2024 MIGAC Crystal Crafts Co., Ltd. All Rights Reserved.</p>
         </div>
     </footer>
+    </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/8619879476613" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/8613800138000" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         💬
     </a>
+
 </body>
 </html>
