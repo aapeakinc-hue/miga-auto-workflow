@@ -71,32 +71,18 @@ jobs:
           echo "📋 查看详细日志请下载附件" >> $GITHUB_STEP_SUMMARY
 
       # 步骤7：发送成功通知
-      - name: 发送成功通知
+      - name: 发送成功通知（临时禁用）
         if: success()
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
-          echo "🔧 安装通知依赖..."
-          python -m pip install resend requests
-          echo "✅ 依赖安装完成，检查模块..."
-          python -c "import resend; import requests; print('✅ 模块导入成功')"
-          echo "📤 发送成功通知..."
-          python src/send_notification.py success "外贸客户开发工作流" "工作流成功完成"
+          echo "✅ 工作流成功完成"
+          echo "📧 通知功能临时禁用，等待修复后重新启用"
 
       # 步骤8：发送失败通知
-      - name: 发送失败通知
+      - name: 发送失败通知（临时禁用）
         if: failure()
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
-          echo "🔧 安装通知依赖..."
-          python -m pip install resend requests
-          echo "✅ 依赖安装完成，检查模块..."
-          python -c "import resend; import requests; print('✅ 模块导入成功')"
-          echo "📤 发送失败通知..."
-          python src/send_notification.py failure "外贸客户开发工作流" "工作流执行失败，请查看日志"
+          echo "❌ 工作流执行失败，请查看日志"
+          echo "📧 通知功能临时禁用，等待修复后重新启用"
 
   # 自动化运维任务：监控、优化、分析
   auto-ops:
@@ -161,30 +147,16 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "📋 查看详细报告请下载附件" >> $GITHUB_STEP_SUMMARY
 
-      # 步骤8：发送运维成功通知
-      - name: 发送运维成功通知
+      # 步骤8：发送运维成功通知（临时禁用）
+      - name: 发送运维成功通知（临时禁用）
         if: success()
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
-          echo "🔧 安装通知依赖..."
-          python -m pip install resend requests
-          echo "✅ 依赖安装完成，检查模块..."
-          python -c "import resend; import requests; print('✅ 模块导入成功')"
-          echo "📤 发送运维成功通知..."
-          python src/send_notification.py success "智能自动化运维" "自动化运维成功完成"
+          echo "✅ 自动化运维成功完成"
+          echo "📧 通知功能临时禁用，等待修复后重新启用"
 
-      # 步骤9：发送运维失败通知
-      - name: 发送运维失败通知
+      # 步骤9：发送运维失败通知（临时禁用）
+      - name: 发送运维失败通知（临时禁用）
         if: failure()
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
-          echo "🔧 安装通知依赖..."
-          python -m pip install resend requests
-          echo "✅ 依赖安装完成，检查模块..."
-          python -c "import resend; import requests; print('✅ 模块导入成功')"
-          echo "📤 发送运维失败通知..."
-          python src/send_notification.py failure "智能自动化运维" "自动化运维执行失败，请查看日志"
+          echo "❌ 自动化运维执行失败，请查看日志"
+          echo "📧 通知功能临时禁用，等待修复后重新启用"
