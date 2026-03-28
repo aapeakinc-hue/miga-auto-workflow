@@ -12,17 +12,24 @@ from datetime import datetime
 # 添加上级目录到路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# 检查是否可以发送通知
+CAN_SEND_NOTIFICATION = False
+USE_RESEND_SDK = False
+requests = None
+resend = None
+
 try:
     import resend
     USE_RESEND_SDK = True
+    CAN_SEND_NOTIFICATION = True
 except ImportError:
     # 如果 resend 库不可用，尝试使用 requests
     USE_RESEND_SDK = False
     try:
         import requests
+        CAN_SEND_NOTIFICATION = True
     except ImportError:
         print("⚠️ 警告：resend 和 requests 模块都未安装，无法发送通知")
-        requests = None
 
 
 def send_notification(status, workflow_name, summary=""):
@@ -34,6 +41,13 @@ def send_notification(status, workflow_name, summary=""):
         workflow_name: 工作流名称
         summary: 运行摘要
     """
+    # 检查是否可以发送通知
+    if not CAN_SEND_NOTIFICATION:
+        print(f"⚠️ 无法发送通知：必需的模块未安装")
+        print(f"   工作流状态：{status}")
+        print(f"   工作流名称：{workflow_name}")
+        return True  # 返回 True 表示通知步骤完成（即使没有实际发送）
+
     resend_api_key = os.getenv('RESEND_API_KEY')
     notification_email = os.getenv('NOTIFICATION_EMAIL')
 
