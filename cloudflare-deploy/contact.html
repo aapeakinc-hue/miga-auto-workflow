@@ -18,6 +18,252 @@
     <title>Contact MIGAC Crystal Crafts | Free Quote & Samples | Manufacturer from China</title>
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://miga.cc/contact.html">
+
+    <style>
+        .contact-page {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-intro {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            border-radius: 12px;
+            margin-bottom: 60px;
+        }
+
+        .contact-intro h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            border-color: #ffd700;
+            box-shadow: 0 5px 15px rgba(255,215,0,0.2);
+        }
+
+        .contact-item .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .contact-item h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .contact-item a,
+        .contact-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: #1a237e;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #ffd700;
+        }
+
+        .contact-form-container {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-form-container h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .contact-form-container > p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-group label .required {
+            color: #ff0000;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1a237e;
+            box-shadow: 0 0 0 3px rgba(26,35,126,0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #999;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+            color: #1a237e;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+        }
+
+        .faq-section {
+            margin-top: 100px;
+            padding: 80px 20px;
+            background: #f5f5f5;
+            border-radius: 12px;
+        }
+
+        .faq-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a237e;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-container {
+                padding: 30px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -52,59 +298,52 @@
     </section>
 
     <!-- Content -->
-    <div class="content">
+    <div class="content contact-page">
+        <div class="contact-intro">
+            <h1>Get in Touch with MIGAC</h1>
+            <p>If you have any requirements or questions, please feel free to contact us. Our professional team will respond to your inquiry within 24 hours.</p>
+        </div>
+
         <div class="contact-grid">
             <div class="contact-info">
                 <h2>Contact Information</h2>
-                <p>If you have any requirements or questions, please feel free to contact us. Our professional team will respond to your inquiry within 24 hours.</p>
+                <p>Reach out to us through multiple channels. We're committed to providing prompt and professional service to all our customers worldwide.</p>
 
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="icon">📧</div>
-                        <div class="text">
-                            <h3>Email</h3>
-                            <a href="mailto:info@miga.cc">info@miga.cc</a>
-                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:info@miga.cc">info@miga.cc</a>
                     </div>
 
                     <div class="contact-item">
                         <div class="icon">📞</div>
-                        <div class="text">
-                            <h3>Phone</h3>
-                            <a href="tel:+8619879476613">+86-19879476613</a>
-                        </div>
+                        <h3>Phone</h3>
+                        <a href="tel:+8619879476613">+86-19879476613</a>
                     </div>
 
                     <div class="contact-item">
                         <div class="icon">💬</div>
-                        <div class="text">
-                            <h3>WhatsApp</h3>
-                            <a href="https://wa.me/8619879476613">+86-19879476613</a>
-                        </div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/8619879476613">+86-19879476613</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon">🎮</div>
+                        <h3>WeChat</h3>
+                        <p>Migac1319</p>
                     </div>
 
                     <div class="contact-item">
                         <div class="icon">🌐</div>
-                        <div class="text">
-                            <h3>Website</h3>
-                            <a href="https://miga.cc">www.miga.cc</a>
-                        </div>
+                        <h3>Website</h3>
+                        <a href="https://miga.cc">www.miga.cc</a>
                     </div>
 
                     <div class="contact-item">
                         <div class="icon">📍</div>
-                        <div class="text">
-                            <h3>Address</h3>
-                            <p>No. 888 Crystal Road, Pujiang County, Zhejiang Province, China</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="icon">⏰</div>
-                        <div class="text">
-                            <h3>Business Hours</h3>
-                            <p>Monday to Friday 9:00 - 18:00 (Beijing Time)</p>
-                        </div>
+                        <h3>Address</h3>
+                        <p>Crystal Industrial Park, Pujiang, China</p>
                     </div>
                 </div>
             </div>
@@ -140,7 +379,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="company">company name</label>
+                        <label for="company">Company Name</label>
                         <input
                             type="text"
                             id="company"
@@ -161,7 +400,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phonenumber</label>
+                        <label for="phone">Phone Number</label>
                         <input
                             type="tel"
                             id="phone"
@@ -177,7 +416,7 @@
                             <option value="price-inquiry">Price Inquiry</option>
                             <option value="custom-order">Custom Order</option>
                             <option value="wholesale">Wholesale Inquiry</option>
-                            <option value="catalog">RequestProductCatalog</option>
+                            <option value="catalog">Request Product Catalog</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -188,7 +427,7 @@
                             id="message"
                             name="message"
                             required
-                            placeholder="Please describe your requirements in detail，includingproduct type、quantity、specificationsand other information"
+                            placeholder="Please describe your requirements in detail, including product type, quantity, specifications and other information"
                         ></textarea>
                     </div>
 
@@ -199,43 +438,43 @@
 
         <!-- FAQ Section -->
         <div class="faq-section">
-            <h2>FAQ</h2>
+            <h2>Frequently Asked Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>📦 What is the Minimum Order Quantity (MOQ)?？</h3>
-                    <p>MostProductproducts have a minimum order quantity of50-100pieces。ForCustom Order，We support small batch trial orders。For specific MOQ, please consult our sales team。</p>
+                    <h3>📦 What is the Minimum Order Quantity (MOQ)?</h3>
+                    <p>Most products have a minimum order quantity of 50-100 pieces. For custom orders, we support small batch trial orders. For specific MOQ, please consult our sales team.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>⏱️ What is the production cycle?？</h3>
-                    <p>in-stockProductTypically3-7days to ship。CustomizationProductNeed15-30days，specifically depends on order quantity and complexity。</p>
+                    <h3>⏱️ What is the production cycle?</h3>
+                    <p>In-stock products typically ship within 3-7 days. Customized products need 15-30 days, specifically depends on order quantity and complexity.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>🎨 Do you supportOEM/ODMCustomization？</h3>
-                    <p>Yes！We have a professional design team，support customization according to your needs。includingProductDesign、packaging design, and more。</p>
+                    <h3>🎨 Do you support OEM/ODM customization?</h3>
+                    <p>Yes! We have a professional design team, supporting customization according to your needs. Including product design, packaging design, and more.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>✅ ProductWhat quality guarantees do you offer?？</h3>
-                    <p>We acceptISO 9001quality certification，AllProductAll undergo strict quality inspection。Support quality assurance，ifyou have any questions，pleaseContact Usprocess。</p>
+                    <h3>✅ What quality guarantees do you offer?</h3>
+                    <p>We accept ISO 9001 quality certification, all products undergo strict quality inspection. Support quality assurance, if you have any questions, please contact us.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>💳 What payment methods do you support?？</h3>
-                    <p>We supportT/T、PayPal、Western Unionand other payment methods。For new customers，usually requires30%deposit，70%pay before shipping。</p>
+                    <h3>💳 What payment methods do you support?</h3>
+                    <p>We support T/T, PayPal, Western Union and other payment methods. For new customers, usually requires 30% deposit, 70% pay before shipping.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>🚚 Do you support international delivery?？</h3>
-                    <p>Yes！We have extensive international logistics experience，We support global delivery。can help handle customs clearance、shipping and other logistics。</p>
+                    <h3>🚚 Do you support international delivery?</h3>
+                    <p>Yes! We have extensive international logistics experience, supporting global delivery. Can help handle customs clearance, shipping and other logistics.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/8619879476613?text=Hello，I want to inquire about crystal candelabrasProduct" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/8619879476613?text=Hello, I want to inquire about crystal candelabras products" class="whatsapp-float" target="_blank">
         💬
     </a>
 
     <!-- Footer -->
-        <footer class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>MIGAC Crystal Crafts</h3>

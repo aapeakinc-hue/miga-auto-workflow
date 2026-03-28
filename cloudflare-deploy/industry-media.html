@@ -143,6 +143,235 @@
             font-size: 16px;
             color: #666;
         }
+
+        .featured-articles {
+            background: #1a237e;
+            color: white;
+            padding: 80px 20px;
+            margin: 60px 0;
+        }
+
+        .featured-articles .section-title {
+            color: white;
+        }
+
+        .article-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+
+        .featured-article {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .featured-article h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .featured-article p {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .read-more:hover {
+            opacity: 0.8;
+        }
+
+        .resources-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .resource-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .resource-card:hover {
+            border-color: #ffd700;
+            box-shadow: 0 5px 20px rgba(255,215,0,0.2);
+        }
+
+        .resource-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .resource-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .resource-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .resource-btn {
+            display: inline-block;
+            background: #1a237e;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .resource-btn:hover {
+            background: #ffd700;
+            color: #1a237e;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+            padding: 80px 20px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .newsletter-section h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-section p {
+            font-size: 18px;
+            color: #1a237e;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 15px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+        }
+
+        .newsletter-btn {
+            background: #1a237e;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-btn:hover {
+            background: #0d47a1;
+            transform: translateY(-2px);
+        }
+
+        .video-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+            position: relative;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            background: rgba(255,255,255,0.9);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -236,6 +465,52 @@
                     <span class="media-date">October 2023</span>
                 </div>
             </div>
+
+            <div class="media-card">
+                <div class="media-image">📈</div>
+                <div class="media-content">
+                    <span class="media-category">Business Growth</span>
+                    <h3>Rental Business Opportunities</h3>
+                    <p>How event companies are building profitable crystal rental businesses in 2024.</p>
+                    <span class="media-date">September 2023</span>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-image">🔧</div>
+                <div class="media-content">
+                    <span class="media-category">Manufacturing</span>
+                    <h3>Quality Control Standards</h3>
+                    <p>ISO 9001 certified quality control processes ensuring premium crystal products.</p>
+                    <span class="media-date">August 2023</span>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-image">🎉</div>
+                <div class="media-content">
+                    <span class="media-category">Events</span>
+                    <h3>Pujiang Crystal Expo 2024</h3>
+                    <p>Upcoming international crystal industry exhibition showcasing latest innovations and designs.</p>
+                    <span class="media-date">July 2023</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-articles">
+        <h2 class="section-title">Featured Articles</h2>
+        <div class="article-grid">
+            <div class="featured-article">
+                <h3>The Complete Guide to Crystal Candelabras for Weddings</h3>
+                <p>Everything you need to know about choosing the perfect crystal candelabras for wedding ceremonies and receptions. From traditional designs to modern innovations, discover the complete guide.</p>
+                <a href="contact.html" class="read-more">Read Full Article →</a>
+            </div>
+            <div class="featured-article">
+                <h3>Building a Successful Crystal Rental Business</h3>
+                <p>Learn how event companies are creating profitable crystal rental businesses. Essential tips on inventory management, pricing strategies, and customer acquisition in the luxury event market.</p>
+                <a href="contact.html" class="read-more">Read Full Article →</a>
+            </div>
         </div>
     </section>
 
@@ -261,14 +536,87 @@
         </div>
     </section>
 
+    <section class="video-section">
+        <h2 class="section-title">Video Gallery</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>Crystal Manufacturing Process</h3>
+                    <p>Behind the scenes: How premium crystal candelabras are crafted</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>Wedding Decoration Showcase</h3>
+                    <p>Stunning crystal candelabra arrangements for luxury weddings</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3>Quality Control Standards</h3>
+                    <p>ISO 9001 certified quality inspection processes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-section">
+        <h2 class="section-title">Resources & Downloads</h2>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <div class="resource-icon">📚</div>
+                <h3>Product Catalog 2024</h3>
+                <p>Complete collection of crystal candelabras and decorative crafts</p>
+                <a href="catalog.html" class="resource-btn">Download Now</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">📋</div>
+                <h3>Price List</h3>
+                <p>Wholesale and retail pricing for all crystal products</p>
+                <a href="free-audit.html" class="resource-btn">Get Quote</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">📝</div>
+                <h3>Sample Request</h3>
+                <p>Order product samples before bulk purchase</p>
+                <a href="request-sample.html" class="resource-btn">Request Samples</a>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">💼</div>
+                <h3>B2B Partnership</h3>
+                <p>Explore wholesale and partnership opportunities</p>
+                <a href="contact.html" class="resource-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <h2>Subscribe to Industry Updates</h2>
+        <p>Stay informed about the latest crystal industry trends, innovations, and market insights. Join our newsletter today.</p>
+        <form class="newsletter-form" action="https://formspree.io/f/mpqyvjee" method="POST">
+            <input type="email" name="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+    </section>
+
     <section class="media-section">
-        <h2 class="section-title">Subscribe to Industry Updates</h2>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            <p style="font-size: 16px; color: #666; margin-bottom: 30px;">
-                Stay informed about the latest crystal industry trends, innovations, and market insights. Subscribe to our newsletter.
+        <h2 class="section-title">Contact for Industry Collaboration</h2>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <p style="font-size: 16px; color: #666; margin-bottom: 30px; line-height: 1.8;">
+                Looking for partnership opportunities, custom projects, or media collaboration? 
+                Our team is ready to discuss how we can work together to create stunning crystal decorations for your events and projects.
             </p>
             <a href="contact.html" class="hero-btn-primary" style="background: #ffd700; color: #1a237e; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-size: 16px; font-weight: 700; display: inline-block;">
-                Contact Us for Updates
+                Get in Touch
             </a>
         </div>
     </section>
