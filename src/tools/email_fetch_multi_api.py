@@ -6,7 +6,7 @@
 import requests
 import logging
 from typing import Dict, List, Any, Optional
-from .email_api_manager import get_email_api_key, mark_api_key_used, email_api_manager
+from email_api_manager import get_email_api_key, mark_api_key_used, email_api_manager
 
 logger = logging.getLogger(__name__)
 

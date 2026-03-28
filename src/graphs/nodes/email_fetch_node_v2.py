@@ -8,8 +8,8 @@ from langchain_core.runnables import RunnableConfig
 from langgraph.runtime import Runtime
 from coze_coding_utils.runtime_ctx.context import Context
 from graphs.state import EmailFetchInput, EmailFetchOutput
-from src.tools.email_fetch_multi_api import fetch_emails_from_domain
-from src.email_api_manager import setup_email_apis, email_api_manager
+from tools.email_fetch_multi_api import fetch_emails_from_domain
+from email_api_manager import setup_email_apis, email_api_manager
 
 # 配置日志
 logging.basicConfig(level=logging.INFO)
