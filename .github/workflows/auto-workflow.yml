@@ -30,11 +30,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      # 步骤3：安装依赖
+      # 步骤3：清除缓存并安装依赖
+      - name: 清除 pip 缓存
+        run: |
+          pip cache purge || true
+          rm -rf ~/.cache/pip || true
+
       - name: 安装依赖
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip --no-cache-dir
+          pip install -r requirements.txt --no-cache-dir
 
       # 步骤4：运行自动化工作流（使用真实 API）
       - name: 运行自动化工作流
@@ -99,11 +104,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      # 步骤3：安装依赖
+      # 步骤3：清除缓存并安装依赖
+      - name: 清除 pip 缓存
+        run: |
+          pip cache purge || true
+          rm -rf ~/.cache/pip || true
+
       - name: 安装依赖
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip --no-cache-dir
+          pip install -r requirements.txt --no-cache-dir
 
       # 步骤4：运行智能自动化运维
       - name: 运行智能自动化运维

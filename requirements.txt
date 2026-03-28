@@ -1,7 +1,5 @@
 alembic==1.16.5
 annotated-doc==0.0.4
-# 邮件发送
-resend==2.4.0
 annotated-types==0.7.0
 anyio==4.12.1
 APScheduler==3.11.2
