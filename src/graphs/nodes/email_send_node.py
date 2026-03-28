@@ -17,8 +17,8 @@ def email_send_node(state: EmailSendInput, config: RunnableConfig, runtime: Runt
     """
     ctx = runtime.context
     
-    # resend API 配置
-    resend_api_key = "re_5pAqrE8V_6DgcPEqkjR8yyN3PzSRhStat"
+    # Resend API Key（从环境变量读取，使用已配置的key作为默认值）
+    resend_api_key = os.getenv('RESEND_API_KEY', 're_5pAqrE8V_6DgcPEqkjR8yyN3PzSRhStat')
     from_email = "info@miga.cc"
     
     # 统计结果

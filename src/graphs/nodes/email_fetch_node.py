@@ -34,11 +34,12 @@ def email_fetch_node(state: EmailFetchInput, config: RunnableConfig, runtime: Ru
     desc: 使用 snov.io API 根据公司域名或联系人信息获取有效邮箱地址
     integrations: snov.io API
     """
+    import os
     ctx = runtime.context
     
-    # snov.io API 配置
-    snov_api_token = "fbf98546081c2793e21d6de6540ce2ca"
-    snov_client_id = "746628993ee9eda28e455e53751030bd"
+    # snov.io API 配置（从环境变量读取，使用已配置的token）
+    snov_api_token = os.getenv('SNOVIO_API_TOKEN', 'fbf98546081c2793e21d6de6540ce2ca')
+    snov_client_id = os.getenv('SNOVIO_CLIENT_ID', '746628993ee9eda28e455e53751030bd')
     
     customers_with_email = []
     
