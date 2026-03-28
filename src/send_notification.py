@@ -14,9 +14,15 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
     import resend
+    USE_RESEND_SDK = True
 except ImportError:
-    # 如果 resend 库不可用，使用 requests
-    import requests
+    # 如果 resend 库不可用，尝试使用 requests
+    USE_RESEND_SDK = False
+    try:
+        import requests
+    except ImportError:
+        print("⚠️ 警告：resend 和 requests 模块都未安装，无法发送通知")
+        requests = None
 
 
 def send_notification(status, workflow_name, summary=""):
@@ -101,22 +107,28 @@ def send_notification(status, workflow_name, summary=""):
     """
 
     # 发送邮件
-    try:
-        # 尝试使用 resend SDK
-        resend.api_key = resend_api_key
-        params = {
-            "from": "外贸自动化系统 <noreply@aapeakinc.com>",
-            "to": [notification_email],
-            "subject": subject,
-            "html": email_content
-        }
+    if USE_RESEND_SDK:
+        # 使用 resend SDK
+        try:
+            resend.api_key = resend_api_key
+            params = {
+                "from": "外贸自动化系统 <noreply@aapeakinc.com>",
+                "to": [notification_email],
+                "subject": subject,
+                "html": email_content
+            }
 
-        resend.Emails.send(params)
-        print(f"✅ 通知已发送到 {notification_email}")
-        return True
+            resend.Emails.send(params)
+            print(f"✅ 通知已发送到 {notification_email} (使用 SDK)")
+            return True
 
-    except Exception as e1:
-        # 如果 SDK 不可用，使用 REST API
+        except Exception as e:
+            print(f"❌ 使用 Resend SDK 发送失败: {e}")
+            # 降级到 REST API
+            USE_RESEND_SDK = False
+
+    # 使用 REST API
+    if not USE_RESEND_SDK and requests:
         try:
             url = "https://api.resend.com/emails"
             headers = {
@@ -133,12 +145,16 @@ def send_notification(status, workflow_name, summary=""):
             response = requests.post(url, headers=headers, json=data)
             response.raise_for_status()
 
-            print(f"✅ 通知已发送到 {notification_email}")
+            print(f"✅ 通知已发送到 {notification_email} (使用 REST API)")
             return True
 
-        except Exception as e2:
-            print(f"❌ 发送通知失败: {e2}")
+        except Exception as e:
+            print(f"❌ 使用 REST API 发送失败: {e}")
             return False
+
+    # 如果两种方式都不可用
+    print("❌ 无法发送通知：resend SDK 和 requests 模块都不可用")
+    return False
 
 
 if __name__ == "__main__":
