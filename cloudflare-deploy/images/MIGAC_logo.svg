@@ -1,46 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
   <defs>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;display=swap');
       .logo-text {
-        font-family: 'Montserrat', 'Arial', sans-serif;
-        font-weight: 900;
-        font-size: 64px;
-        fill: #FFFFFF;
-        letter-spacing: 4px;
-      }
-      .logo-dot {
-        font-family: 'Montserrat', 'Arial', sans-serif;
-        font-weight: 900;
-        font-size: 64px;
-        fill: #FFD700;
+        font-family: 'Pacifico', cursive;
+        font-size: 42px;
+        fill: #FF6B9D;
       }
       .tagline {
-        font-family: 'Montserrat', 'Arial', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 700;
-        font-size: 14px;
-        fill: #E0E0E0;
-        letter-spacing: 8px;
+        font-size: 13px;
+        fill: #FFFFFF;
+        letter-spacing: 6px;
         text-transform: uppercase;
       }
     </style>
   </defs>
 
-  <!-- Logo Text (No Background) -->
-  <text x="20" y="75" class="logo-text">MIGAC</text>
-  <text x="230" y="75" class="logo-dot">.</text>
+  <!-- 树袋熊（考拉）图像 -->
+  <g transform="translate(20, 10)">
+    <!-- 身体 -->
+    <ellipse cx="50" cy="50" rx="40" ry="45" fill="#FF6B9D"/>
 
-  <!-- Tagline -->
-  <text x="20" y="100" class="tagline">Crystal Crafts</text>
+    <!-- 头部 -->
+    <circle cx="50" cy="35" r="32" fill="#FF6B9D"/>
 
-  <!-- Crystal Element (Transparent Background) -->
-  <g transform="translate(310, 20)">
-    <!-- Crystal Shape -->
-    <polygon points="40,0 80,30 80,70 40,100 0,70 0,30" fill="#FFFFFF" opacity="0.9"/>
-    <polygon points="40,10 70,35 70,65 40,90 10,65 10,35" fill="#E0E0E0" opacity="0.8"/>
-    <polygon points="40,20 60,40 60,60 40,80 20,60 20,40" fill="#FFD700" opacity="0.6"/>
-    <!-- Highlight -->
-    <polygon points="40,25 55,40 40,55 25,40" fill="white" opacity="0.3"/>
+    <!-- 耳朵 -->
+    <ellipse cx="22" cy="25" rx="15" ry="18" fill="#FF6B9D"/>
+    <ellipse cx="78" cy="25" rx="15" ry="18" fill="#FF6B9D"/>
+    <!-- 耳朵内侧 -->
+    <ellipse cx="22" cy="25" rx="10" ry="12" fill="#FFB6C1"/>
+    <ellipse cx="78" cy="25" rx="10" ry="12" fill="#FFB6C1"/>
+
+    <!-- 鼻子 -->
+    <ellipse cx="50" cy="38" rx="14" ry="12" fill="#8B4513"/>
+    <ellipse cx="50" cy="37" rx="8" ry="6" fill="#A0522D"/>
+
+    <!-- 眼睛 -->
+    <ellipse cx="38" cy="28" rx="8" ry="9" fill="#4A4A4A"/>
+    <ellipse cx="62" cy="28" rx="8" ry="9" fill="#4A4A4A"/>
+    <!-- 眼睛高光 -->
+    <circle cx="40" cy="26" r="3" fill="white"/>
+    <circle cx="64" cy="26" r="3" fill="white"/>
+
+    <!-- 腹部 -->
+    <ellipse cx="50" cy="58" rx="25" ry="22" fill="#FFB6C1"/>
+
+    <!-- 手臂（举起） -->
+    <ellipse cx="80" cy="48" rx="12" ry="18" fill="#FF6B9D" transform="rotate(-30, 80, 48)"/>
+  </g>
+
+  <!-- 手写文字 -->
+  <text x="130" y="65" class="logo-text">migac</text>
+
+  <!-- 副标题 -->
+  <text x="130" y="90" class="tagline">Crystal Crafts</text>
+
+  <!-- 右侧装饰 - 简化的水晶元素 -->
+  <g transform="translate(340, 25)">
+    <polygon points="20,0 40,15 40,35 20,50 0,35 0,15" fill="#FFD700" opacity="0.8"/>
+    <polygon points="20,8 32,18 32,32 20,42 8,32 8,18" fill="#FFA500" opacity="0.6"/>
   </g>
 </svg>
