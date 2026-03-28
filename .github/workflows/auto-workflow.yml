@@ -39,7 +39,8 @@ jobs:
       # 步骤4：运行自动化工作流（使用真实 API）
       - name: 运行自动化工作流
         env:
-          SNOVIO_API_KEY: ${{ secrets.SNOVIO_API_KEY }}
+          SNOVIO_API_TOKEN: ${{ secrets.SNOVIO_API_TOKEN }}
+          SNOVIO_CLIENT_ID: ${{ secrets.SNOVIO_CLIENT_ID }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           cd src
