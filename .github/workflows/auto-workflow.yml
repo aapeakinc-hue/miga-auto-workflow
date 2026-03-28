@@ -77,6 +77,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
+          pip install resend requests --quiet || true
           python src/send_notification.py success "外贸客户开发工作流" "工作流成功完成"
 
       # 步骤8：发送失败通知
@@ -86,6 +87,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
+          pip install resend requests --quiet || true
           python src/send_notification.py failure "外贸客户开发工作流" "工作流执行失败，请查看日志"
 
   # 自动化运维任务：监控、优化、分析
@@ -158,6 +160,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
+          pip install resend requests --quiet || true
           python src/send_notification.py success "智能自动化运维" "自动化运维成功完成"
 
       # 步骤9：发送运维失败通知
@@ -167,4 +170,5 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
         run: |
+          pip install resend requests --quiet || true
           python src/send_notification.py failure "智能自动化运维" "自动化运维执行失败，请查看日志"
