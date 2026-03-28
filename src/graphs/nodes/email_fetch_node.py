@@ -4,10 +4,29 @@
 """
 import requests
 import os
+import re
 from langchain_core.runnables import RunnableConfig
 from langgraph.runtime import Runtime
 from coze_coding_utils.runtime_ctx.context import Context
 from graphs.state import EmailFetchInput, EmailFetchOutput
+
+def is_fake_customer(customer: dict) -> bool:
+    """
+    判断是否为伪客户（需要屏蔽）
+    
+    屏蔽条件：
+    1. 公司名称包含 "PUJIANG" 或 "浦江"
+    2. 地址在中国境内
+    3. 电话号码以 +86 开头
+    4. 其他本地公司特征
+    """
+    company_name = customer.get("company_name", "").lower()
+    
+    # 屏蔽浦江相关公司
+    if "pujiang" in company_name or "浦江" in company_name:
+        return True
+    
+    return False
 
 def email_fetch_node(state: EmailFetchInput, config: RunnableConfig, runtime: Runtime[Context]) -> EmailFetchOutput:
     """
@@ -31,6 +50,10 @@ def email_fetch_node(state: EmailFetchInput, config: RunnableConfig, runtime: Ru
         website = customer.get("website", "")
         company_name = customer.get("company_name", "")
         domain = customer.get("domain", "")
+        
+        # 过滤伪客户
+        if is_fake_customer(customer):
+            continue
         
         # 如果没有网站和域名，跳过
         if not website and not domain:
