@@ -11,10 +11,6 @@ on:
   # 允许手动触发
   workflow_dispatch:
 
-env:
-  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -26,13 +22,11 @@ jobs:
 
       # 步骤 2：部署到 Cloudflare Pages
       - name: 部署到 Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: miga-website
-          directory: cloudflare-deploy
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy cloudflare-deploy --project-name=miga-website
 
       # 步骤 3：输出部署信息
       - name: 输出部署信息
