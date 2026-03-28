@@ -7,7 +7,6 @@ on:
       - main
     paths:
       - 'cloudflare-deploy/**'
-
   # 允许手动触发
   workflow_dispatch:
 
@@ -19,8 +18,6 @@ jobs:
       # 步骤 1：检出代码
       - name: 检出代码
         uses: actions/checkout@v4
-        with:
-          path: 'cloudflare-deploy'
 
       # 步骤 2：安装 Node.js
       - name: 安装 Node.js
@@ -44,6 +41,7 @@ jobs:
 
       # 步骤 5：输出部署信息
       - name: 输出部署信息
+        if: success()
         run: |
           echo "## 🚀 部署成功" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
