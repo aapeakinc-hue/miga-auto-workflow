@@ -44,7 +44,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           cd src
-          python auto_workflow_with_real_api.py --keywords "美国水晶工艺品批发商" --website "https://www.aapeakinc.com"
+          python auto_workflow_with_real_api.py --keywords "美国水晶工艺品批发商" --website "https://www.miga.cc"
 
       # 步骤5：上传日志
       - name: 上传日志

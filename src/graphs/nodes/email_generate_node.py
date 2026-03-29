@@ -152,8 +152,8 @@ I would appreciate the opportunity to discuss how we can support your business g
 Best regards,
 Your Name
 Yiwu Bangye Handicraft Factory
-Email: info@aapeakinc.com
-Website: https://www.aapeakinc.com"""
+Email: info@miga.cc
+Website: https://miga.cc"""
             }
             email_templates.append(email_template)
     

@@ -120,7 +120,7 @@ def run_auto_workflow(target_keywords: str = None, website_url: str = None):
     if not target_keywords:
         target_keywords = "美国水晶工艺品批发商"
     if not website_url:
-        website_url = "https://www.aapeakinc.com"
+        website_url = "https://www.miga.cc"
 
     logger.info(f"🔍 目标关键词: {target_keywords}")
     logger.info(f"🌐 产品网站: {website_url}")
