@@ -16,6 +16,7 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 COLORS = {
     'primary': colors.HexColor('#1e3c72'),
     'accent': colors.HexColor('#d4af37'),
+    'accent_light': colors.HexColor('#f4e4ba'),
     'text_light': colors.HexColor('#ffffff'),
     'text_dark': colors.HexColor('#333333'),
     'text_gray': colors.HexColor('#666666'),
@@ -85,22 +86,28 @@ def create_cover_page(canvas, doc, catalog_data):
     
     # 标题
     canvas.setFillColor(COLORS['accent'])
-    canvas.setFont('Helvetica-Bold', 48)
-    canvas.drawCentredString(A4[0]/2, A4[1] - 7*cm, "MIGAC")
+    canvas.setFont('Helvetica-Bold', 52)
+    canvas.drawCentredString(A4[0]/2, A4[1] - 6.5*cm, "MIGAC")
     
-    canvas.setFont('Helvetica-Bold', 24)
-    canvas.drawCentredString(A4[0]/2, A4[1] - 8.5*cm, "PREMIUM CRYSTAL CRAFTS")
+    canvas.setFont('Helvetica-Bold', 20)
+    canvas.drawCentredString(A4[0]/2, A4[1] - 8*cm, "PREMIUM CRYSTAL CRAFTS")
     
     canvas.setFont('Helvetica', 14)
     canvas.setFillColor(colors.HexColor('#ffffff'))
-    canvas.drawCentredString(A4[0]/2, A4[1] - 10*cm, "Excellence in Every Crystal")
+    canvas.drawCentredString(A4[0]/2, A4[1] - 9.5*cm, "Excellence in Every Crystal")
+    
+    canvas.setFont('Helvetica', 12)
+    canvas.setFillColor(COLORS['accent_light'])
+    canvas.drawCentredString(A4[0]/2, A4[1] - 11*cm, "B2B Catalog 2026")
     
     # 公司信息
     company = catalog_data['catalog']['company']
-    canvas.setFont('Helvetica', 12)
-    canvas.drawCentredString(A4[0]/2, A4[1] - 15*cm, company['name'])
-    canvas.setFont('Helvetica', 10)
-    canvas.drawCentredString(A4[0]/2, A4[1] - 16*cm, company['email'])
+    canvas.setFont('Helvetica', 11)
+    canvas.setFillColor(colors.HexColor('#ffffff'))
+    canvas.drawCentredString(A4[0]/2, A4[1] - 14.5*cm, company['name'])
+    canvas.setFont('Helvetica', 9)
+    canvas.drawCentredString(A4[0]/2, A4[1] - 15.5*cm, company['email'])
+    canvas.drawCentredString(A4[0]/2, A4[1] - 16.5*cm, company['website'])
     
     # 页脚
     canvas.setFont('Helvetica', 8)
