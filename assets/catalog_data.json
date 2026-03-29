@@ -1,0 +1,194 @@
+{
+  "company_info": {
+    "company_name": "Yiwu Bangye Handicraft Factory",
+    "brand_name": "MIGAC",
+    "website": "https://miga.cc",
+    "email": "info@miga.cc",
+    "phone": "+86-19879476613",
+    "address": "Yiwu, Zhejiang, China",
+    "description": "Professional Manufacturer of Crystal Candelabras & Home Decor",
+    "experience": "10+ Years",
+    "customers": "200+",
+    "countries": "50+"
+  },
+  "product_categories": [
+    {
+      "category": "Crystal Candelabras",
+      "description": "Elegant crystal candelabras for weddings, events, and luxury home decor",
+      "features": [
+        "High-quality K9 crystal",
+        "Multiple arm designs",
+        "Candle or LED options",
+        "Customizable heights"
+      ],
+      "moq": "10 pieces",
+      "lead_time": "7-15 days"
+    },
+    {
+      "category": "Candle Holders",
+      "description": "Beautiful crystal and glass candle holders for table decoration",
+      "features": [
+        "Premium materials",
+        "Various styles available",
+        "Perfect for events",
+        "Competitive pricing"
+      ],
+      "moq": "20 pieces",
+      "lead_time": "7-10 days"
+    },
+    {
+      "category": "Home Decor",
+      "description": "Crystal decorative items for home and commercial spaces",
+      "features": [
+        "Modern designs",
+        "Durable quality",
+        "Easy maintenance",
+        "Packaging included"
+      ],
+      "moq": "30 pieces",
+      "lead_time": "10-15 days"
+    }
+  ],
+  "product_images": [
+    {
+      "path": "assets/candle-微信圖片_20260321165016_423_2.jpg",
+      "name": "candle-微信圖片_20260321165016_423_2",
+      "size": 748870,
+      "size_mb": 0.71
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164927_376_2.jpg",
+      "name": "candle-微信圖片_20260321164927_376_2",
+      "size": 726163,
+      "size_mb": 0.69
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164933_382_2.jpg",
+      "name": "candle-微信圖片_20260321164933_382_2",
+      "size": 697297,
+      "size_mb": 0.66
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165930_798_2.jpg",
+      "name": "candle-微信圖片_20260321165930_798_2",
+      "size": 695733,
+      "size_mb": 0.66
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165908_780_2.jpg",
+      "name": "candle-微信圖片_20260321165908_780_2",
+      "size": 653517,
+      "size_mb": 0.62
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164932_381_2.jpg",
+      "name": "candle-微信圖片_20260321164932_381_2",
+      "size": 644991,
+      "size_mb": 0.62
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165015_422_2.jpg",
+      "name": "candle-微信圖片_20260321165015_422_2",
+      "size": 637727,
+      "size_mb": 0.61
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164515_251_2.jpg",
+      "name": "candle-微信圖片_20260321164515_251_2",
+      "size": 621641,
+      "size_mb": 0.59
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165747_732_2.jpg",
+      "name": "candle-微信圖片_20260321165747_732_2",
+      "size": 590295,
+      "size_mb": 0.56
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165848_768_2.jpg",
+      "name": "candle-微信圖片_20260321165848_768_2",
+      "size": 568509,
+      "size_mb": 0.54
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164721_355_2.jpg",
+      "name": "candle-微信圖片_20260321164721_355_2",
+      "size": 551128,
+      "size_mb": 0.53
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165749_733_2.jpg",
+      "name": "candle-微信圖片_20260321165749_733_2",
+      "size": 543601,
+      "size_mb": 0.52
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164607_291_2.jpg",
+      "name": "candle-微信圖片_20260321164607_291_2",
+      "size": 478256,
+      "size_mb": 0.46
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164735_359_2.jpg",
+      "name": "candle-微信圖片_20260321164735_359_2",
+      "size": 472661,
+      "size_mb": 0.45
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164606_290_2.jpg",
+      "name": "candle-微信圖片_20260321164606_290_2",
+      "size": 452592,
+      "size_mb": 0.43
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165541_711_2.jpg",
+      "name": "candle-微信圖片_20260321165541_711_2",
+      "size": 451649,
+      "size_mb": 0.43
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165534_706_2.jpg",
+      "name": "candle-微信圖片_20260321165534_706_2",
+      "size": 428414,
+      "size_mb": 0.41
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164517_253_2.jpg",
+      "name": "candle-微信圖片_20260321164517_253_2",
+      "size": 427111,
+      "size_mb": 0.41
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321165514_690_2.jpg",
+      "name": "candle-微信圖片_20260321165514_690_2",
+      "size": 402800,
+      "size_mb": 0.38
+    },
+    {
+      "path": "assets/candle-微信圖片_20260321164739_360_2.jpg",
+      "name": "candle-微信圖片_20260321164739_360_2",
+      "size": 391941,
+      "size_mb": 0.37
+    }
+  ],
+  "key_advantages": [
+    "10+ Years Manufacturing Experience",
+    "200+ Satisfied Customers Worldwide",
+    "Export to 50+ Countries",
+    "100% Quality Inspection",
+    "Competitive Factory Prices",
+    "Custom Design Available"
+  ],
+  "services": [
+    "OEM/ODM Services",
+    "Free Samples Available",
+    "Fast Delivery",
+    "Quality Guarantee",
+    "After-sales Support"
+  ],
+  "contact_info": {
+    "sales_team": "sales@miga.cc",
+    "website": "https://miga.cc",
+    "whatsapp": "+86-19879476613"
+  }
+}
