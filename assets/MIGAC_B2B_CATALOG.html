@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGAC Crystal Crafts - Premium B2B Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Professional B2B Header */
+        .b2b-header {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+            padding: 15px 50px;
+            border-bottom: 4px solid #d4af37;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 42px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4ba 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .company-name {
+            font-size: 16px;
+            color: #e8e8e8;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .header-badges {
+            display: flex;
+            gap: 15px;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4ba 100%);
+            color: #1a1a2e;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(42, 82, 152, 0.95) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="crystal" patternUnits="userSpaceOnUse" width="20" height="20"><polygon points="10,0 20,10 10,20 0,10" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect fill="url(%23crystal)" width="100" height="100"/></svg>');
+            padding: 80px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 50%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4ba 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #e8e8e8;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #d4af37;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #b8c8d4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            font-weight: 900;
+            color: #d4af37;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #b8c8d4;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        }
+
+        /* Product Series */
+        .series-section {
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.3) 0%, rgba(42, 82, 152, 0.3) 100%);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #f4e4ba, #d4af37);
+        }
+
+        .series-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .series-title-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .series-icon {
+            font-size: 64px;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+        }
+
+        .series-title {
+            font-size: 36px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .series-subtitle {
+            font-size: 18px;
+            color: #d4af37;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        .series-code-badge {
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4ba 100%);
+            color: #1a1a2e;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .series-description {
+            font-size: 18px;
+            color: #e8e8e8;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .series-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .feature-tag {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: #d4af37;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.8) 0%, rgba(42, 82, 152, 0.8) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, #f4e4ba, #d4af37);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-card.best-seller {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(244, 228, 186, 0.1) 100%);
+            border: 2px solid #d4af37;
+        }
+
+        .product-card.featured {
+            background: linear-gradient(135deg, rgba(30, 144, 255, 0.2) 0%, rgba(0, 191, 255, 0.1) 100%);
+            border: 2px solid #00bfff;
+        }
+
+        .product-card.new-arrival {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.2) 0%, rgba(255, 140, 0, 0.1) 100%);
+            border: 2px solid #ff6600;
+        }
+
+        .product-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-badge {
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .badge-best {
+            background: linear-gradient(135deg, #d4af37, #f4e4ba);
+            color: #1a1a2e;
+        }
+
+        .badge-featured {
+            background: linear-gradient(135deg, #00bfff, #1e90ff);
+            color: #ffffff;
+        }
+
+        .badge-new {
+            background: linear-gradient(135deg, #ff6600, #ff8c00);
+            color: #ffffff;
+        }
+
+        .product-model {
+            font-size: 14px;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .product-name {
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .product-tagline {
+            font-size: 14px;
+            color: #d4af37;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .product-description {
+            font-size: 15px;
+            color: #b8c8d4;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .spec-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #e8e8e8;
+            border-left: 3px solid #d4af37;
+        }
+
+        .spec-item strong {
+            color: #d4af37;
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+
+        .product-pricing {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .price-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .price-label {
+            color: #b8c8d4;
+        }
+
+        .price-value {
+            color: #d4af37;
+            font-weight: 700;
+        }
+
+        .price-value.highlight {
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 228, 186, 0.05) 100%);
+            padding: 60px 50px;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 80px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 900;
+            color: #d4af37;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: #e8e8e8;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            background: rgba(30, 60, 114, 0.5);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #d4af37;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .contact-item span {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #d4af37;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 40px 50px;
+            text-align: center;
+            border-top: 4px solid #d4af37;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            color: #b8c8d4;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .footer .catalog-info {
+            color: #d4af37;
+            font-size: 12px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .b2b-header {
+                padding: 15px 20px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .logo {
+                font-size: 32px;
+            }
+            
+            .hero {
+                padding: 60px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .series-section {
+                padding: 30px 20px;
+            }
+            
+            .series-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section {
+                padding: 40px 20px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white !important;
+                color: #000 !important;
+            }
+            
+            .b2b-header {
+                background: white !important;
+                color: #000 !important;
+                border: 2px solid #000;
+            }
+            
+            .logo {
+                color: #000 !important;
+                -webkit-text-fill-color: #000 !important;
+            }
+            
+            .badge {
+                background: #000 !important;
+                color: #fff !important;
+            }
+            
+            .hero {
+                background: white !important;
+                color: #000 !important;
+            }
+            
+            .hero h1 {
+                color: #000 !important;
+                -webkit-text-fill-color: #000 !important;
+            }
+            
+            .series-section {
+                background: white !important;
+                border: 1px solid #000;
+                color: #000 !important;
+            }
+            
+            .product-card {
+                background: white !important;
+                border: 1px solid #000;
+                color: #000 !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            .spec-item {
+                background: #f5f5f5 !important;
+                border-left: 2px solid #000 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- B2B Header -->
+    <header class="b2b-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">MIGAC</div>
+                <div class="company-name">Yiwu Bangye Handicraft Factory</div>
+            </div>
+            <div class="header-badges">
+                <div class="badge">ISO 9001 Certified</div>
+                <div class="badge">BSCI Audited</div>
+                <div class="badge">10+ Years</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CRYSTAL EXCELLENCE REDEFINED</h1>
+            <p>Premium Handcrafted Crystal Lighting & Decor Solutions for Global B2B Markets</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">26+</div>
+                    <div class="stat-label">Premium Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Quality Guarantee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Candelabra Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title-group">
+                    <div class="series-icon">🕯️</div>
+                    <div>
+                        <div class="series-title">Crystal Candelabra</div>
+                        <div class="series-subtitle">Luxurious Wedding & Event Lighting</div>
+                    </div>
+                </div>
+                <div class="series-code-badge">MG-CA</div>
+            </div>
+            
+            <div class="series-description">
+                Transform any venue into a breathtaking spectacle with our premium K9 crystal candelabras. Meticulously handcrafted to perfection, each piece delivers unparalleled brilliance and sophistication. Perfect for luxury weddings, high-end hotel banquets, and exclusive events where excellence is non-negotiable.
+            </div>
+            
+            <div class="series-features">
+                <span class="feature-tag">Premium K9 Crystal</span>
+                <span class="feature-tag">Hand-Polished Finish</span>
+                <span class="feature-tag">3-12 Arms Available</span>
+                <span class="feature-tag">LED Compatible</span>
+                <span class="feature-tag">Custom Heights</span>
+                <span class="feature-tag">Wholesale Pricing</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-badges">
+                        <span class="product-badge badge-best">Best Seller</span>
+                    </div>
+                    <div class="product-model">MG-CA-001</div>
+                    <div class="product-name">Classic 5-Arm Candelabra</div>
+                    <div class="product-tagline">Timeless Elegance for Every Event</div>
+                    <div class="product-description">
+                        A masterpiece of crystal craftsmanship, featuring 5 perfectly balanced arms adorned with sparkling K9 crystals. The classic design radiates sophistication, making it the centerpiece of any luxury event.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>36×83cm</div>
+                        <div class="spec-item"><strong>Arms</strong>5 Premium Arms</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Hand-Polished</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$15-25</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">10 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card best-seller">
+                    <div class="product-badges">
+                        <span class="product-badge badge-best">Best Seller</span>
+                    </div>
+                    <div class="product-model">MG-CA-002</div>
+                    <div class="product-name">Elegant 7-Arm Candelabra</div>
+                    <div class="product-tagline">Stunning Brilliance for Grand Occasions</div>
+                    <div class="product-description">
+                        Elevate your event with this magnificent 7-arm candelabra. The extended arm configuration creates a dramatic lighting effect, while the premium crystals cast mesmerizing reflections that captivate every guest.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>45×109cm</div>
+                        <div class="spec-item"><strong>Arms</strong>7 Premium Arms</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Hand-Polished</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$20-35</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">10 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="product-badges">
+                        <span class="product-badge badge-featured">Featured</span>
+                    </div>
+                    <div class="product-model">MG-CA-008</div>
+                    <div class="product-name">Large 5-Arm Candelabra</div>
+                    <div class="product-tagline">Commanding Presence for Luxury Venues</div>
+                    <div class="product-description">
+                        Standing tall at 120cm, this candelabra makes an unforgettable statement. The extended height and crystal density create a dazzling display that transforms ordinary spaces into extraordinary venues.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>48×120cm</div>
+                        <div class="spec-item"><strong>Arms</strong>5 Premium Arms</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Hand-Polished</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$25-40</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">10 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="product-badges">
+                        <span class="product-badge badge-featured">Featured</span>
+                    </div>
+                    <div class="product-model">MG-CA-014</div>
+                    <div class="product-name">Grand 12-Arm Candelabra</div>
+                    <div class="product-tagline">The Ultimate Statement of Luxury</div>
+                    <div class="product-description">
+                        A monumental masterpiece featuring 12 arms of crystal perfection. Standing nearly 2 meters tall, this candelabra is reserved for the most prestigious events and venues that demand nothing but the extraordinary.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>66×190cm</div>
+                        <div class="spec-item"><strong>Arms</strong>12 Premium Arms</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Hand-Polished</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$80-120</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">5 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">15-20 days</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card new-arrival">
+                    <div class="product-badges">
+                        <span class="product-badge badge-new">New</span>
+                    </div>
+                    <div class="product-model">MG-CA-015</div>
+                    <div class="product-name">Majestic 9-Arm Candelabra</div>
+                    <div class="product-tagline">Sophisticated Grandeur for Elite Events</div>
+                    <div class="product-description">
+                        The perfect balance between elegance and scale. 9 arms of crystal brilliance create a stunning focal point without overwhelming the space. Ideal for medium to large venues seeking premium aesthetics.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>70×170cm</div>
+                        <div class="spec-item"><strong>Arms</strong>9 Premium Arms</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Hand-Polished</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$60-90</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">5 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">12-15 days</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-model">MG-CA-005</div>
+                    <div class="product-name">Premium 5-Arm Black Candelabra</div>
+                    <div class="product-tagline">Dramatic Dark Crystal Elegance</div>
+                    <div class="product-description">
+                        A striking variant featuring black crystal that creates a mysterious, sophisticated ambiance. Perfect for modern venues seeking a bold, contemporary aesthetic that still retains classic luxury.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>60×86cm</div>
+                        <div class="spec-item"><strong>Arms</strong>5 Premium Arms</div>
+                        <div class="spec-item"><strong>Material</strong>Black Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Matte Black</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$22-35</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">10 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flower Stand Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title-group">
+                    <div class="series-icon">🌸</div>
+                    <div>
+                        <div class="series-title">Crystal Flower Stand</div>
+                        <div class="series-subtitle">Elegant Floral Display Solutions</div>
+                    </div>
+                </div>
+                <div class="series-code-badge">MG-FS</div>
+            </div>
+            
+            <div class="series-description">
+                Elevate floral arrangements with our crystal flower stands. Each stand is engineered to showcase flowers with maximum impact, creating stunning visual displays that enhance any venue's aesthetic appeal.
+            </div>
+            
+            <div class="series-features">
+                <span class="feature-tag">Premium Clarity</span>
+                <span class="feature-tag">Multiple Heights</span>
+                <span class="feature-tag">Stable Base</span>
+                <span class="feature-tag">Versatile Design</span>
+                <span class="feature-tag">Wholesale Available</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-badges">
+                        <span class="product-badge badge-best">Best Seller</span>
+                    </div>
+                    <div class="product-model">MG-FS-003</div>
+                    <div class="product-name">Standard Crystal Flower Stand</div>
+                    <div class="product-tagline">Perfect Balance for Any Floral Display</div>
+                    <div class="product-description">
+                        The industry standard for crystal flower stands. At 73cm, this versatile piece accommodates a wide range of floral arrangements while maintaining crystal-perfect clarity and stability.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>25×73cm</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Crystal Clear</div>
+                        <div class="spec-item"><strong>Base</strong>Stable Design</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$12-18</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">15 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-model">MG-FS-004</div>
+                    <div class="product-name">Tall Crystal Flower Stand</div>
+                    <div class="product-tagline">Elevated Elegance for Grand Displays</div>
+                    <div class="product-description">
+                        Standing tall at 104cm, this flower stand creates dramatic height in floral arrangements. Perfect for hotel lobbies, wedding venues, and large event spaces requiring elevated displays.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Dimensions</strong>30×104cm</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Crystal Clear</div>
+                        <div class="spec-item"><strong>Base</strong>Reinforced</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$18-28</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">15 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Candle Holder Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title-group">
+                    <div class="series-icon">🕯️</div>
+                    <div>
+                        <div class="series-title">Crystal Candle Holder</div>
+                        <div class="series-subtitle">Sophisticated Table Lighting</div>
+                    </div>
+                </div>
+                <div class="series-code-badge">MG-CH</div>
+            </div>
+            
+            <div class="series-description">
+                Compact yet captivating, our crystal candle holders deliver premium aesthetics for intimate settings. Perfect for restaurants, cafes, and elegant dining experiences where sophistication matters.
+            </div>
+            
+            <div class="series-features">
+                <span class="feature-tag">Hand-Crafted</span>
+                <span class="feature-tag">Multiple Styles</span>
+                <span class="feature-tag">Affordable Luxury</span>
+                <span class="feature-tag">Bulk Orders</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-badges">
+                        <span class="product-badge badge-best">Best Seller</span>
+                    </div>
+                    <div class="product-model">MG-CH-002</div>
+                    <div class="product-name">Single Crystal Candle Holder</div>
+                    <div class="product-tagline">Minimalist Perfection for Table Settings</div>
+                    <div class="product-description">
+                        A single, perfectly formed crystal candle holder that exudes elegance. The minimalist design allows the crystal's natural brilliance to take center stage, creating an intimate and sophisticated ambiance.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Type</strong>Single Holder</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Hand-Polished</div>
+                        <div class="spec-item"><strong>Base</strong>Stable</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$2-4</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">30 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">5-7 days</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cake Stand Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title-group">
+                    <div class="series-icon">🎂</div>
+                    <div>
+                        <div class="series-title">Crystal Cake Stand</div>
+                        <div class="series-subtitle">Luxurious Dessert Presentation</div>
+                    </div>
+                </div>
+                <div class="series-code-badge">MG-CS</div>
+            </div>
+            
+            <div class="series-description">
+                Transform ordinary desserts into extraordinary presentations with our crystal cake stands. Each tier is designed to showcase cakes and pastries with maximum visual impact, creating memorable dining experiences.
+            </div>
+            
+            <div class="series-features">
+                <span class="feature-tag">Multi-Tier Design</span>
+                <span class="feature-tag">Food Grade Safe</span>
+                <span class="feature-tag">Easy Assembly</span>
+                <span class="feature-tag">Premium Crystal</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-badges">
+                        <span class="product-badge badge-best">Best Seller</span>
+                    </div>
+                    <div class="product-model">MG-CS-001</div>
+                    <div class="product-name">3-Tier Crystal Cake Stand</div>
+                    <div class="product-tagline">Classic Elegance for Wedding Cakes</div>
+                    <div class="product-description">
+                        The perfect showcase for wedding cakes and elaborate dessert displays. Three tiers of crystal clarity create a stunning centerpiece that elevates any celebration.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Tiers</strong>3 Levels</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Crystal Clear</div>
+                        <div class="spec-item"><strong>Safety</strong>Food Grade</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$15-25</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">15 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="product-badges">
+                        <span class="product-badge badge-featured">Featured</span>
+                    </div>
+                    <div class="product-model">MG-CS-002</div>
+                    <div class="product-name">5-Tier Crystal Cake Stand</div>
+                    <div class="product-tagline">Grand Presentation for Elite Events</div>
+                    <div class="product-description">
+                        A monumental display piece for the most prestigious events. Five tiers create a dramatic dessert presentation that commands attention and admiration from every guest.
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>Tiers</strong>5 Levels</div>
+                        <div class="spec-item"><strong>Material</strong>K9 Crystal</div>
+                        <div class="spec-item"><strong>Finish</strong>Crystal Clear</div>
+                        <div class="spec-item"><strong>Safety</strong>Food Grade</div>
+                    </div>
+                    <div class="product-pricing">
+                        <div class="price-row"><span class="price-label">Price Range</span><span class="price-value highlight">$25-40</span></div>
+                        <div class="price-row"><span class="price-label">MOQ</span><span class="price-value">10 pieces</span></div>
+                        <div class="price-row"><span class="price-label">Lead Time</span><span class="price-value">7-10 days</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>READY TO ELEVATE YOUR BUSINESS?</h2>
+            <p>Contact our B2B team today for wholesale pricing, custom orders, and exclusive distributor opportunities.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>Company</strong>
+                    <span>Yiwu Bangye Handicraft Factory</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <a href="mailto:info@miga.cc">info@miga.cc</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Phone</strong>
+                    <span>+86-19879476613</span>
+                </div>
+                <div class="contact-item">
+                    <strong>WhatsApp</strong>
+                    <span>+86-19879476613</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Website</strong>
+                    <a href="https://miga.cc">https://miga.cc</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Address</strong>
+                    <span>Yiwu, Zhejiang, China</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Yiwu Bangye Handicraft Factory. All Rights Reserved.</p>
+        <p class="catalog-info">B2B Catalog 2026 Edition | Premium Crystal Crafts | Wholesale Pricing Available</p>
+    </footer>
+</body>
+</html>
