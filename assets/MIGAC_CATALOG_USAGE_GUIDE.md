@@ -509,8 +509,8 @@ update_product('MG-CA-001-083-N', {
 
 如果您在使用过程中遇到任何问题，请联系：
 
-- **技术支持**: support@miga.cc
-- **销售咨询**: sales@miga.cc
+- **技术支持**: info@miga.cc
+- **销售咨询**: info@miga.cc
 
 ---
 

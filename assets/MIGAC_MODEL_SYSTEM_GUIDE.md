@@ -243,7 +243,7 @@
 ## 📞 联系方式
 
 - **公司名称**: Yiwu Bangye Handicraft Factory
-- **邮箱**: sales@miga.cc
+- **邮箱**: info@miga.cc
 - **电话**: +86-19879476613
 - **网站**: https://miga.cc
 - **WhatsApp**: +86-19879476613

@@ -208,7 +208,7 @@ MG-CA-001-083-N
 如有任何问题或需要进一步的帮助，请联系：
 
 - **公司**: Yiwu Bangye Handicraft Factory
-- **邮箱**: sales@miga.cc
+- **邮箱**: info@miga.cc
 - **电话**: +86-19879476613
 - **WhatsApp**: +86-19879476613
 - **网站**: https://miga.cc

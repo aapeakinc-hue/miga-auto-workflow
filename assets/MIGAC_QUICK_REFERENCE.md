@@ -100,7 +100,7 @@ MG - XX - YYY - ZZZ - C
 | 类型 | 信息 |
 |------|------|
 | **公司** | Yiwu Bangye Handicraft Factory |
-| **邮箱** | sales@miga.cc |
+| **邮箱** | info@miga.cc |
 | **电话** | +86-19879476613 |
 | **WhatsApp** | +86-19879476613 |
 | **网站** | https://miga.cc |
