@@ -66,7 +66,7 @@ def email_generate_node(state: EmailGenerateInput, config: RunnableConfig, runti
 - 邮件主题要简洁明了，吸引人打开
 - 邮件正文要有针对性，体现对客户公司的研究
 - 避免过度推销，强调价值而非价格
-- 包含发件人邮箱：info@miga.cc
+- 包含发件人邮箱：info@aapeakinc.com
 - 结尾要有专业的署名"""
         
         # 用户提示词
@@ -115,7 +115,7 @@ def email_generate_node(state: EmailGenerateInput, config: RunnableConfig, runti
                 else:
                     # 如果没有找到JSON，使用备用格式
                     email_data = {
-                        "subject": f"Partnership Opportunity with MIGA",
+                        "subject": f"Partnership Opportunity with Yiwu Bangye Handicraft Factory",
                         "body": content
                     }
             except:
@@ -140,10 +140,10 @@ def email_generate_node(state: EmailGenerateInput, config: RunnableConfig, runti
                 "to_email": email,
                 "to_name": recipient_name,
                 "to_company": company_name,
-                "subject": f"Partnership Opportunity with MIGA - {company_name}",
+                "subject": f"Partnership Opportunity with Yiwu Bangye Handicraft Factory - {company_name}",
                 "body": f"""Dear {recipient_name},
 
-I hope this email finds you well. I am reaching out from MIGA to explore potential partnership opportunities with {company_name}.
+I hope this email finds you well. I am reaching out from Yiwu Bangye Handicraft Factory to explore potential partnership opportunities with {company_name}.
 
 Based on my research, I believe our products could be a great fit for your business needs. We specialize in providing high-quality products with competitive pricing and excellent service.
 
@@ -151,9 +151,9 @@ I would appreciate the opportunity to discuss how we can support your business g
 
 Best regards,
 Your Name
-MIGA
-Email: info@miga.cc
-Website: https://miga.cc"""
+Yiwu Bangye Handicraft Factory
+Email: info@aapeakinc.com
+Website: https://www.aapeakinc.com"""
             }
             email_templates.append(email_template)
     

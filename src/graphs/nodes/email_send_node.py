@@ -19,7 +19,7 @@ def email_send_node(state: EmailSendInput, config: RunnableConfig, runtime: Runt
     
     # Resend API Key（从环境变量读取，使用已配置的key作为默认值）
     resend_api_key = os.getenv('RESEND_API_KEY', 're_5pAqrE8V_6DgcPEqkjR8yyN3PzSRhStat')
-    from_email = "info@miga.cc"
+    from_email = "info@aapeakinc.com"
     
     # 统计结果
     send_results = {
@@ -64,13 +64,13 @@ def email_send_node(state: EmailSendInput, config: RunnableConfig, runtime: Runt
 <p>{body.replace('\n', '<br>')}</p>
 <br>
 <p>Best regards,</p>
-<p>MIGA Team</p>
+<p>Yiwu Bangye Handicraft Factory Team</p>
 <p>Email: {from_email}</p>
-<p>Website: https://miga.cc</p>
+<p>Website: https://www.aapeakinc.com</p>
 </body>
 </html>
                 """,
-                "text": f"Dear {to_name},\n\n{body}\n\nBest regards,\nMIGA Team\nEmail: {from_email}\nWebsite: https://miga.cc"
+                "text": f"Dear {to_name},\n\n{body}\n\nBest regards,\nYiwu Bangye Handicraft Factory Team\nEmail: {from_email}\nWebsite: https://www.aapeakinc.com"
             }
             
             response = requests.post(url, headers=headers, json=data, timeout=30)
