@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGAC Product Catalog 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .company-name {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .slogan {
+            font-size: 18px;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Model System */
+        .model-system {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .model-system h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .model-example {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .model-components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .component-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .component-item strong {
+            color: #667eea;
+        }
+
+        /* Product Series */
+        .series-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .series-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .series-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .series-icon {
+            font-size: 36px;
+        }
+
+        .series-name {
+            font-size: 28px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .series-code {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .series-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .feature-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+
+        .product-card.best-seller {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            border: 2px solid #ff6b6b;
+        }
+
+        .product-card.featured {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid #0ea5e9;
+        }
+
+        .product-model {
+            font-size: 16px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .product-name-cn {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .spec-item {
+            font-size: 13px;
+            color: #555;
+            padding: 5px 10px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .spec-item strong {
+            color: #667eea;
+        }
+
+        .product-details {
+            border-top: 2px solid #e9ecef;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .detail-row strong {
+            color: #333;
+        }
+
+        .detail-row span {
+            color: #666;
+        }
+
+        .price-range {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .badge-best-seller {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .badge-featured {
+            background: #0ea5e9;
+            color: white;
+        }
+
+        /* Color Codes */
+        .color-codes {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .color-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .color-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .color-name {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-specs {
+                grid-template-columns: 1fr;
+            }
+            
+            .series-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">MIGAC</div>
+            <div class="company-name">Yiwu Bangye Handicraft Factory</div>
+            <div class="slogan">Elegance in Every Crystal</div>
+        </div>
+
+        <!-- Model System -->
+        <div class="model-system">
+            <h2>🏷️ Product Model System</h2>
+            <div class="model-example">MG-CA-001-120-G</div>
+            <p style="text-align: center; color: #666; margin-top: 15px;">
+                MIGAC Brand - Crystal Candelabra Series - Model 001 - 120cm Height - Gold Color
+            </p>
+            
+            <div class="model-components">
+                <div class="component-item"><strong>MG</strong> - Brand (MIGAC)</div>
+                <div class="component-item"><strong>CA</strong> - Series (Candelabra)</div>
+                <div class="component-item"><strong>001</strong> - Product Type (001-999)</div>
+                <div class="component-item"><strong>120</strong> - Size Code (Height in cm)</div>
+                <div class="component-item"><strong>G</strong> - Color (Gold)</div>
+            </div>
+        </div>
+
+        <!-- Crystal Candelabra Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title">
+                    <span class="series-icon">🕯️</span>
+                    <div>
+                        <div class="series-name">Crystal Candelabra</div>
+                        <div style="color: #666; font-size: 14px;">水晶烛台</div>
+                    </div>
+                </div>
+                <span class="series-code">CA</span>
+            </div>
+            
+            <div class="series-description">
+                Elegant crystal candelabras for weddings, events, and luxury home decor. 
+                Made from premium K9 crystal with durable metal bases. Available in multiple arm configurations (3/5/7/9/12 arms).
+            </div>
+            
+            <div class="features">
+                <span class="feature-tag">K9 Crystal</span>
+                <span class="feature-tag">3-12 Arms</span>
+                <span class="feature-tag">Candle & LED</span>
+                <span class="feature-tag">Customizable</span>
+                <span class="feature-tag">Premium Quality</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-model">MG-CA-001-083-N</div>
+                    <div class="product-name">Classic 5-Arm Candelabra <span class="badge badge-best-seller">Best Seller</span></div>
+                    <div class="product-name-cn">经典五臂烛台</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 36×83cm</div>
+                        <div class="spec-item"><strong>臂数:</strong> 5 Arms</div>
+                        <div class="spec-item"><strong>高度:</strong> 83cm</div>
+                        <div class="spec-item"><strong>宽度:</strong> 36cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal + Metal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>10 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$15-25</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card best-seller">
+                    <div class="product-model">MG-CA-002-109-N</div>
+                    <div class="product-name">Elegant 7-Arm Candelabra <span class="badge badge-best-seller">Best Seller</span></div>
+                    <div class="product-name-cn">优雅七臂烛台</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 45×109cm</div>
+                        <div class="spec-item"><strong>臂数:</strong> 7 Arms</div>
+                        <div class="spec-item"><strong>高度:</strong> 109cm</div>
+                        <div class="spec-item"><strong>宽度:</strong> 45cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal + Metal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>10 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$20-35</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="product-model">MG-CA-008-120-N</div>
+                    <div class="product-name">Large 5-Arm Candelabra <span class="badge badge-featured">Featured</span></div>
+                    <div class="product-name-cn">大型五臂烛台</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 48×120cm</div>
+                        <div class="spec-item"><strong>臂数:</strong> 5 Arms</div>
+                        <div class="spec-item"><strong>高度:</strong> 120cm</div>
+                        <div class="spec-item"><strong>宽度:</strong> 48cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal + Metal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>10 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$25-40</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="product-model">MG-CA-014-190-N</div>
+                    <div class="product-name">Grand 12-Arm Candelabra <span class="badge badge-featured">Featured</span></div>
+                    <div class="product-name-cn">宏伟十二臂烛台</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 66×190cm</div>
+                        <div class="spec-item"><strong>臂数:</strong> 12 Arms</div>
+                        <div class="spec-item"><strong>高度:</strong> 190cm</div>
+                        <div class="spec-item"><strong>宽度:</strong> 66cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal + Metal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>5 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>15-20 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$80-120</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-model">MG-CA-003-080-N</div>
+                    <div class="product-name">Luxury 5-Arm Candelabra</div>
+                    <div class="product-name-cn">奢华五臂烛台</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 60×80cm</div>
+                        <div class="spec-item"><strong>臂数:</strong> 5 Arms</div>
+                        <div class="spec-item"><strong>高度:</strong> 80cm</div>
+                        <div class="spec-item"><strong>宽度:</strong> 60cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal + Metal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>10 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$18-30</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-model">MG-CA-005-086-B</div>
+                    <div class="product-name">Premium 5-Arm Black Candelabra</div>
+                    <div class="product-name-cn">高级五臂黑色烛台</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 60×86cm</div>
+                        <div class="spec-item"><strong>臂数:</strong> 5 Arms</div>
+                        <div class="spec-item"><strong>高度:</strong> 86cm</div>
+                        <div class="spec-item"><strong>宽度:</strong> 60cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>Black Crystal + Metal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>10 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$22-35</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crystal Flower Stand Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title">
+                    <span class="series-icon">🌸</span>
+                    <div>
+                        <div class="series-name">Crystal Flower Stand</div>
+                        <div style="color: #666; font-size: 14px;">水晶花架</div>
+                    </div>
+                </div>
+                <span class="series-code">FS</span>
+            </div>
+            
+            <div class="series-description">
+                Beautiful crystal stands for floral arrangements. Perfect for wedding venues, hotel lobbies, and home decor.
+            </div>
+            
+            <div class="features">
+                <span class="feature-tag">Premium Crystal</span>
+                <span class="feature-tag">Multiple Heights</span>
+                <span class="feature-tag">Sturdy Base</span>
+                <span class="feature-tag">Easy to Clean</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-model">MG-FS-003-073-N</div>
+                    <div class="product-name">Standard Crystal Flower Stand <span class="badge badge-best-seller">Best Seller</span></div>
+                    <div class="product-name-cn">标准水晶花架</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 25×73cm</div>
+                        <div class="spec-item"><strong>高度:</strong> 73cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>15 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$12-18</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-model">MG-FS-001-050-N</div>
+                    <div class="product-name">Mini Crystal Flower Stand</div>
+                    <div class="product-name-cn">迷你水晶花架</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>尺寸:</strong> 42×50cm</div>
+                        <div class="spec-item"><strong>高度:</strong> 50cm</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>20 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$8-12</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crystal Candle Holder Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title">
+                    <span class="series-icon">🕯️</span>
+                    <div>
+                        <div class="series-name">Crystal Candle Holder</div>
+                        <div style="color: #666; font-size: 14px;">水晶蜡烛托</div>
+                    </div>
+                </div>
+                <span class="series-code">CH</span>
+            </div>
+            
+            <div class="series-description">
+                Crystal candle holders for table decoration. Compact design, affordable pricing, perfect for restaurants and home use.
+            </div>
+            
+            <div class="features">
+                <span class="feature-tag">Compact Design</span>
+                <span class="feature-tag">Multiple Styles</span>
+                <span class="feature-tag">Durable Quality</span>
+                <span class="feature-tag">Affordable</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-model">MG-CH-002-ST-N</div>
+                    <div class="product-name">Single Crystal Candle Holder II <span class="badge badge-best-seller">Best Seller</span></div>
+                    <div class="product-name-cn">单头水晶蜡烛托 II</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>类型:</strong> Single</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>30 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>5-7 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$2-4</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crystal Cake Stand Series -->
+        <div class="series-section">
+            <div class="series-header">
+                <div class="series-title">
+                    <span class="series-icon">🎂</span>
+                    <div>
+                        <div class="series-name">Crystal Cake Stand</div>
+                        <div style="color: #666; font-size: 14px;">水晶蛋糕架</div>
+                    </div>
+                </div>
+                <span class="series-code">CS</span>
+            </div>
+            
+            <div class="series-description">
+                Crystal stands for wedding cakes and desserts. Multi-tier design, food grade safe, elegant presentation.
+            </div>
+            
+            <div class="features">
+                <span class="feature-tag">Multi-Tier</span>
+                <span class="feature-tag">Food Grade Safe</span>
+                <span class="feature-tag">Easy Assembly</span>
+                <span class="feature-tag">Elegant Design</span>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card best-seller">
+                    <div class="product-model">MG-CS-001-3T-N</div>
+                    <div class="product-name">3-Tier Crystal Cake Stand <span class="badge badge-best-seller">Best Seller</span></div>
+                    <div class="product-name-cn">三层水晶蛋糕架</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>层数:</strong> 3-Tier</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>15 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$15-25</span></div>
+                    </div>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="product-model">MG-CS-002-5T-N</div>
+                    <div class="product-name">5-Tier Crystal Cake Stand <span class="badge badge-featured">Featured</span></div>
+                    <div class="product-name-cn">五层水晶蛋糕架</div>
+                    <div class="product-specs">
+                        <div class="spec-item"><strong>层数:</strong> 5-Tier</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-row"><strong>材料:</strong> <span>K9 Crystal</span></div>
+                        <div class="detail-row"><strong>MOQ:</strong> <span>10 pieces</span></div>
+                        <div class="detail-row"><strong>交期:</strong> <span>7-10 days</span></div>
+                        <div class="detail-row"><strong>价格:</strong> <span class="price-range">$25-40</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Codes -->
+        <div class="color-codes">
+            <h2 style="color: #667eea; margin-bottom: 20px; text-align: center;">🎨 Available Colors</h2>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-code">N</div>
+                    <div class="color-name">Natural (无色)</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-code">W</div>
+                    <div class="color-name">White (白色)</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-code">B</div>
+                    <div class="color-name">Black (黑色)</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-code">G</div>
+                    <div class="color-name">Gold (金色)</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-code">S</div>
+                    <div class="color-name">Silver (银色)</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-code">P</div>
+                    <div class="color-name">Pink (粉色)</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-code">CH</div>
+                    <div class="color-name">Champagne (香槟色)</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-code">GR</div>
+                    <div class="color-name">Green (绿色)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-section">
+            <h2 style="color: #667eea; margin-bottom: 20px;">📞 Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>Company</strong>
+                    Yiwu Bangye Handicraft Factory
+                </div>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    sales@miga.cc
+                </div>
+                <div class="contact-item">
+                    <strong>Phone</strong>
+                    +86-19879476613
+                </div>
+                <div class="contact-item">
+                    <strong>Website</strong>
+                    <a href="https://miga.cc" style="color: #667eea; text-decoration: none;">https://miga.cc</a>
+                </div>
+                <div class="contact-item">
+                    <strong>WhatsApp</strong>
+                    +86-19879476613
+                </div>
+                <div class="contact-item">
+                    <strong>Address</strong>
+                    Yiwu, Zhejiang, China
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 Yiwu Bangye Handicraft Factory. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 14px;">Catalog Version 2.0 | Updated: March 30, 2026</p>
+        </div>
+    </div>
+</body>
+</html>

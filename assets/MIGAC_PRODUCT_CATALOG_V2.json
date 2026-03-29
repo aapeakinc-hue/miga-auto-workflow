@@ -1,0 +1,521 @@
+{
+  "brand": {
+    "name": "MIGAC",
+    "company": "Yiwu Bangye Handicraft Factory",
+    "logo": "https://miga.cc/images/logo.png",
+    "website": "https://miga.cc",
+    "established": "2010",
+    "experience": "10+ Years",
+    "slogan": "Elegance in Every Crystal"
+  },
+  
+  "model_system": {
+    "naming_convention": "MG-XX-YYY-ZZZ-C",
+    "description": "品牌-系列-类型-尺寸-颜色",
+    "components": {
+      "MG": "品牌缩写（MIGAC）",
+      "XX": "产品系列（CA=烛台, FS=花架, CS=蛋糕架, CH=蜡烛托）",
+      "YYY": "产品类型（3位数字，001-999）",
+      "ZZZ": "尺寸代码（3位数字）",
+      "C": "颜色代码（W=白色, B=黑色, G=金色, S=银色, P=粉色, N=无色）"
+    },
+    "example": "MG-CA-001-120-G",
+    "example_explanation": "MIGAC品牌-水晶烛台系列-001型号-120cm高度-金色"
+  },
+  
+  "product_series": [
+    {
+      "series_code": "CA",
+      "series_name": "Crystal Candelabra",
+      "series_name_cn": "水晶烛台",
+      "icon": "🕯️",
+      "description": "Elegant crystal candelabras for weddings, events, and luxury home decor",
+      "description_cn": "优雅的水晶烛台，适用于婚礼、活动和奢华家居装饰",
+      "features": [
+        "K9 Crystal Material",
+        "Multiple Arm Options (3/5/7/9/12 Arms)",
+        "Candle & LED Compatible",
+        "Customizable Heights",
+        "Premium Quality Assurance"
+      ],
+      "applications": [
+        "Wedding Events",
+        "Hotel Banquet Halls",
+        "Luxury Home Decor",
+        "Party Venues",
+        "Photography Props"
+      ],
+      "products": [
+        {
+          "new_model": "MG-CA-001-083-N",
+          "old_model": "C03",
+          "name": "Classic 5-Arm Candelabra",
+          "name_cn": "经典五臂烛台",
+          "dimensions": "36×83cm",
+          "arms": 5,
+          "height": 83,
+          "width": 36,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$15-25",
+          "best_seller": true
+        },
+        {
+          "new_model": "MG-CA-002-109-N",
+          "old_model": "C05",
+          "name": "Elegant 7-Arm Candelabra",
+          "name_cn": "优雅七臂烛台",
+          "dimensions": "45×109cm",
+          "arms": 7,
+          "height": 109,
+          "width": 45,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$20-35",
+          "best_seller": true
+        },
+        {
+          "new_model": "MG-CA-003-080-N",
+          "old_model": "C06",
+          "name": "Luxury 5-Arm Candelabra",
+          "name_cn": "奢华五臂烛台",
+          "dimensions": "60×80cm",
+          "arms": 5,
+          "height": 80,
+          "width": 60,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$18-30"
+        },
+        {
+          "new_model": "MG-CA-004-086-N",
+          "old_model": "C07",
+          "name": "Premium 5-Arm Candelabra",
+          "name_cn": "高级五臂烛台",
+          "dimensions": "60×86cm",
+          "arms": 5,
+          "height": 86,
+          "width": 60,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$20-32"
+        },
+        {
+          "new_model": "MG-CA-005-086-B",
+          "old_model": "C07-black",
+          "name": "Premium 5-Arm Black Candelabra",
+          "name_cn": "高级五臂黑色烛台",
+          "dimensions": "60×86cm",
+          "arms": 5,
+          "height": 86,
+          "width": 60,
+          "material": "Black Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$22-35"
+        },
+        {
+          "new_model": "MG-CA-006-080-N",
+          "old_model": "C09",
+          "name": "Standard 5-Arm Candelabra",
+          "name_cn": "标准五臂烛台",
+          "dimensions": "45×80cm",
+          "arms": 5,
+          "height": 80,
+          "width": 45,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$15-25"
+        },
+        {
+          "new_model": "MG-CA-007-100-N",
+          "old_model": "C09-M5",
+          "name": "Medium 5-Arm Candelabra",
+          "name_cn": "中型五臂烛台",
+          "dimensions": "48×100cm",
+          "arms": 5,
+          "height": 100,
+          "width": 48,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$18-28"
+        },
+        {
+          "new_model": "MG-CA-008-120-N",
+          "old_model": "C09-M5-L",
+          "name": "Large 5-Arm Candelabra",
+          "name_cn": "大型五臂烛台",
+          "dimensions": "48×120cm",
+          "arms": 5,
+          "height": 120,
+          "width": 48,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$25-40",
+          "featured": true
+        },
+        {
+          "new_model": "MG-CA-009-088-N",
+          "old_model": "C10",
+          "name": "Classic 5-Arm Candelabra II",
+          "name_cn": "经典五臂烛台 II",
+          "dimensions": "46×88cm",
+          "arms": 5,
+          "height": 88,
+          "width": 46,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$17-27"
+        },
+        {
+          "new_model": "MG-CA-010-116-N",
+          "old_model": "C10-L",
+          "name": "Tall 5-Arm Candelabra",
+          "name_cn": "高五臂烛台",
+          "dimensions": "48×116cm",
+          "arms": 5,
+          "height": 116,
+          "width": 48,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$22-35"
+        },
+        {
+          "new_model": "MG-CA-011-079-N",
+          "old_model": "C14",
+          "name": "Compact 5-Arm Candelabra",
+          "name_cn": "紧凑型五臂烛台",
+          "dimensions": "54×79cm",
+          "arms": 5,
+          "height": 79,
+          "width": 54,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$16-26"
+        },
+        {
+          "new_model": "MG-CA-012-090-N",
+          "old_model": "C18",
+          "name": "Standard 5-Arm Candelabra III",
+          "name_cn": "标准五臂烛台 III",
+          "dimensions": "50×90cm",
+          "arms": 5,
+          "height": 90,
+          "width": 50,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$18-30"
+        },
+        {
+          "new_model": "MG-CA-013-083-N",
+          "old_model": "C43",
+          "name": "Wide 5-Arm Candelabra",
+          "name_cn": "宽五臂烛台",
+          "dimensions": "63×83cm",
+          "arms": 5,
+          "height": 83,
+          "width": 63,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$20-32"
+        },
+        {
+          "new_model": "MG-CA-014-190-N",
+          "old_model": "C206",
+          "name": "Grand 12-Arm Candelabra",
+          "name_cn": "宏伟十二臂烛台",
+          "dimensions": "66×190cm",
+          "arms": 12,
+          "height": 190,
+          "width": 66,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 5,
+          "lead_time": "15-20 days",
+          "price_range": "$80-120",
+          "featured": true
+        },
+        {
+          "new_model": "MG-CA-015-170-N",
+          "old_model": "C228",
+          "name": "Majestic 9-Arm Candelabra",
+          "name_cn": "壮丽九臂烛台",
+          "dimensions": "70×170cm",
+          "arms": 9,
+          "height": 170,
+          "width": 70,
+          "material": "K9 Crystal + Metal Base",
+          "moq": 5,
+          "lead_time": "12-15 days",
+          "price_range": "$60-90"
+        }
+      ]
+    },
+    {
+      "series_code": "FS",
+      "series_name": "Crystal Flower Stand",
+      "series_name_cn": "水晶花架",
+      "icon": "🌸",
+      "description": "Beautiful crystal stands for floral arrangements",
+      "description_cn": "美丽的水晶花架，用于花卉装饰",
+      "features": [
+        "Premium Crystal Quality",
+        "Multiple Height Options",
+        "Sturdy Base Design",
+        "Elegant Aesthetic",
+        "Easy to Clean"
+      ],
+      "applications": [
+        "Wedding Venues",
+        "Hotel Lobby",
+        "Home Decor",
+        "Event Decoration",
+        "Florist Display"
+      ],
+      "products": [
+        {
+          "new_model": "MG-FS-001-050-N",
+          "old_model": "CC001",
+          "name": "Mini Crystal Flower Stand",
+          "name_cn": "迷你水晶花架",
+          "dimensions": "42×50cm",
+          "height": 50,
+          "material": "K9 Crystal",
+          "moq": 20,
+          "lead_time": "7-10 days",
+          "price_range": "$8-12"
+        },
+        {
+          "new_model": "MG-FS-002-050-N",
+          "old_model": "CC002",
+          "name": "Compact Crystal Flower Stand",
+          "name_cn": "紧凑型水晶花架",
+          "dimensions": "42×50cm",
+          "height": 50,
+          "material": "K9 Crystal",
+          "moq": 20,
+          "lead_time": "7-10 days",
+          "price_range": "$8-12"
+        },
+        {
+          "new_model": "MG-FS-003-073-N",
+          "old_model": "CC022",
+          "name": "Standard Crystal Flower Stand",
+          "name_cn": "标准水晶花架",
+          "dimensions": "25×73cm",
+          "height": 73,
+          "material": "K9 Crystal",
+          "moq": 15,
+          "lead_time": "7-10 days",
+          "price_range": "$12-18",
+          "best_seller": true
+        },
+        {
+          "new_model": "MG-FS-004-104-N",
+          "old_model": "CC218",
+          "name": "Tall Crystal Flower Stand",
+          "name_cn": "高水晶花架",
+          "dimensions": "30×104cm",
+          "height": 104,
+          "material": "K9 Crystal",
+          "moq": 15,
+          "lead_time": "7-10 days",
+          "price_range": "$18-28"
+        }
+      ]
+    },
+    {
+      "series_code": "CH",
+      "series_name": "Crystal Candle Holder",
+      "series_name_cn": "水晶蜡烛托",
+      "icon": "🕯️",
+      "description": "Crystal candle holders for table decoration",
+      "description_cn": "水晶蜡烛托，用于餐桌装饰",
+      "features": [
+        "Compact Design",
+        "Multiple Styles Available",
+        "Durable Quality",
+        "Affordable Pricing",
+        "Easy to Use"
+      ],
+      "applications": [
+        "Table Setting",
+        "Home Decor",
+        "Restaurant",
+        "Cafe",
+        "Special Events"
+      ],
+      "products": [
+        {
+          "new_model": "MG-CH-001-ST-N",
+          "old_model": "CH009",
+          "name": "Single Crystal Candle Holder",
+          "name_cn": "单头水晶蜡烛托",
+          "dimensions": "Standard Size",
+          "type": "Single",
+          "material": "K9 Crystal",
+          "moq": 30,
+          "lead_time": "5-7 days",
+          "price_range": "$2-4"
+        },
+        {
+          "new_model": "MG-CH-002-ST-N",
+          "old_model": "CH011",
+          "name": "Single Crystal Candle Holder II",
+          "name_cn": "单头水晶蜡烛托 II",
+          "dimensions": "Standard Size",
+          "type": "Single",
+          "material": "K9 Crystal",
+          "moq": 30,
+          "lead_time": "5-7 days",
+          "price_range": "$2-4",
+          "best_seller": true
+        },
+        {
+          "new_model": "MG-CH-003-ML-N",
+          "old_model": "CH048",
+          "name": "Multi-Layer Candle Holder",
+          "name_cn": "多层水晶蜡烛托",
+          "dimensions": "Multiple Layers",
+          "type": "Multi-Layer",
+          "material": "K9 Crystal",
+          "moq": 20,
+          "lead_time": "7-10 days",
+          "price_range": "$8-15"
+        },
+        {
+          "new_model": "MG-CH-004-PT-N",
+          "old_model": "CH064",
+          "name": "Petite Crystal Candle Holder",
+          "name_cn": "精致水晶蜡烛托",
+          "dimensions": "Petite Size",
+          "type": "Petite",
+          "material": "K9 Crystal",
+          "moq": 30,
+          "lead_time": "5-7 days",
+          "price_range": "$1.5-3"
+        }
+      ]
+    },
+    {
+      "series_code": "CS",
+      "series_name": "Crystal Cake Stand",
+      "series_name_cn": "水晶蛋糕架",
+      "icon": "🎂",
+      "description": "Crystal stands for wedding cakes and desserts",
+      "description_cn": "水晶蛋糕架，适用于婚礼蛋糕和甜点展示",
+      "features": [
+        "Multi-Tier Design",
+        "High Clarity Crystal",
+        "Food Grade Safe",
+        "Easy Assembly",
+        "Elegant Presentation"
+      ],
+      "applications": [
+        "Wedding Cakes",
+        "Birthday Parties",
+        "Dessert Display",
+        "Hotel Banquet",
+        "Cafe Display"
+      ],
+      "products": [
+        {
+          "new_model": "MG-CS-001-3T-N",
+          "old_model": "CCS001",
+          "name": "3-Tier Crystal Cake Stand",
+          "name_cn": "三层水晶蛋糕架",
+          "dimensions": "3-Tier",
+          "tiers": 3,
+          "material": "K9 Crystal",
+          "moq": 15,
+          "lead_time": "7-10 days",
+          "price_range": "$15-25",
+          "best_seller": true
+        },
+        {
+          "new_model": "MG-CS-002-5T-N",
+          "old_model": "CCS005",
+          "name": "5-Tier Crystal Cake Stand",
+          "name_cn": "五层水晶蛋糕架",
+          "dimensions": "5-Tier",
+          "tiers": 5,
+          "material": "K9 Crystal",
+          "moq": 10,
+          "lead_time": "7-10 days",
+          "price_range": "$25-40",
+          "featured": true
+        },
+        {
+          "new_model": "MG-CS-003-3T-N",
+          "old_model": "CCS003",
+          "name": "3-Tier Crystal Cake Stand II",
+          "name_cn": "三层水晶蛋糕架 II",
+          "dimensions": "3-Tier",
+          "tiers": 3,
+          "material": "K9 Crystal",
+          "moq": 15,
+          "lead_time": "7-10 days",
+          "price_range": "$15-25"
+        }
+      ]
+    }
+  ],
+  
+  "color_codes": {
+    "N": "Natural (无色)",
+    "W": "White (白色)",
+    "B": "Black (黑色)",
+    "G": "Gold (金色)",
+    "S": "Silver (银色)",
+    "P": "Pink (粉色)",
+    "CH": "Champagne (香槟色)",
+    "GR": "Green (绿色)",
+    "BL": "Blue (蓝色)"
+  },
+  
+  "specifications": {
+    "material": "K9 Crystal + Metal Base",
+    "crystal_quality": "High Clarity, Lead-Free",
+    "metal_base": "Durable, Rust-Resistant",
+    "packaging": "Safe Bubble Wrap + Carton",
+    "customization": "OEM/ODM Available",
+    "certification": "CE, ROHS Compliant"
+  },
+  
+  "service_commitment": {
+    "free_samples": "Available (Customer Pays Shipping)",
+    "custom_design": "OEM/ODM Service",
+    "quality_guarantee": "100% Inspection Before Shipment",
+    "fast_delivery": "7-20 Days Lead Time",
+    "after_sales": "1 Year Warranty",
+    "technical_support": "24/7 Online Support"
+  },
+  
+  "contact": {
+    "company": "Yiwu Bangye Handicraft Factory",
+    "email": "sales@miga.cc",
+    "phone": "+86-19879476613",
+    "website": "https://miga.cc",
+    "address": "Yiwu, Zhejiang, China",
+    "whatsapp": "+86-19879476613"
+  },
+  
+  "catalog_info": {
+    "version": "2.0",
+    "date": "2026-03-30",
+    "next_update": "2026-06-30",
+    "total_products": 28,
+    "total_series": 4
+  }
+}

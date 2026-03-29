@@ -1,0 +1,148 @@
+{
+  "old_products": {
+    "crystal_candelabra": [
+      {
+        "model": "C01-M5",
+        "size": "Size:",
+        "category": "crystal_candelabra"
+      },
+      {
+        "model": "C07-black",
+        "size": "Siz",
+        "category": "crystal_candelabra"
+      },
+      {
+        "model": "C09-M5-L",
+        "size": "Size:",
+        "category": "crystal_candelabra"
+      },
+      {
+        "model": "9arms-rectangle",
+        "size": "size:",
+        "category": "crystal_candelabra"
+      },
+      {
+        "model": "7arms-oval",
+        "size": "size:",
+        "category": "crystal_candelabra"
+      },
+      {
+        "model": "C03-3arms",
+        "size": "Si",
+        "category": "crystal_candelabra"
+      },
+      {
+        "model": "C209",
+        "size": "CC216-13arms",
+        "category": "crystal_candelabra"
+      }
+    ],
+    "crystal_flower_stand": [],
+    "crystal_cake_stand": [],
+    "crystal_candle_holder": [
+      {
+        "model": "CH020",
+        "size": "CH021",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH036",
+        "size": "CH037",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH051",
+        "size": "CH046 CH047",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH052",
+        "size": "C H053",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH067",
+        "size": "CH062 C H063",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH068",
+        "size": "CH070",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH082",
+        "size": "CH077 C H078",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH083",
+        "size": "CH084",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH202",
+        "size": "CH189CH197 C H198",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH211",
+        "size": "CH206 C H207",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH212",
+        "size": "CH213",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH228",
+        "size": "CH223 C H224",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH231",
+        "size": "CH232",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH237",
+        "size": "CH237-C",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH245",
+        "size": "CH238 C H239",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH246",
+        "size": "CH247",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH254",
+        "size": "CH248 C H249",
+        "category": "crystal_candle_holder"
+      },
+      {
+        "model": "CH255",
+        "size": "CH256",
+        "category": "crystal_candle_holder"
+      }
+    ]
+  },
+  "new_model_system": {
+    "naming_convention": "品牌-系列-类型-尺寸-颜色",
+    "structure": "MG-XX-YYY-ZZZ-C",
+    "components": {
+      "MG": "品牌缩写（MIGAC）",
+      "XX": "产品系列（CA=烛台, FS=花架, CS=蛋糕架, CH=蜡烛托）",
+      "YYY": "产品类型（3位数字，001-999）",
+      "ZZZ": "尺寸代码（3位数字）",
+      "C": "颜色代码（W=白色, B=黑色, G=金色, S=银色, P=粉色）"
+    },
+    "example": "MG-CA-001-120-G",
+    "example_explanation": "MIGAC品牌-水晶烛台系列-001型号-120cm高度-金色"
+  }
+}
