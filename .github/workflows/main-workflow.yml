@@ -10,6 +10,26 @@ on:
   workflow_dispatch:
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: 安装系统依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libdbus-1-dev pkg-config python3-dev
+      
+      - name: 安装 pip 及依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+# ... 下面还有其它步骤就不用动
   # 主工作流：自动搜索客户和发送邮件
   run-auto-workflow:
     runs-on: ubuntu-latest
